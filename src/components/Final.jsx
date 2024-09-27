@@ -4,10 +4,10 @@ const Final = () => {
       <div className="relative pt-8 pb-8">
         <div className="w-full">
           <div className="w-full px-4 mx-auto max-w-[1400px]">
-            <div className="mx-auto max-w-[1000px] bg-colorFour h-80 rounded-3xl mt-20 ">
+            <div className="mx-auto max-w-[1000px] bg-colorFour h-80 rounded-3xl ">
               <div className="space-y-4">
                 <div class="flex justify-center items-center pt-12">
-                  <h1 class=" text-4xl text-white font-semibold">
+                  <h1 class="md:text-4xl text-3xl text-white font-semibold">
                     Get Started for Free
                   </h1>
                 </div>

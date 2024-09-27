@@ -34,14 +34,14 @@ const Hero = () => {
                 <a
                   href="/login"
                   className="bg-colorFour hover:bg-[#14a800] font-semibold outline-none
-              rounded-3xl hover:shadow-form transition duration-1000 ease-in-out text-white px-12 py-3 text-center"
+              rounded-3xl hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
                 >
                   Get Started Now
                 </a>
                 <a
                   href="/login"
                   className="bg-colorFour hover:bg-[#14a800] font-semibold outline-none
-              rounded-3xl hover:shadow-form transition duration-1000 ease-in-out text-white px-12 py-3 text-center ml-2"
+              rounded-3xl hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center ml-2"
                 >
                   Contact With us
                 </a>

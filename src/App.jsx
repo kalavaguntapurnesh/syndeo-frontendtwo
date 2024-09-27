@@ -6,13 +6,14 @@ import Privacy from "./pages/Privacy";
 import Register from "./pages/Register";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
         <Route path="/login" element={<Login />}></Route>
 
         <Route path="/privacy" element={<Privacy />}></Route>

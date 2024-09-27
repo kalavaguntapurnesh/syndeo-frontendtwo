@@ -1,9 +1,14 @@
-
+import Footer from "./../components/Footer";
+import Navbar from "./../components/Navbar";
 
 const About = () => {
   return (
-    <div>About</div>
-  )
-}
+    <div>
+      <Navbar />
 
-export default About
+      <Footer />
+    </div>
+  );
+};
+
+export default About;
