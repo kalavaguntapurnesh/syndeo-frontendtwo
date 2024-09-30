@@ -7,7 +7,7 @@ const Carousel = () => {
             <div className="justify-center w-full text-center pb-8">
               <div className="w-full max-w-[14000px] mx-auto space-y-4">
                 <div className="pt-4">
-                  <h1 className="mx-auto max-w-[800px] md:text-5xl text-3xl font-semibold tracking-wide">
+                  <h1 className="mx-auto max-w-[800px] md:text-5xl text-3xl font-bold tracking-tight">
                     Scheduling for entrepreneurs, freelancers, and leaders
                   </h1>
                 </div>
@@ -125,7 +125,7 @@ const Carousel = () => {
 
               <div className="pt-20">
                 <div className="pt-4">
-                  <h1 className="text-4xl font-semibold tracking-wide">
+                  <h1 className="text-4xl font-bold tracking-tight">
                     Fits seamlessly into the way{" "}
                     <span className="text-colorFour">you work</span>
                   </h1>

@@ -7,7 +7,7 @@ const Final = () => {
             <div className="mx-auto max-w-[1000px] bg-colorFour h-80 rounded-3xl ">
               <div className="space-y-4">
                 <div class="flex justify-center items-center pt-12">
-                  <h1 class="md:text-4xl text-3xl text-white font-semibold">
+                  <h1 class="md:text-4xl text-3xl text-white font-bold tracking-tight">
                     Get Started for Free
                   </h1>
                 </div>
