@@ -12,8 +12,8 @@ const Final = () => {
                   </h1>
                 </div>
 
-                <div class="flex justify-center items-center text-white text-center max-w-lg mx-auto">
-                  <p>
+                <div class="flex justify-center items-center text-white text-center max-w-lg mx-auto ">
+                  <p className="md:mx-0 mx-2">
                     You can activate a 14 day trial of our paid plan at any
                     time. After your trial, enjoy our free version — forever.
                   </p>
