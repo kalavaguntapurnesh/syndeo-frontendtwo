@@ -24,7 +24,7 @@ const Carousel = () => {
 
                 <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 pt-8">
                   <a href="" class="flex md:justify-start justify-center">
-                    <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+                    <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                       <div class="space-y-4">
                         <div class="flex justify-center items-center">
                           <img
@@ -56,7 +56,7 @@ const Carousel = () => {
                   </a>
 
                   <a href="" class="flex md:justify-start justify-center">
-                    <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+                    <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                       <div class="space-y-4">
                         <div class="flex justify-center items-center">
                           <img
@@ -89,7 +89,7 @@ const Carousel = () => {
                   </a>
 
                   <a href="" class="flex md:justify-start justify-center">
-                    <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+                    <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                       <div class="space-y-4">
                         <div class="flex justify-center items-center">
                           <img
