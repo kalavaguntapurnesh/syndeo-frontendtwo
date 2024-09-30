@@ -221,7 +221,7 @@ const Footer = () => {
                 <FaGoogle size={25} className="cursor-pointer" color="white" />
               </a>
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center mt-6">
               <p className="md:text-sm text-xs text-white">
                 Copyright © 2024 Syndèo. All rights reserved.
               </p>
