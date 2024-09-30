@@ -47,7 +47,7 @@ const Carousel = () => {
                         </div>
 
                         <div>
-                          <button class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 text-colorFour py-2 px-4 rounded-full">
+                          <button class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full">
                             View Features
                           </button>
                         </div>
@@ -80,7 +80,7 @@ const Carousel = () => {
                         </div>
 
                         <div>
-                          <button class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 text-colorFour py-2 px-4 rounded-full">
+                          <button class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 text-colorFour font-semibold py-2 px-4 rounded-full">
                             View Features
                           </button>
                         </div>
@@ -113,7 +113,7 @@ const Carousel = () => {
                         </div>
 
                         <div>
-                          <button class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 text-colorFour py-2 px-4 rounded-full">
+                          <button class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full">
                             View Features
                           </button>
                         </div>
