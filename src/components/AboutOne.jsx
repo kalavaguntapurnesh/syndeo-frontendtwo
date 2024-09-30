@@ -7,7 +7,7 @@ const AboutOne = () => {
             <div className="grid lg:grid-cols-2 gap-4">
               <div className="space-y-4 flex flex-col justify-center">
                 <div className="flex md:justify-start justify-center">
-                  <h1 className="md:text-4xl text-3xl font-semibold tracking-wide">
+                  <h1 className="md:text-4xl text-3xl font-bold tracking-tight">
                     Our <span className="text-colorFour">Story</span>
                   </h1>
                 </div>
@@ -46,12 +46,12 @@ const AboutOne = () => {
 
             <div className="mt-20 bg-slate-100 rounded space-y-4 md:h-60">
               <div className="text-center md:pt-8 pt-6">
-                <h1 className=" text-4xl font-semibold">Syndèo in numbers</h1>
+                <h1 className=" text-4xl font-bold tracking-tight">Syndèo in numbers</h1>
               </div>
               <div className="mx-auto max-w-[800px] md:pb-2 pb-6">
                 <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
                   <div className="flex flex-col justify-center items-center space-y-1">
-                    <div className="text-colorFour text-5xl font-semibold">
+                    <div className="text-colorFour text-5xl font-bold tracking-tight">
                       <h1>2023 </h1>
                     </div>
                     <div className="text-gray-600">
@@ -60,7 +60,7 @@ const AboutOne = () => {
                   </div>
 
                   <div className="flex flex-col justify-center items-center space-y-1">
-                    <div className="text-colorFour text-5xl font-semibold">
+                    <div className="text-colorFour text-5xl font-bold tracking-tight">
                       <h1>180+</h1>
                     </div>
                     <div className="text-gray-600">
@@ -69,7 +69,7 @@ const AboutOne = () => {
                   </div>
 
                   <div className="flex flex-col justify-center items-center space-y-1">
-                    <div className="text-colorFour text-5xl font-semibold">
+                    <div className="text-colorFour text-5xl font-bold tracking-tight">
                       <h1>24/7</h1>
                     </div>
                     <div className="text-gray-600">
@@ -82,7 +82,7 @@ const AboutOne = () => {
 
             <div className="pt-8 space-y-4">
               <div className="text-center md:pt-8 pt-6">
-                <h1 className=" text-4xl font-semibold">Our Company Values</h1>
+                <h1 className=" text-4xl font-bold tracking-tight">Our Company Values</h1>
               </div>
               <div className="text-center text-gray-500 md:text-xl">
                 <p>

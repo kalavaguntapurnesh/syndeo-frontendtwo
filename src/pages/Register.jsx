@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Navbar from "../components/Navbar";
 // import { useNavigate } from "react-router-dom";
 // import { useDispatch } from "react-redux";
 // import { showLoading, hideLoading } from "../redux/features/alertSlice";
@@ -101,9 +100,7 @@ function Register() {
 
   return (
     <div>
-      <Navbar />
-
-      <div className="relative md:pt-20 pt-32 pb-4">
+      <div className="relative">
         <div className="w-full">
           <div className="w-full px-4 mx-auto max-w-[1400px]">
             <div className="justify-center w-full">
@@ -445,8 +442,6 @@ function Register() {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }
