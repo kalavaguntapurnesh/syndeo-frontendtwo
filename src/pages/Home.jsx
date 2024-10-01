@@ -4,6 +4,7 @@ import Carousel from "../components/Carousel";
 import Final from "../components/Final";
 import Footer from "./../components/Footer";
 import Reviews from "./../components/Reviews";
+import FAQ from "../components/FAQ";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Hero />
       <Carousel />
       <Reviews />
+      <FAQ />
       <Final />
       <Footer />
     </div>

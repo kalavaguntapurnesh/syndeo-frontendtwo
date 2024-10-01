@@ -255,15 +255,7 @@ const Carousel = () => {
               </div>
 
               <div className="pt-20">
-                <div class="text-center flex justify-center items-center">
-                  <h1 class="font-bold md:text-5xl text-4xl">
-                    Unlock your
-                    <span class="text-colorFour"> potential </span>
-                    with Syndèo
-                  </h1>
-                </div>
-
-                <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-12">
+                {/* <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-12">
                   <div className="flex flex-col justify-start">
                     <div className="w-full flex justify-center items-center pt-6">
                       <div className="w-full">
@@ -304,48 +296,128 @@ const Carousel = () => {
                       alt=""
                     />
                   </div>
-                </div>
+                </div> */}
 
-                <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-12">
-                  <div>
-                    <div className="flex flex-col space-y-4">
-                      <div>
-                        <h1 className="lg:text-5xl text-4xl font-bold tracking-normal md:leading-relaxed leading-normal">
-                          Motivated to make a better future, connect to us
-                          through this form.
-                        </h1>
+                <div className="grid md:grid-cols-2 grid-cols-1 gap-4 pt-12">
+                  <div className="space-y-2">
+                    <div className="lg:hidden block">
+                      <h1 className=" text-4xl font-bold text-center">
+                        Cancel & reschedule in just a{" "}
+                        <span className="text-colorFour">few clicks</span>
+                      </h1>
+                    </div>
+                    <div className="lg:hidden block pt-2">
+                      <p className="text-center font-normal text-base">
+                        It can be done using the following steps:
+                      </p>
+                    </div>
+                    <div className="lg:block hidden">
+                      <h1 className="font-bold md:text-5xl text-4xl">
+                        Cancel & reschedule in just a{" "}
+                        <span className="text-colorFour">few clicks</span>
+                      </h1>
+                    </div>
+                    <div className="lg:block hidden pt-2">
+                      <p className=" font-normal text-lg">
+                        It can be done using the following steps:
+                      </p>
+                    </div>
+
+                    <div className="flex md:justify-start justify-center flex-col mt-8">
+                      <div className=" mb-3">
+                        <div className="grid grid-cols-6 ">
+                          <div className="flex justify-center items-center col-span-1">
+                            <h1 className="font-semibold text-4xl text-colorFour">
+                              1
+                            </h1>
+                          </div>
+                          <div className="col-span-5 flex justify-start items-start">
+                            <div>
+                              <h1 className="text-gray-900 text-base">
+                                First, select the desired eSports product in the
+                                product overview and open it in our 3D
+                                configurator
+                              </h1>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <h1 className="leading-relaxed tracking-wide font-medium lg:text-[20px] text-[16px] text-gray-600 d ">
-                          We craft beautiful and unique digital experiences.
-                          With a better industy knowledge and expertise, we
-                          design and code clean websites and apps!
-                        </h1>
+                      <div className=" mb-3">
+                        <div className="grid grid-cols-6">
+                          <div className="flex justify-center items-center col-span-1">
+                            <h1 className="font-semibold text-4xl text-colorFour">
+                              2
+                            </h1>
+                          </div>
+                          <div className="col-span-5 flex justify-start items-start">
+                            <div>
+                              <h1 className="text-gray-900 text-base">
+                                Then you can choose between different custom
+                                eSports jersey designs, which you can then
+                                refine according to your own preferences.
+                              </h1>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <ul className="space-y-4 text-colorTwo font-semibold leading-relaxed tracking-wide flex flex-col list-disc md:mx-4 mx-8">
-                          <li>
-                            99% successful appointment scheduling through our
-                            syndèo.
-                          </li>
-                          <li>
-                            4.8 / 5 Excellent Ratings From clients and
-                            customers.
-                          </li>
-                          <li>
-                            Thousands of meetings scheduled through syndèo
-                            platform.
-                          </li>
-                          <li>
-                            Services available across all the countries of the
-                            globe.
-                          </li>
-                        </ul>
+                      <div className=" mb-3">
+                        <div className="grid grid-cols-6">
+                          <div className="flex justify-center items-center col-span-1">
+                            <h1 className="font-semibold text-4xl text-colorFour">
+                              3
+                            </h1>
+                          </div>
+                          <div className="col-span-5 flex justify-start items-center">
+                            <div>
+                              <h1 className="text-gray-900 text-base">
+                                You can add patterns and colour gradients to
+                                give your eSports jersey an extra special touch.
+                              </h1>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className=" mb-4">
+                        <div className="grid grid-cols-6">
+                          <div className="flex justify-center items-center col-span-1">
+                            <h1 className="font-semibold text-4xl text-colorFour">
+                              4
+                            </h1>
+                          </div>
+                          <div className="col-span-5 flex justify-start items-center">
+                            <div>
+                              <h1 className="text-gray-900 text-base">
+                                Team logos, badges, player numbers and names can
+                                be easily added via drag & drop or via the menu
+                                bar.
+                              </h1>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className=" mb-3">
+                        <div className="grid grid-cols-6">
+                          <div className="flex justify-center items-center col-span-1">
+                            <h1 className="font-semibold text-4xl text-colorFour">
+                              5
+                            </h1>
+                          </div>
+                          <div className="col-span-5 flex justify-start items-center">
+                            <div>
+                              <h1 className="text-gray-900 text-base">
+                                Once you've designed your custom eSports jersey,
+                                you can use our voting function to have your
+                                friends choose their favourite eSports jersey
+                                design.
+                              </h1>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-
-                  <div>
+                  <div className=" flex justify-center items-start">
                     <img
                       src="https://25078520.fs1.hubspotusercontent-eu1.net/hub/25078520/hubfs/2022/illustrations/howitworks/calendar_bookings@2x.png?width=800&name=calendar_bookings@2x.png"
                       alt=""
