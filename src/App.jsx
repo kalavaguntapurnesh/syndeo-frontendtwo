@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Dashboard from "./pages/Dashboard";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -25,6 +26,9 @@ function App() {
         <Route path="/contact" element={<Contact />}></Route>
 
         <Route path="/dashboard" element={<Dashboard />}></Route>
+
+     
+
       </Routes>
     </BrowserRouter>
   );
