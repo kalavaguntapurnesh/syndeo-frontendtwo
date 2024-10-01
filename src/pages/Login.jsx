@@ -44,7 +44,7 @@ const Login = () => {
           Swal.fire({
             icon: "error",
             title: "Incorrect Credentials !!!",
-            text: "The username and/or password doesn't match. Please enter valid username and correct password.",
+            text: "The username & password doesn't match. Please enter valid username and correct password.",
           });
         }
       })
