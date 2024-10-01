@@ -8,7 +8,8 @@ import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Dashboard from "./pages/Dashboard";
-
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 
 function App() {
   return (
@@ -26,9 +27,11 @@ function App() {
         <Route path="/contact" element={<Contact />}></Route>
 
         <Route path="/dashboard" element={<Dashboard />}></Route>
-
-     
-
+        <Route path="/forgotPassword" element={<ForgotPassword />}></Route>
+        <Route
+          path="/resetPassword/:id/:token"
+          element={<ResetPassword />}
+        ></Route>
       </Routes>
     </BrowserRouter>
   );

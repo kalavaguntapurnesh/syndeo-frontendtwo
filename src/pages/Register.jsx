@@ -52,7 +52,7 @@ function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(showLoading());
+    // dispatch(showLoading());
     axios
       .post("http://localhost:8080/api/v1/registerUser", {
         firstName,
@@ -67,7 +67,7 @@ function Register() {
         phoneNumber,
       })
       .then((response) => {
-        dispatch(hideLoading());
+        // dispatch(hideLoading());
         if (response.status === 201) {
           const verifyMail = response.data.email;
           const partialEmail = verifyMail.replace(
@@ -82,11 +82,11 @@ function Register() {
               " and verify it to proceed further.",
             icon: "success",
           });
-          navigate("/login");
+          // navigate("/login");
         }
       })
       .catch((error) => {
-        dispatch(hideLoading());
+        // dispatch(hideLoading());
         console.log(error);
         Swal.fire({
           icon: "error",

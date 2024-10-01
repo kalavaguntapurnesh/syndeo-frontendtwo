@@ -1,61 +1,62 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 // import { useDispatch } from "react-redux";
 // import { hideLoading, showLoading } from "../redux/features/alertSlice";
-// import axios from "axios";
-// import Swal from "sweetalert2";
+import axios from "axios";
+import Swal from "sweetalert2";
+import { FaUnlock } from "react-icons/fa";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
 
-//   const navigate = useNavigate();
+  //   const navigate = useNavigate();
 
-//   const dispatch = useDispatch();
+  //   const dispatch = useDispatch();
 
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     dispatch(showLoading());
-//     axios
-//       .post("https://syndeo-backend.onrender.com/auth/forgetPassword", {
-//         email,
-//       })
-//       .then((response) => {
-//         dispatch(hideLoading());
-//         if (response.data.status) {
-//           const verifyMail = response.data.email;
-//           const partialEmail = verifyMail.replace(
-//             /(\w{3})[\w.-]+@([\w.]+\w)/,
-//             "$1***@$2"
-//           );
-//           Swal.fire({
-//             title: "Password Reset Initiated",
-//             text:
-//               "We have sent an email to " +
-//               partialEmail +
-//               " registered with us, please check the email for password reset.",
-//             icon: "success",
-//           });
-//           navigate("/login");
-//         } else {
-//           Swal.fire({
-//             icon: "error",
-//             title: "Oops...",
-//             text: "Something went wrong!",
-//           });
-//           navigate("/register");
-//         }
-//       })
-//       .catch((error) => {
-//         dispatch(hideLoading());
-//         console.log(error);
-//         Swal.fire({
-//           icon: "error",
-//           title: "Oops...",
-//           text: "Something went wrong!",
-//         });
-//       });
-//   };
+  //   const handleSubmit = (e) => {
+  //     e.preventDefault();
+  //     dispatch(showLoading());
+  //     axios
+  //       .post("https://syndeo-backend.onrender.com/auth/forgetPassword", {
+  //         email,
+  //       })
+  //       .then((response) => {
+  //         dispatch(hideLoading());
+  //         if (response.data.status) {
+  //           const verifyMail = response.data.email;
+  //           const partialEmail = verifyMail.replace(
+  //             /(\w{3})[\w.-]+@([\w.]+\w)/,
+  //             "$1***@$2"
+  //           );
+  //           Swal.fire({
+  //             title: "Password Reset Initiated",
+  //             text:
+  //               "We have sent an email to " +
+  //               partialEmail +
+  //               " registered with us, please check the email for password reset.",
+  //             icon: "success",
+  //           });
+  //           navigate("/login");
+  //         } else {
+  //           Swal.fire({
+  //             icon: "error",
+  //             title: "Oops...",
+  //             text: "Something went wrong!",
+  //           });
+  //           navigate("/register");
+  //         }
+  //       })
+  //       .catch((error) => {
+  //         dispatch(hideLoading());
+  //         console.log(error);
+  //         Swal.fire({
+  //           icon: "error",
+  //           title: "Oops...",
+  //           text: "Something went wrong!",
+  //         });
+  //       });
+  //   };
 
   return (
     <div>
@@ -68,14 +69,25 @@ const ForgotPassword = () => {
                 <div>
                   <section className="bg-gray-50 my-8">
                     <div className="flex flex-col items-center justify-center px-6 mx-auto">
-                      <div className="w-full bg-white rounded-lg shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                      <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                         <div className="p-6 space-y-4 md:space-y-4 sm:p-8">
                           <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-colorThree md:text-2xl dark:text-white">
-                            Forgot Password
+                            Reset your password
                           </h1>
+                          <div className="text-center text-gray-500">
+                            <p>
+                              No need to fear, we’ll send you a reset link by
+                              email.
+                            </p>
+                          </div>
+
+                          <div className="flex justify-center items-center">
+                            <FaUnlock className="text-colorFour w-12 h-12" />
+                          </div>
+
                           <form
                             className="space-y-4 md:space-y-6"
-                            onSubmit={handleSubmit}
+                            // onSubmit={handleSubmit}
                           >
                             <div>
                               <label
@@ -88,7 +100,7 @@ const ForgotPassword = () => {
                                 type="email"
                                 name="email"
                                 id="email"
-                                className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                className=" border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="name@company.com"
                                 required=""
                                 onChange={(e) => setEmail(e.target.value)}
