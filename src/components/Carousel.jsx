@@ -1,18 +1,20 @@
+import Accordion from "../components/Accordion";
+
 const Carousel = () => {
   return (
     <div className="bg-white">
       <div className="relative pt-8 pb-4">
         <div className="w-full">
           <div className="w-full px-4 mx-auto max-w-[1400px]">
-            <div className="justify-center w-full text-center pb-8">
+            <div className="justify-center w-full ">
               <div className="w-full max-w-[14000px] mx-auto space-y-4">
                 <div className="pt-4">
-                  <h1 className="mx-auto max-w-[800px] md:text-5xl text-3xl font-bold tracking-tight">
+                  <h1 className="mx-auto max-w-[800px] text-center md:text-5xl text-3xl font-bold tracking-tight">
                     Scheduling for entrepreneurs, freelancers, and leaders
                   </h1>
                 </div>
 
-                <div>
+                <div className="text-center">
                   <p className="text-xl text-gray-600">
                     Syndeo's made for teams of all sizes.{" "}
                     <a href="/pricing" className="text-blue-500">
@@ -46,7 +48,7 @@ const Carousel = () => {
                           </p>
                         </div>
 
-                        <div>
+                        <div className="flex justify-center">
                           <button class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full">
                             View Features
                           </button>
@@ -79,7 +81,7 @@ const Carousel = () => {
                           </p>
                         </div>
 
-                        <div>
+                        <div className="flex justify-center">
                           <button class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 text-colorFour font-semibold py-2 px-4 rounded-full">
                             View Features
                           </button>
@@ -112,7 +114,7 @@ const Carousel = () => {
                           </p>
                         </div>
 
-                        <div>
+                        <div className="flex justify-center">
                           <button class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full">
                             View Features
                           </button>
@@ -125,13 +127,13 @@ const Carousel = () => {
 
               <div className="pt-20">
                 <div className="pt-4">
-                  <h1 className="text-4xl font-bold tracking-tight">
+                  <h1 className="text-4xl font-bold tracking-tight text-center">
                     Fits seamlessly into the way{" "}
                     <span className="text-colorFour">you work</span>
                   </h1>
                 </div>
 
-                <div className="pt-4">
+                <div className="pt-4 text-center">
                   <p className="text-xl text-gray-600">
                     Syndeo offers many integrations to save you time, reduce
                     duplication and boost your productivity.
@@ -249,6 +251,106 @@ const Carousel = () => {
                   <button class="border-[1px] border-colorFour bg-colorFour hover:bg-colorFour hover:text-white transition duration-1000 text-white py-2 px-6 rounded-full">
                     See all the Integrations
                   </button>
+                </div>
+              </div>
+
+              <div className="pt-20">
+                <div class="text-center flex justify-center items-center">
+                  <h1 class="font-bold md:text-5xl text-4xl">
+                    Unlock your
+                    <span class="text-colorFour"> potential </span>
+                    with Syndèo
+                  </h1>
+                </div>
+
+                <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-12">
+                  <div className="flex flex-col justify-start">
+                    <div className="w-full flex justify-center items-center pt-6">
+                      <div className="w-full">
+                        <Accordion
+                          title="How can I manage all the bookings made in the booking software?"
+                          answer="You can have complete control over all the bookings that are made in the system. You can set flexible business hours at both the staff and service levels, set a limit on the number of bookings that can be made per client, and choose how much in advance clients can book, reschedule, or cancel their appointments."
+                        />
+                        <Accordion
+                          title="Can I sync my personal calendar with an online booking platform?"
+                          answer="
+                      Yes. Appointy offers a two-way sync with personal and work calendars like Google Calendar, iCal, Outlook, and more. You can export bookings from Syndèo to personal calendar, and also import bookings from your personal calendar to Syndèo to block those times."
+                        />
+                        <Accordion
+                          title="Can different staff members have their own login?"
+                          answer="Yes, Syndèo lets your staff members manage their bookings and schedule by enabling separate staff logins. The system allows the admin to automatically track staff schedules, productivity, etc."
+                        />
+                        <Accordion
+                          title="How can our customers contact us for immediate guidance?"
+                          answer="You can contact us through mail on syndèoservices@clouddatanetworks.com or go to the Contact page for further information. And we are ready to help."
+                        />
+                      </div>
+                    </div>
+
+                    <div className="flex lg:justify-start justify-center items-center pt-8">
+                      <a
+                        href="/login"
+                        className="bg-colorFour hover:bg-[#14a800] font-semibold outline-none
+              rounded-3xl hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center ml-2"
+                      >
+                        Sign up to Syndèo
+                      </a>
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="https://25078520.fs1.hubspotusercontent-eu1.net/hubfs/25078520/2022/illustrations/features/appointmenttypes@2x.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-12">
+                  <div>
+                    <div className="flex flex-col space-y-4">
+                      <div>
+                        <h1 className="lg:text-5xl text-4xl font-bold tracking-normal md:leading-relaxed leading-normal">
+                          Motivated to make a better future, connect to us
+                          through this form.
+                        </h1>
+                      </div>
+                      <div>
+                        <h1 className="leading-relaxed tracking-wide font-medium lg:text-[20px] text-[16px] text-gray-600 d ">
+                          We craft beautiful and unique digital experiences.
+                          With a better industy knowledge and expertise, we
+                          design and code clean websites and apps!
+                        </h1>
+                      </div>
+                      <div>
+                        <ul className="space-y-4 text-colorTwo font-semibold leading-relaxed tracking-wide flex flex-col list-disc md:mx-4 mx-8">
+                          <li>
+                            99% successful appointment scheduling through our
+                            syndèo.
+                          </li>
+                          <li>
+                            4.8 / 5 Excellent Ratings From clients and
+                            customers.
+                          </li>
+                          <li>
+                            Thousands of meetings scheduled through syndèo
+                            platform.
+                          </li>
+                          <li>
+                            Services available across all the countries of the
+                            globe.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <img
+                      src="https://25078520.fs1.hubspotusercontent-eu1.net/hub/25078520/hubfs/2022/illustrations/howitworks/calendar_bookings@2x.png?width=800&name=calendar_bookings@2x.png"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             </div>

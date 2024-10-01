@@ -119,12 +119,10 @@ const ContactOne = () => {
                     </div>
                   </div>
 
-                  <div className="w-full flex justify-center items-center">
-                    <div className="mb-5 md:w-8/12 w-full">
-                      <button className="hover:shadow-form rounded-3xl bg-colorFour hover:bg-colorFour transition duration-1000 ease-in-out py-3 px-12 text-base font-semibold text-white outline-none">
-                        Submit
-                      </button>
-                    </div>
+                  <div className="w-full flex lg:justify-start justify-center">
+                    <button className="hover:shadow-form rounded-3xl bg-colorFour hover:bg-colorFour transition duration-1000 ease-in-out py-3 px-12 text-base font-semibold text-white outline-none">
+                      Submit
+                    </button>
                   </div>
                 </form>
               </div>

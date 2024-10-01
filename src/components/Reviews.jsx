@@ -3,7 +3,7 @@ import Star from "../../public/Star.svg";
 const Reviews = () => {
   return (
     <section>
-      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 flex justify-center flex-col">
+      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-12 flex justify-center flex-col">
         <div class="py-8">
           <div class="text-center flex justify-center items-center">
             <h1 class="font-bold md:text-5xl text-4xl">
