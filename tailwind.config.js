@@ -13,8 +13,6 @@ export default {
         colorThree: "#2a3b2c",
         colorFour: "#00684A",
         colorFive: "#000000",
-        cdnColor: "#1a2b6d",
-        cdnColorTwo: "#e7473c",
       },
     },
   },

@@ -2,11 +2,15 @@ import { Icon } from "react-icons-kit";
 import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { useState } from "react";
 import { eye } from "react-icons-kit/feather/eye";
+import axios from "axios";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [type, setType] = useState("password");
   const [icon, setIcon] = useState(eyeOff);
+  const navigate = useNavigate();
   const handleToggle = () => {
     if (type === "password") {
       setIcon(eye);
@@ -16,6 +20,45 @@ const Login = () => {
       setType("password");
     }
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // dispatch(showLoading());
+    axios
+      .post("http://localhost:8080/api/v1/login", {
+        email,
+        password,
+      })
+      .then((response) => {
+        // window.location.reload();
+        // dispatch(hideLoading());
+        if (response.status === 200) {
+          localStorage.setItem("token", response.data.token);
+          console.log(response.data.token);
+          Swal.fire({
+            title: "Login Success",
+            icon: "success",
+          });
+          navigate("/dashboard");
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Incorrect Credentials !!!",
+            text: "The username and/or password doesn't match. Please enter valid username and correct password.",
+          });
+        }
+      })
+      .catch((error) => {
+        // dispatch(hideLoading());
+        console.log(error);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+        });
+      });
+  };
+
   return (
     <div>
       {/* <Navbar /> */}
@@ -32,7 +75,7 @@ const Login = () => {
                       </h1>
                       <form
                         className="space-y-4 md:space-y-6"
-                        // onSubmit={handleSubmit}
+                        onSubmit={handleSubmit}
                       >
                         <div>
                           <label
@@ -162,7 +205,6 @@ const Login = () => {
                   <img
                     src="https://doodle.com/auth/resources/18.0.1/login/doodle-v2/img/new-registration-desktop.svg"
                     alt=""
-                 
                   />
                 </div>
                 <div className="font-semibold lg:text-2xl text-xl tracking-wide lg:text-start text-center">
