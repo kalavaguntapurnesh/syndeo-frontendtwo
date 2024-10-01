@@ -27,28 +27,28 @@ function Register() {
   // const dispatch = useDispatch();
 
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [valid, setValid] = useState(true);
+  // const [valid, setValid] = useState(true);
 
-  const handleChange = (event) => {
-    const input = event.target.value;
-    setPhoneNumber(input);
-    setValid(validPhoneNumber(input));
-  };
+  // const handleChange = (event) => {
+  //   const input = event.target.value;
+  //   setPhoneNumber(input);
+  //   setValid(validPhoneNumber(input));
+  // };
 
-  const validPhoneNumber = () => {
-    const phoneNumberPattern = /^\d{10}$/;
-    return phoneNumberPattern.test(phoneNumber);
-  };
+  // const validPhoneNumber = () => {
+  //   const phoneNumberPattern = /^\d{10}$/;
+  //   return phoneNumberPattern.test(phoneNumber);
+  // };
 
-  const handleToggle = () => {
-    if (type === "password") {
-      setIcon(eye);
-      setType("text");
-    } else {
-      setIcon(eyeOff);
-      setType("password");
-    }
-  };
+  // const handleToggle = () => {
+  //   if (type === "password") {
+  //     setIcon(eye);
+  //     setType("text");
+  //   } else {
+  //     setIcon(eyeOff);
+  //     setType("password");
+  //   }
+  // };
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
@@ -328,7 +328,7 @@ function Register() {
                             title="Must start with either 7, 8, 9 and should be of 10 numbers"
                             required
                             value={phoneNumber}
-                            onChange={handleChange}
+                            // onChange={handleChange}
                           />
                           </div>
                         </div>
@@ -355,7 +355,7 @@ function Register() {
                             onChange={(e) => setPassword(e.target.value)}
                           ></input>
                           <span
-                            onClick={handleToggle}
+                            // onClick={handleToggle}
                             className="cursor-pointer flex justify-center items-center"
                           >
                             <Icon
