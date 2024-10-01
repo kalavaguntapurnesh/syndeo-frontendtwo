@@ -361,7 +361,7 @@ function Register() {
                                     }
                                   ></input>
                                   <span
-                                    onClick={handleToggle}
+                                    // onClick={handleToggle}
                                     className="cursor-pointer flex justify-center items-center"
                                   >
                                     <Icon
