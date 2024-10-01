@@ -355,7 +355,7 @@ function Register() {
                             onChange={(e) => setPassword(e.target.value)}
                           ></input>
                           <span
-                            // onClick={handleToggle}
+                            onClick={handleToggle}
                             className="cursor-pointer flex justify-center items-center"
                           >
                             <Icon
