@@ -7,6 +7,7 @@ import Register from "./pages/Register";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
         <Route path="/pricing" element={<Pricing />}></Route>
 
         <Route path="/contact" element={<Contact />}></Route>
+
+        <Route path="/dashboard" element={<Dashboard />}></Route>
       </Routes>
     </BrowserRouter>
   );
