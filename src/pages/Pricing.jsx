@@ -199,7 +199,7 @@ const Pricing = () => {
                   </div>
                   <div>
                     <div class="bg-cdnColor p-2 rounded-lg text-center">
-                      <h4 class="text-2xl font-bold text-white">$9.90</h4>
+                      <h4 class="text-2xl font-bold text-gray-900">$9.90</h4>
                       <p class="text-xs text-gray-300">Per month</p>
                     </div>
                   </div>
