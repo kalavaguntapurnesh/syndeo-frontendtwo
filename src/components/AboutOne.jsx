@@ -46,7 +46,9 @@ const AboutOne = () => {
 
             <div className="mt-20 bg-slate-100 rounded space-y-4 md:h-60">
               <div className="text-center md:pt-8 pt-6">
-                <h1 className=" text-4xl font-bold tracking-tight">Syndèo in numbers</h1>
+                <h1 className=" text-4xl font-bold tracking-tight">
+                  Syndèo in numbers
+                </h1>
               </div>
               <div className="mx-auto max-w-[800px] md:pb-2 pb-6">
                 <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
@@ -82,7 +84,9 @@ const AboutOne = () => {
 
             <div className="pt-8 space-y-4">
               <div className="text-center md:pt-8 pt-6">
-                <h1 className=" text-4xl font-bold tracking-tight">Our Company Values</h1>
+                <h1 className=" text-4xl font-bold tracking-tight">
+                  Our <span className="text-colorFour">Company</span> Values
+                </h1>
               </div>
               <div className="text-center text-gray-500 md:text-xl">
                 <p>

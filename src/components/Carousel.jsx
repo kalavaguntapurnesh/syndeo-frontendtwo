@@ -128,11 +128,11 @@ const Carousel = () => {
               <div className="pt-20">
                 <div className="pt-4">
                   <h1 className="text-4xl font-bold tracking-tight text-center">
-                    Fits seamlessly into the way{" "}
-                    <span className="text-colorFour">you work</span>
+                    Fits seamlessly into{" "}
+                    <span className="text-colorFour">the</span> world of
+                    scheduling
                   </h1>
                 </div>
-
                 <div className="pt-4 text-center">
                   <p className="text-xl text-gray-600">
                     Syndeo offers many integrations to save you time, reduce
