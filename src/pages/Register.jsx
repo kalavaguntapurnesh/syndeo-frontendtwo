@@ -108,7 +108,7 @@ function Register() {
                   <div>
                     <section className="my-8 ">
                       <div className="flex flex-col items-center justify-center px-6 mx-auto">
-                        <div className="w-full bg-white rounded-lg shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:border md:mt-0 sm:max-w-xl xl:p-0 dark:bg-gray-800 dark:border-gray-700 ">
+                        <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-xl xl:p-0 dark:bg-gray-800 dark:border-gray-700 ">
                           <div className="p-6 space-y-4 md:space-y-4 sm:p-8">
                             <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-colorThree md:text-2xl dark:text-white">
                               Sign up to your account
