@@ -1,5 +1,205 @@
+import Layout from "./../components/Layout";
+import chrome from "../assets/chrome.svg";
+import ai from "../assets/AI.svg";
+import calendar from "../assets/calendar.svg";
+import clock from "../assets/clock.svg";
+import premium from "../assets/PREMIUM.svg";
+import gc from "../assets/GC.svg";
+import success from "../assets/success.svg";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+
 const Dashboard = () => {
-  return <div>Dashboard</div>;
+  return (
+    <div>
+      <Layout>
+        <div>
+          <h1 className="pb-3 font-medium leading-normal tracking-normal text-2xl lg:text-start text-center">
+            Hello, Purnesh Kalavagunta
+          </h1>
+        </div>
+
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 pt-8">
+          <a href="" class="flex md:justify-start justify-center">
+            <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+              <div class="space-y-4">
+                <div className="py-8 space-y-2">
+                  <div className="flex justify-center items-center">
+                    <img src={ai} alt="" className="w-12 h-12" />
+                  </div>
+                  <div className="flex justify-center items-center text-center">
+                    <h1 className="text-xl font-semibold">
+                      Create booking page
+                    </h1>
+                  </div>
+                  <div className="flex justify-center items-center text-center">
+                    <p className="text-gray-500">
+                      Start taking bookings and meet with your customers in no
+                      time.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex justify-center py-8">
+                  <a href="" className="text-colorFour font-semibold">
+                    Create an event
+                  </a>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="" class="flex md:justify-start justify-center">
+            <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+              <div class="space-y-4">
+                <div className="py-8 space-y-2">
+                  <div className="flex justify-center items-center">
+                    <img src={calendar} alt="" className="w-12 h-12" />
+                  </div>
+                  <div className="flex justify-center items-center text-center">
+                    <h1 className="text-xl font-semibold">
+                      No Upcoming bookings
+                    </h1>
+                  </div>
+                  <div className="flex justify-center items-center text-center">
+                    <p className="text-gray-500">
+                      As soon as someone books a time with you it will show up
+                      here.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex justify-center py-8">
+                  <a href="" className="text-colorFour font-semibold">
+                    View all Bookings
+                  </a>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="" class="flex md:justify-start justify-center">
+            <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+              <div class="space-y-4">
+                <div className="flex justify-center items-center">
+                  <img src={premium} alt="" className="w-12 h-12" />
+                </div>
+                <div className="flex justify-center items-center text-center">
+                  <h1 className="text-xl font-semibold">
+                    Try our powerful features
+                  </h1>
+                </div>
+                {/* <div className="flex justify-center items-center text-center">
+                  <p className="text-gray-500">
+                    Start 14 day trial to get more out of YouCanBookMe
+                  </p>
+                </div> */}
+
+                <div className="bg-[#f8f9f8] rounded space-y-1">
+                  <div className="flex flex-row justify-start items-center">
+                    <img src={success} alt="" className="w-4 h-4 ml-2" />
+                    <h1 className="ml-4 text-gray-500">Automatic reminders</h1>
+                  </div>
+
+                  <div className="flex flex-row justify-start items-center">
+                    <img src={success} alt="" className="w-4 h-4 ml-2" />
+                    <h1 className="ml-4  text-gray-500">
+                      Workflows to follow up on meetings and track no-shows
+                    </h1>
+                  </div>
+
+                  <div className="flex flex-row justify-start items-center">
+                    <img src={success} alt="" className="w-4 h-4 ml-2" />
+                    <h1 className="ml-4  text-gray-500">
+                      Let bookers choose meeting length
+                    </h1>
+                  </div>
+                </div>
+
+                <div className="flex justify-center py-6">
+                  <button class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full">
+                    Start making event
+                  </button>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <h1 className="pt-8 font-medium leading-normal tracking-normal text-2xl lg:text-start text-center">
+            Useful links
+          </h1>
+        </div>
+
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 pt-4">
+          <a href="" class="flex md:justify-start justify-center">
+            <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+              <div class="flex flex-row justify-between">
+                <div className="flex justify-center items-center">
+                  <img src={gc} alt="" className="w-8 h-8" />
+                </div>
+                <div className="flex justify-center items-center">
+                  <h1 className="font-semibold text-lg">Add to Calendar</h1>
+                </div>
+                <div className="flex justify-center items-center">
+                  <MdOutlineKeyboardArrowRight className="text-gray-500" />
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="" class="flex md:justify-start justify-center">
+            <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+              <div class="flex flex-row justify-between">
+                <div className="flex justify-center items-center">
+                  <img src={chrome} alt="" className="w-8 h-8" />
+                </div>
+                <div className="flex justify-center items-center">
+                  <h1 className="font-semibold text-lg">Chrome Extension</h1>
+                </div>
+                <div className="flex justify-center items-center">
+                  <MdOutlineKeyboardArrowRight className="text-gray-500" />
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="" class="flex md:justify-start justify-center">
+            <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+              <div class="flex flex-row justify-between">
+                <div className="flex justify-center items-center">
+                  <img src={clock} alt="" className="w-8 h-8" />
+                </div>
+                <div className="flex justify-center items-center">
+                  <h1 className="font-semibold text-lg">Automatic Reminders</h1>
+                </div>
+                <div className="flex justify-center items-center">
+                  <MdOutlineKeyboardArrowRight className="text-gray-500" />
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </Layout>
+
+      <div className="w-full bg-white text-gray-500 text-sm rounded-4xl">
+        <div className="mx-auto max-w-[600px] py-6">
+          <div className="grid md:grid-cols-4 grid-cols-2 gap-4">
+            <div className="flex justify-center items-center">
+              <a href="">© 2024 Syndeo Ltd</a>
+            </div>
+            <div className="flex justify-center items-center">
+              <a href="">Terms</a>
+            </div>
+            <div className="flex justify-center items-center">
+              <a href="">Privacy</a>
+            </div>
+            <div className="flex justify-center items-center text-colorFour font-bold">
+              <a href="">Syndèo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Dashboard;
