@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Dashboard from "./pages/Dashboard";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
+import MySchedules from "./pages/MySchedules";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
 
         <Route path="/contact" element={<Contact />}></Route>
 
+        <Route path="/bookings" element={<MySchedules />}></Route>
         <Route path="/dashboard" element={<Dashboard />}></Route>
         <Route path="/forgotPassword" element={<ForgotPassword />}></Route>
         <Route

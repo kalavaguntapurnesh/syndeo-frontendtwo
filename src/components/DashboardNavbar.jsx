@@ -53,7 +53,7 @@ const DashboardNavbar = () => {
     },
     {
       name: "My Bookings",
-      path: "/book",
+      path: "/bookings",
       icon: MdOutlineTimer,
     },
     {
