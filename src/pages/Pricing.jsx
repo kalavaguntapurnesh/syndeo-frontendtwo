@@ -195,12 +195,12 @@ const Pricing = () => {
                 <div class="flex justify-between items-center">
                   <div>
                     <h4 class="text-2xl font-bold text-black">Professional</h4>
-                    <p class="text-xs text-gray-300">Individual level</p>
+                    <p class="text-xs text-gray-500">Individual level</p>
                   </div>
                   <div>
-                    <div class="bg-cdnColor p-2 rounded-lg text-center">
+                    <div class="bg-gray-100 p-2 rounded-lg text-center">
                       <h4 class="text-2xl font-bold text-gray-900">$9.90</h4>
-                      <p class="text-xs text-gray-300">Per month</p>
+                      <p class="text-xs text-gray-500">Per month</p>
                     </div>
                   </div>
                 </div>
