@@ -6,21 +6,26 @@ import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { showLoading, hideLoading } from "../redux/features/alertSlice";
 
 const CreateSchedule = () => {
+  const { user } = useSelector((state) => state.user);
   const params = useParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [date, setDate] = useState(new Date());
   const [showModal, setShowModal] = useState(false);
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [location, setLocation] = useState("");
 
   const handleDateChange = (newDate) => {
     setDate(newDate);
     setShowModal(false); // Close the modal after date selection
   };
-
-  console.log("Date is : ", date);
 
   const handleStartTimeChange = (event) => {
     setStartTime(event.target.value);
@@ -54,6 +59,41 @@ const CreateSchedule = () => {
     return options;
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    dispatch(showLoading());
+    axios
+      .post("http://localhost:8080/api/v1/makeIndividualSchedules", {
+        userId: params.id,
+        title,
+        description,
+        location,
+        date,
+        startTime,
+        endTime,
+      })
+      .then((response) => {
+        dispatch(hideLoading());
+        if (response.status === 200) {
+          Swal.fire({
+            title: "Schedule booking Successful",
+            text: "Invites can use the link below to attend the event.",
+            icon: "success",
+          });
+          navigate("/login");
+        }
+      })
+      .catch((error) => {
+        dispatch(hideLoading());
+        console.log(error);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+        });
+      });
+  };
+
   return (
     <div>
       <Layout>
@@ -63,10 +103,7 @@ const CreateSchedule = () => {
           </h1>
         </div>
 
-        <form
-          className="space-y-4 md:space-y-6"
-          //  onSubmit={handleSubmit}
-        >
+        <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div>
               <label
@@ -82,7 +119,7 @@ const CreateSchedule = () => {
                 className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Give your event a name"
                 required
-                onChange={(e) => setFirstName(e.target.value)}
+                onChange={(e) => setTitle(e.target.value)}
               ></input>
             </div>
 
@@ -100,7 +137,7 @@ const CreateSchedule = () => {
                 className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Here you can include things like agenda, instructions and other details."
                 required
-                onChange={(e) => setFirstName(e.target.value)}
+                onChange={(e) => setDescription(e.target.value)}
               ></input>
             </div>
 
@@ -118,7 +155,7 @@ const CreateSchedule = () => {
                 className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Enter your location or address of the event"
                 required
-                onChange={(e) => setFirstName(e.target.value)}
+                onChange={(e) => setLocation(e.target.value)}
               ></input>
             </div>
 
@@ -138,7 +175,7 @@ const CreateSchedule = () => {
                 className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Select the date for your event"
                 required
-                onChange={(e) => setFirstName(e.target.value)}
+                onChange={(e) => setDate(e.target.value)}
               ></input>
 
               {showModal && (

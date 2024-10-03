@@ -5,12 +5,16 @@ import { eye } from "react-icons-kit/feather/eye";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { showLoading, hideLoading } from "../redux/features/alertSlice";
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [type, setType] = useState("password");
   const [icon, setIcon] = useState(eyeOff);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const handleToggle = () => {
     if (type === "password") {
       setIcon(eye);
@@ -23,15 +27,15 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // dispatch(showLoading());
+    dispatch(showLoading());
     axios
       .post("http://localhost:8080/api/v1/login", {
         email,
         password,
       })
       .then((response) => {
-        // window.location.reload();
-        // dispatch(hideLoading());
+        window.location.reload();
+        dispatch(hideLoading());
         if (response.status === 200) {
           localStorage.setItem("token", response.data.token);
           console.log(response.data.token);
@@ -49,7 +53,7 @@ const Login = () => {
         }
       })
       .catch((error) => {
-        // dispatch(hideLoading());
+        dispatch(hideLoading());
         console.log(error);
         Swal.fire({
           icon: "error",

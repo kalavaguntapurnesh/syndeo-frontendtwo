@@ -1,8 +1,43 @@
 import Layout from "./../components/Layout";
-import { ImSortAmountDesc } from "react-icons/im";
 import calendar from "../assets/calendar.svg";
+import { useNavigate, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { showLoading, hideLoading } from "../redux/features/alertSlice";
+import axios from "axios";
+import Swal from "sweetalert2";
+import { useEffect, useState } from "react";
 
 const MySchedules = () => {
+  const { user } = useSelector((state) => state.user);
+  const [individualSchedules, setIndividualSchedules] = useState();
+  const params = useParams();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const getIndividualSchedules = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/api/v1/getIndividualSchedules",
+        { userId: params.id }
+      );
+      if (response.data) {
+        setIndividualSchedules(response.data);
+        console.log("individual schedules are : ", individualSchedules);
+      }
+    } catch (error) {
+      console.log(error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+      });
+    }
+  };
+
+  useEffect(() => {
+    getIndividualSchedules();
+  }, []);
+
   return (
     <div>
       <Layout>

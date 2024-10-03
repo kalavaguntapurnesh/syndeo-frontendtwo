@@ -115,7 +115,7 @@ function App() {
           ></Route>
 
           <Route
-            path="/addEmployees"
+            path="/addEmployees/:id"
             element={
               <ProtectedRoute>
                 <AddEmployees />
@@ -123,7 +123,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/allEmployees"
+            path="/allEmployees/:id"
             element={
               <ProtectedRoute>
                 <AllEmployees />
@@ -132,7 +132,7 @@ function App() {
           ></Route>
 
           <Route
-            path="/profile"
+            path="/profile/:id"
             element={
               <ProtectedRoute>
                 <Profile />
@@ -140,7 +140,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/createSchedule"
+            path="/createSchedule/:id"
             element={
               <ProtectedRoute>
                 <CreateSchedule />
@@ -149,7 +149,7 @@ function App() {
           ></Route>
 
           <Route
-            path="/bookings"
+            path="/bookings/:id"
             element={
               <ProtectedRoute>
                 <MySchedules />

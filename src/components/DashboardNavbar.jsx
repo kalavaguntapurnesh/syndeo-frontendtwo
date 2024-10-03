@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { RiMenu3Fill } from "react-icons/ri";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { FaHome } from "react-icons/fa";
 import { MdOutlineTimer } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +10,7 @@ import Swal from "sweetalert2";
 const DashboardNavbar = () => {
   const [nav, setNav] = useState(false);
   const navigate = useNavigate();
+  const { user } = useSelector((state) => state.user);
 
   const [bell, setBell] = useState(false);
   const handleNav = () => {
@@ -48,17 +49,17 @@ const DashboardNavbar = () => {
     },
     {
       name: "Make a Schedule",
-      path: "/createSchedule",
+      path: `/createSchedule/${user?._id}`,
       icon: MdOutlineTimer,
     },
     {
       name: "My Bookings",
-      path: "/bookings",
+      path: `/bookings/${user?._id}`,
       icon: MdOutlineTimer,
     },
     {
       name: "Profile",
-      path: "/profile",
+      path: `/profile/${user?._id}`,
       icon: MdOutlineTimer,
     },
     {
@@ -109,7 +110,14 @@ const DashboardNavbar = () => {
     },
   ];
 
-  const NavbarMenu = userMenu;
+  const NavbarMenu =
+    user?.role === "individual"
+      ? userMenu
+      : user?.role === "organization"
+      ? orgAdminMenu
+      : user?.role === "employee"
+      ? employeeMenu
+      : adminMenu;
 
   return (
     <div>

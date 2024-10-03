@@ -7,19 +7,59 @@ import premium from "../assets/PREMIUM.svg";
 import gc from "../assets/GC.svg";
 import success from "../assets/success.svg";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+  const { user } = useSelector((state) => state.user);
+  const [customer, setCustomer] = useState(null);
+  const navigate = useNavigate();
+
+  const getCustomerInfo = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/api/v1/getUserData",
+        { userId: user?._id },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
+      if (response.data) {
+        setCustomer(response.data.data);
+      }
+    } catch (error) {
+      console.log(error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+      });
+    }
+  };
+
+  useEffect(() => {
+    getCustomerInfo();
+    //eslint-disable-next-line
+  }, []);
+
   return (
     <div>
       <Layout>
         <div>
           <h1 className="pb-3 font-medium leading-normal tracking-normal text-2xl lg:text-start text-center">
-            Hello, Purnesh Kalavagunta
+            Hello, {customer?.firstName} {customer?.lastName}
           </h1>
         </div>
 
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 pt-8">
-          <a href="" class="flex md:justify-start justify-center">
+          <button
+            onClick={() => navigate(`/createSchedule/${user?._id}`)}
+            class="flex md:justify-start justify-center"
+          >
             <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
               <div class="space-y-4">
                 <div className="py-8 space-y-2">
@@ -39,15 +79,22 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="flex justify-center py-8">
-                  <a href="" className="text-colorFour font-semibold">
+                  <button
+                    onClick={() => navigate(`/createSchedule/${user?._id}`)}
+                    className="text-colorFour font-semibold"
+                  >
                     Create an event
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
-          </a>
+          </button>
 
-          <a href="" class="flex md:justify-start justify-center">
+          <button
+            onClick={() => navigate(`/bookings/${user?._id}`)}
+            href=""
+            class="flex md:justify-start justify-center"
+          >
             <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
               <div class="space-y-4">
                 <div className="py-8 space-y-2">
@@ -67,15 +114,21 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="flex justify-center py-8">
-                  <a href="" className="text-colorFour font-semibold">
+                  <button
+                    onClick={() => navigate(`/bookings/${user?._id}`)}
+                    className="text-colorFour font-semibold"
+                  >
                     View all Bookings
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
-          </a>
+          </button>
 
-          <a href="" class="flex md:justify-start justify-center">
+          <button
+            onClick={() => navigate(`/createSchedule/${user?._id}`)}
+            class="flex md:justify-start justify-center"
+          >
             <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
               <div class="space-y-4">
                 <div className="flex justify-center items-center">
@@ -101,7 +154,7 @@ const Dashboard = () => {
                   <div className="flex flex-row justify-start items-center">
                     <img src={success} alt="" className="w-4 h-4 ml-2" />
                     <h1 className="ml-4  text-gray-500">
-                      Workflows to follow up on meetings and track no-shows
+                      Workflows to follow up meetings and track no-shows
                     </h1>
                   </div>
 
@@ -114,13 +167,16 @@ const Dashboard = () => {
                 </div>
 
                 <div className="flex justify-center py-6">
-                  <button class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full">
+                  <button
+                    onClick={() => navigate(`/createSchedule/${user?._id}`)}
+                    class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full"
+                  >
                     Start making event
                   </button>
                 </div>
               </div>
             </div>
-          </a>
+          </button>
         </div>
 
         <div>
