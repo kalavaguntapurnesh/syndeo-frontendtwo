@@ -1,7 +1,9 @@
 const PageNotFound = () => {
   return (
     <main class="h-screen w-full flex flex-col justify-center items-center bg-white">
-      <h1 class="text-9xl font-extrabold text-colorFour tracking-widest">404</h1>
+      <h1 class="text-9xl font-extrabold text-colorFour tracking-widest">
+        404
+      </h1>
       <div class="bg-colorFour text-white font-semibold px-2 text-sm rounded rotate-12 absolute">
         Page Not Found
       </div>
