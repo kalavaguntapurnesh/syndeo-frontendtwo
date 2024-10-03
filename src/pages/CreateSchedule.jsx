@@ -68,7 +68,7 @@ const CreateSchedule = () => {
         title,
         description,
         location,
-        date,
+        date: date.toDateString(),
         startTime,
         endTime,
       })

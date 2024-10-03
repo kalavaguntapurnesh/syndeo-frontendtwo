@@ -1,4 +1,4 @@
-import Star from "../../public/Star.svg";
+import Star from "../assets/Star.svg";
 
 const Reviews = () => {
   return (
