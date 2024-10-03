@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import { AiOutlineMenu } from "react-icons/ai";
+import { RiMenu3Fill } from "react-icons/ri";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -46,9 +46,9 @@ const Navbar = () => {
 
             <div onClick={handleNav} className="block md:hidden cursor-pointer">
               {!nav ? (
-                <AiOutlineMenu size={30} className=" mr-4 mt-6" />
+                <RiMenu3Fill size={28} className=" mr-4 mt-6" />
               ) : (
-                <AiOutlineClose size={30} className=" mr-4 mt-6" />
+                <AiOutlineClose size={28} className=" mr-4 mt-6" />
               )}
             </div>
 

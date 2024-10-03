@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import { AiOutlineMenu } from "react-icons/ai";
+import { RiMenu3Fill } from "react-icons/ri";
 // import { useSelector } from "react-redux";
 import { FaHome } from "react-icons/fa";
 import { MdOutlineTimer } from "react-icons/md";
@@ -138,7 +138,7 @@ const DashboardNavbar = () => {
               <div className="lg:block hidden mr-8">
                 <button
                   onClick={handleLogout}
-                  class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full"
+                  class=" bg-colorFour hover:bg-green-600 transition duration-1000 text-white py-2 px-6 rounded-full"
                 >
                   Logout
                 </button>
@@ -158,9 +158,9 @@ const DashboardNavbar = () => {
                 className="block lg:hidden cursor-pointer"
               >
                 {!nav ? (
-                  <AiOutlineMenu size={30} className=" mr-4 " />
+                  <RiMenu3Fill size={28} className=" mr-4 " />
                 ) : (
-                  <AiOutlineClose size={30} className=" mr-4 " />
+                  <AiOutlineClose size={28} className=" mr-4" />
                 )}
               </div>
 
@@ -184,14 +184,14 @@ const DashboardNavbar = () => {
                     </div>
                   ))}
                 </div>
-                <div className="uppercase">
+                {/* <div className="uppercase">
                   <a
                     href="/notifications"
                     className="py-4 px-8 border-gray-600 text-colorThree cursor-pointer font-medium dark:text-white"
                   >
                     Notifications
                   </a>
-                </div>
+                </div> */}
                 <div className="uppercase mt-6 px-8" onClick={handleLogout}>
                   <a
                     className="py-2.5 px-8 border-gray-600 cursor-pointer font-medium bg-cdnColorTwo
