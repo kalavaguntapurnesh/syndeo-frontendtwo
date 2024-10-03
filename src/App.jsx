@@ -13,6 +13,9 @@ import ResetPassword from "./pages/ResetPassword";
 import MySchedules from "./pages/MySchedules";
 import Profile from "./pages/Profile";
 import CreateSchedule from "./pages/CreateSchedule";
+import AddEmployees from "./pages/AddEmployees";
+import AllEmployees from "./pages/AllEmployees";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
 
         <Route path="/privacy" element={<Privacy />}></Route>
         <Route path="/register" element={<Register />}></Route>
+
+        <Route path="/addEmployees" element={<AddEmployees />}></Route>
+        <Route path="/allEmployees" element={<AllEmployees />}></Route>
 
         <Route path="/pricing" element={<Pricing />}></Route>
 
@@ -39,6 +45,7 @@ function App() {
           path="/resetPassword/:id/:token"
           element={<ResetPassword />}
         ></Route>
+        <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
     </BrowserRouter>
   );
