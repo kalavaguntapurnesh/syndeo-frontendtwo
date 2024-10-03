@@ -47,8 +47,8 @@ const DashboardNavbar = () => {
       icon: FaHome,
     },
     {
-      name: "Make Schedules",
-      path: "/book",
+      name: "Make a Schedule",
+      path: "/createSchedule",
       icon: MdOutlineTimer,
     },
     {
@@ -57,13 +57,13 @@ const DashboardNavbar = () => {
       icon: MdOutlineTimer,
     },
     {
-      name: "Pages",
-      path: "/book",
+      name: "Profile",
+      path: "/profile",
       icon: MdOutlineTimer,
     },
     {
       name: "Templates",
-      path: "/book",
+      path: "/dashboard",
       icon: MdOutlineTimer,
     },
   ];

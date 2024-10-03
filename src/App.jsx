@@ -11,6 +11,8 @@ import Dashboard from "./pages/Dashboard";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import MySchedules from "./pages/MySchedules";
+import Profile from "./pages/Profile";
+import CreateSchedule from "./pages/CreateSchedule";
 
 function App() {
   return (
@@ -26,6 +28,9 @@ function App() {
         <Route path="/pricing" element={<Pricing />}></Route>
 
         <Route path="/contact" element={<Contact />}></Route>
+
+        <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/createSchedule" element={<CreateSchedule />}></Route>
 
         <Route path="/bookings" element={<MySchedules />}></Route>
         <Route path="/dashboard" element={<Dashboard />}></Route>
