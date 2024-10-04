@@ -327,7 +327,7 @@ function Register() {
                                     aria-describedby="helper-text-explanation"
                                     className=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                    pattern="[789][0-9]{9}"
+                                    // pattern="[789][0-9]{9}"
                                     placeholder="123-456-7890"
                                     title="Must start with either 7, 8, 9 and should be of 10 numbers"
                                     required
