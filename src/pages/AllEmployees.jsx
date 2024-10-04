@@ -22,10 +22,6 @@ const AllEmployees = () => {
       );
       if (response.status === 200) {
         setEmployees(response.data.data);
-        Swal.fire({
-          title: "Employees Fetched Successfully",
-          icon: "success",
-        });
       }
     } catch (error) {
       console.log("Error in fetching employyes", error);
@@ -56,16 +52,7 @@ const AllEmployees = () => {
               <thead>
                 <tr>
                   <th className="px-6 py-3 bg-colorFour text-left text-xs font-medium text-white uppercase tracking-wider">
-                    Title
-                  </th>
-                  <th className="px-6 py-3 bg-colorFour lg:block hidden text-left text-xs font-medium text-white uppercase tracking-wider">
-                    Description
-                  </th>
-                  <th className="px-6 py-3 bg-colorFour text-left text-xs font-medium text-white uppercase tracking-wider">
-                    Location
-                  </th>
-                  <th className="px-6 py-3 bg-colorFour text-left text-xs font-medium text-white uppercase tracking-wider">
-                    Date
+                    Employee ID
                   </th>
                   <th className="px-6 py-3 bg-colorFour text-left text-xs font-medium text-white uppercase tracking-wider">
                     Start Time
@@ -76,28 +63,19 @@ const AllEmployees = () => {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {/* {individualSchedules.map((schedule) => (
+                {employees.map((employee) => (
                   <tr>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">
-                      {schedule.title}
+                      {employee.employeeId}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap lg:block hidden text-sm font-medium text-gray-600">
-                      {schedule.description}
+                      {employee.officeStartTime}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">
-                      {schedule.location}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">
-                      {schedule.date}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">
-                      {schedule.startTime}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">
-                      {schedule.endTime}
+                      {employee.officeEndTime}
                     </td>
                   </tr>
-                ))} */}
+                ))}
               </tbody>
             </table>
           </div>
