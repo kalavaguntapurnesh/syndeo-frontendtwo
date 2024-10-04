@@ -7,6 +7,9 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { showLoading, hideLoading } from "../redux/features/alertSlice";
+import { FaHome } from "react-icons/fa";
+import { FaIndustry } from "react-icons/fa";
+import { FaMicrophone } from "react-icons/fa6";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -228,6 +231,31 @@ const Login = () => {
                       Sign-up Sheet, 1:1, and Booking Page features
                     </li>
                   </ul>
+                </div>
+
+                <div className="w-full lg:pt-2 pt-4 lg:pb-0 pb-4">
+                  <div className="grid grid-cols-3 gap-3">
+                    <div className="flex flex-row justify-center items-center">
+                      <FaHome className="text-colorFour w-4 h-4 mr-1" />
+                      <a href="/" className=" text-colorFour font-semibold">
+                        <h1>Home</h1>
+                      </a>
+                    </div>
+
+                    <div className="flex flex-row justify-center items-center">
+                      <FaIndustry className="text-colorFour w-4 h-4 mr-1" />
+                      <a href="/" className=" text-colorFour font-semibold">
+                        <h1>About Us</h1>
+                      </a>
+                    </div>
+
+                    <div className="flex flex-row justify-center items-center">
+                      <FaMicrophone className="text-colorFour w-4 h-4 mr-1" />
+                      <a href="/" className=" text-colorFour font-semibold">
+                        <h1>Contact Us</h1>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

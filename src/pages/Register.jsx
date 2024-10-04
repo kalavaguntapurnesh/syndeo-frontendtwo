@@ -9,7 +9,9 @@ import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { eye } from "react-icons-kit/feather/eye";
 import Select from "react-select";
 import { Country, State, City } from "country-state-city";
-import Footer from "../components/Footer";
+import { FaHome } from "react-icons/fa";
+import { FaIndustry } from "react-icons/fa";
+import { FaMicrophone } from "react-icons/fa6";
 
 function Register() {
   const [firstName, setFirstName] = useState("");
@@ -459,7 +461,7 @@ function Register() {
                 <div className="font-semibold lg:text-2xl text-xl tracking-wide lg:text-start text-center">
                   <h1>Join millions of people who own their time.</h1>
                 </div>
-                <div className="text-base text-gray-600 lg:pb-0 pb-4">
+                <div className="text-base text-gray-600 ">
                   <ul className="space-y-2 ">
                     <li className="lg:text-start text-center">
                       &#x2022; Quick and easy meeting scheduling
@@ -473,6 +475,31 @@ function Register() {
                       Sign-up Sheet, 1:1, and Booking Page features
                     </li>
                   </ul>
+                </div>
+
+                <div className="w-full lg:pt-2 pt-4 lg:pb-0 pb-4">
+                  <div className="grid grid-cols-3 gap-3">
+                    <div className="flex flex-row justify-center items-center">
+                      <FaHome className="text-colorFour w-4 h-4 mr-1" />
+                      <a href="/" className=" text-colorFour font-semibold">
+                        <h1>Home</h1>
+                      </a>
+                    </div>
+
+                    <div className="flex flex-row justify-center items-center">
+                      <FaIndustry className="text-colorFour w-4 h-4 mr-1" />
+                      <a href="/" className=" text-colorFour font-semibold">
+                        <h1>About Us</h1>
+                      </a>
+                    </div>
+
+                    <div className="flex flex-row justify-center items-center">
+                      <FaMicrophone className="text-colorFour w-4 h-4 mr-1" />
+                      <a href="/" className=" text-colorFour font-semibold">
+                        <h1>Contact Us</h1>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
