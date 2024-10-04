@@ -215,21 +215,19 @@ const Profile = () => {
                       />
                     </Form.Item>
                   </Col>
+
                   <Col xs={24} md={24} lg={8}>
                     <Form.Item
-                      label="Gender"
-                      name="gender"
+                      label="Role"
+                      name="role"
                       required
                       rules={[{ required: true }]}
                       className="font-medium"
                     >
-                      <Select
-                        onChange={setGender}
-                        label="Age"
-                        options={options}
-                      ></Select>
+                      <Input type="text" className="p-2" disabled={true} />
                     </Form.Item>
                   </Col>
+
                   <Col xs={24} md={24} lg={8}>
                     <Form.Item
                       label="Country"
@@ -353,6 +351,22 @@ const Profile = () => {
                         title="12345-6789 or 517-126"
                         placeholder="12345-6789 or 517-126"
                       />
+                    </Form.Item>
+                  </Col>
+
+                  <Col xs={24} md={24} lg={8}>
+                    <Form.Item
+                      label="Gender"
+                      name="gender"
+                      required
+                      rules={[{ required: true }]}
+                      className="font-medium"
+                    >
+                      <Select
+                        onChange={setGender}
+                        label="Age"
+                        options={options}
+                      ></Select>
                     </Form.Item>
                   </Col>
                 </Row>

@@ -20,6 +20,7 @@ import { useSelector } from "react-redux";
 import Spinner from "./components/Spinner";
 import ProtectedRoute from "./components/ProtectedRoute";
 import PublicRoute from "./components/PublicRoute";
+import EmployeeSchedules from "./pages/EmployeeSchedules";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -139,6 +140,16 @@ function App() {
               </ProtectedRoute>
             }
           ></Route>
+
+          <Route
+            path="/employeeSchedules/:id"
+            element={
+              <ProtectedRoute>
+                <EmployeeSchedules />
+              </ProtectedRoute>
+            }
+          ></Route>
+
           <Route
             path="/createSchedule/:id"
             element={

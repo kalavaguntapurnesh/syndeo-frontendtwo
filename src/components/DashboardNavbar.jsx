@@ -99,14 +99,14 @@ const DashboardNavbar = () => {
       icon: FaHome,
     },
     {
-      name: "Make Schedules",
-      path: "/book",
+      name: "Make a Schedule",
+      path: `/employeeSchedules/${user?._id}`,
       icon: FaHome,
     },
     {
-      name: "Past Schedules",
-      path: "/book",
-      icon: FaHome,
+      name: "My Schedules",
+      path: `/bookings/${user?._id}`,
+      icon: MdOutlineTimer,
     },
     {
       name: "My Profile",

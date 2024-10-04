@@ -235,26 +235,35 @@ const Login = () => {
 
                 <div className="w-full lg:pt-2 pt-4 lg:pb-0 pb-4">
                   <div className="grid grid-cols-3 gap-3">
-                    <div className="flex flex-row justify-center items-center">
+                    <a
+                      href="/"
+                      className="flex flex-row justify-center items-center"
+                    >
                       <FaHome className="text-colorFour w-4 h-4 mr-1" />
-                      <a href="/" className=" text-colorFour font-semibold">
+                      <div className=" text-colorFour font-semibold">
                         <h1>Home</h1>
-                      </a>
-                    </div>
+                      </div>
+                    </a>
 
-                    <div className="flex flex-row justify-center items-center">
+                    <a
+                      href="/about"
+                      className="flex flex-row justify-center items-center"
+                    >
                       <FaIndustry className="text-colorFour w-4 h-4 mr-1" />
-                      <a href="/" className=" text-colorFour font-semibold">
+                      <div className=" text-colorFour font-semibold">
                         <h1>About Us</h1>
-                      </a>
-                    </div>
+                      </div>
+                    </a>
 
-                    <div className="flex flex-row justify-center items-center">
+                    <a
+                      href="/contact"
+                      className="flex flex-row justify-center items-center"
+                    >
                       <FaMicrophone className="text-colorFour w-4 h-4 mr-1" />
-                      <a href="/" className=" text-colorFour font-semibold">
+                      <div className=" text-colorFour font-semibold">
                         <h1>Contact Us</h1>
-                      </a>
-                    </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>

@@ -21,6 +21,25 @@ const CreateSchedule = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
+  const [emails, setEmails] = useState([""]);
+
+  const handleEmailChange = (index, event) => {
+    const newEmails = [...emails];
+    newEmails[index] = event.target.value;
+    setEmails(newEmails);
+  };
+
+  // Function to add a new email input field
+  const addEmailField = () => {
+    setEmails([...emails, ""]);
+    console.log("The Emails are ", emails);
+  };
+
+  // Function to remove an email input field
+  const removeEmailField = (index) => {
+    const newEmails = emails.filter((_, i) => i !== index);
+    setEmails(newEmails);
+  };
 
   const handleDateChange = (newDate) => {
     setDate(newDate);
@@ -71,6 +90,7 @@ const CreateSchedule = () => {
         date: date.toDateString(),
         startTime,
         endTime,
+        emails,
       })
       .then((response) => {
         dispatch(hideLoading());
@@ -249,6 +269,58 @@ const CreateSchedule = () => {
                     return endTimeInMinutes >= startTimeInMinutes;
                   })}
               </select>
+            </div>
+          </div>
+
+          <div className="border-[1px] border-gray-400 p-3 rounded">
+            <div className="grid grid-cols-1 w-full m-1">
+              <div>
+                <label
+                  htmlFor="title"
+                  className="block mb-2 text-sm font-bold text-colorThree dark:text-white"
+                >
+                  Add Emails of Attendees
+                </label>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                  {emails.map((email, index) => (
+                    <div key={index} className="flex items-center space-x-2">
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(event) => handleEmailChange(index, event)}
+                        placeholder="Enter email"
+                        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                      />
+                      {emails.length > 1 && (
+                        <button
+                          type="button"
+                          onClick={() => removeEmailField(index)}
+                          className="p-2 text-white bg-red-500 hover:bg-red-600 rounded transition"
+                        >
+                          &times;
+                        </button>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-between mt-4">
+              <button
+                type="button"
+                onClick={addEmailField}
+                className="p-3 text-white text-sm bg-colorFour rounded-full transition"
+              >
+                Add Another Email
+              </button>
+
+              {/* <button
+                type="submit"
+                className="p-3 text-white bg-colorFour text-sm rounded-full transition"
+              >
+                Submit Emails
+              </button> */}
             </div>
           </div>
 
