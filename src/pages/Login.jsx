@@ -32,7 +32,7 @@ const Login = () => {
     e.preventDefault();
     dispatch(showLoading());
     axios
-      .post("http://localhost:8080/api/v1/login", {
+      .post("https://backend-syndeo.onrender.com/api/v1/login", {
         email,
         password,
       })

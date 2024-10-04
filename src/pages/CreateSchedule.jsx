@@ -82,16 +82,19 @@ const CreateSchedule = () => {
     e.preventDefault();
     dispatch(showLoading());
     axios
-      .post("http://localhost:8080/api/v1/makeIndividualSchedules", {
-        userId: params.id,
-        title,
-        description,
-        location,
-        date: date.toDateString(),
-        startTime,
-        endTime,
-        emails,
-      })
+      .post(
+        "https://backend-syndeo.onrender.com/api/v1/makeIndividualSchedules",
+        {
+          userId: params.id,
+          title,
+          description,
+          location,
+          date: date.toDateString(),
+          startTime,
+          endTime,
+          emails,
+        }
+      )
       .then((response) => {
         dispatch(hideLoading());
         if (response.status === 200) {

@@ -17,7 +17,7 @@ const AllEmployees = () => {
   const fetchEmployees = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/getOrganizationEmployees",
+        "https://backend-syndeo.onrender.com/api/v1/getOrganizationEmployees",
         { adminId: params.id }
       );
       if (response.status === 200) {

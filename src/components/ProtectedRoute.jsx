@@ -15,7 +15,7 @@ const ProtectedRoute = ({ children }) => {
       dispatch(showLoading());
       // console.log("Called the API");
       const response = await axios.post(
-        "https://syndeo-backend.onrender.com/auth/getUserData",
+        "https://backend-syndeo.onrender.com/api/v1/getUserData",
         {
           token: localStorage.getItem("token"),
         },

@@ -43,7 +43,7 @@ const AddEmployees = () => {
     e.preventDefault();
     dispatch(showLoading());
     axios
-      .post("http://localhost:8080/api/v1/add-employee", {
+      .post("https://backend-syndeo.onrender.com/api/v1/add-employee", {
         firstName,
         lastName,
         email,
