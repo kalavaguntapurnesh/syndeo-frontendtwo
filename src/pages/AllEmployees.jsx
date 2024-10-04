@@ -21,7 +21,8 @@ const AllEmployees = () => {
         { adminId: params.id }
       );
       if (response.status === 200) {
-        setEmployees(response.data.data);
+        setEmployees(response.data);
+        
       }
     } catch (error) {
       console.log("Error in fetching employyes", error);
@@ -54,11 +55,15 @@ const AllEmployees = () => {
                   <th className="px-6 py-3 bg-colorFour text-left text-xs font-medium text-white uppercase tracking-wider">
                     Employee ID
                   </th>
+
                   <th className="px-6 py-3 bg-colorFour text-left text-xs font-medium text-white uppercase tracking-wider">
-                    Start Time
+                    First Name
                   </th>
                   <th className="px-6 py-3 bg-colorFour text-left text-xs font-medium text-white uppercase tracking-wider">
-                    End Time
+                    Last Name
+                  </th>
+                  <th className="px-6 py-3 bg-colorFour text-left text-xs font-medium text-white uppercase tracking-wider">
+                    Email
                   </th>
                 </tr>
               </thead>
@@ -68,11 +73,14 @@ const AllEmployees = () => {
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">
                       {employee.employeeId}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap lg:block hidden text-sm font-medium text-gray-600">
-                      {employee.officeStartTime}
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">
+                      {employee.firstName}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">
-                      {employee.officeEndTime}
+                      {employee.lastName}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">
+                      {employee.email}
                     </td>
                   </tr>
                 ))}

@@ -22,7 +22,7 @@ const MySchedules = () => {
       );
       if (response.data) {
         setIndividualSchedules(response.data.data);
-        console.log("Individual schedules are : ", response.data.data);
+    
       }
     } catch (error) {
       console.log(error);
