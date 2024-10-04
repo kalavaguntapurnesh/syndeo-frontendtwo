@@ -1,16 +1,25 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-// import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { showLoading, hideLoading } from "../redux/features/alertSlice";
 import Layout from "../components/Layout";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useParams } from "react-router-dom";
+import { eye } from "react-icons-kit/feather/eye";
+import { eyeOff } from "react-icons-kit/feather/eyeOff";
+import { Icon } from "react-icons-kit";
 
 const AddEmployees = () => {
+  const { user } = useSelector((state) => state.user);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [firstName, setFirstName] = useState("");
+  const [type, setType] = useState("password");
+  const [icon, setIcon] = useState(eyeOff);
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [employeeId, setEmployeeId] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -18,8 +27,52 @@ const AddEmployees = () => {
     const input = event.target.value;
     setPhoneNumber(input);
   };
+  const handleToggle = () => {
+    if (type === "password") {
+      setIcon(eye);
+      setType("text");
+    } else {
+      setIcon(eyeOff);
+      setType("password");
+    }
+  };
 
   const params = useParams();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(showLoading());
+    axios
+      .post("http://localhost:8080/api/v1/add-employee", {
+        firstName,
+        lastName,
+        email,
+        password,
+        role: "employee",
+        phoneNumber,
+        adminId: params.id,
+        employeeId,
+      })
+      .then((response) => {
+        dispatch(hideLoading());
+        if (response.status === 201) {
+          Swal.fire({
+            title: "Employee Added Successfully",
+            icon: "success",
+          });
+        }
+        navigate("/dashboard");
+      })
+      .catch((error) => {
+        dispatch(hideLoading());
+        console.log(error);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong in adding employees!",
+        });
+      });
+  };
 
   return (
     <div>
@@ -29,10 +82,7 @@ const AddEmployees = () => {
             Add an Employee
           </h1>
         </div>
-        <form
-          className="space-y-4 md:space-y-6"
-          // onSubmit={handleSubmit}
-        >
+        <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div>
               <label
@@ -46,7 +96,7 @@ const AddEmployees = () => {
                 name="firstName"
                 id="firstName"
                 className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Your first name"
+                placeholder="Employee First Name"
                 required
                 onChange={(e) => setFirstName(e.target.value)}
               ></input>
@@ -64,7 +114,7 @@ const AddEmployees = () => {
                 name="lastName"
                 id="lastName"
                 className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Your last name"
+                placeholder="Employee Last Name"
                 required="true"
                 onChange={(e) => setLastName(e.target.value)}
               ></input>
@@ -99,9 +149,10 @@ const AddEmployees = () => {
                 type="text"
                 name="employeeId"
                 id="employeeId"
+                placeholder="123456"
                 className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 required="true"
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setEmployeeId(e.target.value)}
               ></input>
             </div>
 
@@ -113,17 +164,6 @@ const AddEmployees = () => {
                 Phone number
               </label>
               <div className="relative">
-                {/* <div className="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none">
-                  <svg
-                    className="w-4 h-4 text-gray-500 dark:text-gray-400"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    viewBox="0 0 19 18"
-                  >
-                    <path d="M18 13.446a3.02 3.02 0 0 0-.946-1.985l-1.4-1.4a3.054 3.054 0 0 0-4.218 0l-.7.7a.983.983 0 0 1-1.39 0l-2.1-2.1a.983.983 0 0 1 0-1.389l.7-.7a2.98 2.98 0 0 0 0-4.217l-1.4-1.4a2.824 2.824 0 0 0-4.218 0c-3.619 3.619-3 8.229 1.752 12.979C6.785 16.639 9.45 18 11.912 18a7.175 7.175 0 0 0 5.139-2.325A2.9 2.9 0 0 0 18 13.446Z" />
-                  </svg>
-                </div> */}
                 <input
                   type="text"
                   name="phoneNumber"
@@ -151,13 +191,25 @@ const AddEmployees = () => {
               <div className="flex flex-row">
                 <input
                   name="password"
+                  type={type}
                   value={password}
                   id="password"
+                  placeholder="******"
                   title="Password must be within 8 to 12 characters containing alteast 1 uppercase, 1 lowercase, 1 number and a special character"
                   className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   required="true"
                   onChange={(e) => setPassword(e.target.value)}
                 ></input>
+                <span
+                  onClick={handleToggle}
+                  className="cursor-pointer flex justify-center items-center"
+                >
+                  <Icon
+                    className="absolute mr-10 text-black"
+                    icon={icon}
+                    size={20}
+                  ></Icon>
+                </span>
               </div>
             </div>
           </div>

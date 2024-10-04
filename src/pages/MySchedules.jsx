@@ -59,7 +59,7 @@ const MySchedules = () => {
           </div>
         </div>
 
-        {individualSchedules ? (
+        {individualSchedules.length > 0 ? (
           <div className="mt-4">
             <table className="min-w-full bg-white border border-gray-200 shadow-md rounded-lg">
               <thead>
@@ -122,7 +122,7 @@ const MySchedules = () => {
                 </h1>
               </div>
 
-              <div className="text-center text-gray-500">
+              <div className="text-center text-gray-500 md:text-base text-sm">
                 <p>
                   Need help? Find out more about sharing your{" "}
                   <a href="/dashboard" className="text-colorFour font-medium">

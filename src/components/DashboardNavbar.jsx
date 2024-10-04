@@ -77,17 +77,17 @@ const DashboardNavbar = () => {
     },
     {
       name: "Add Employees",
-      path: "/book",
+      path: `/addEmployees/${user?._id}`,
       icon: FaHome,
     },
     {
       name: "Display Employees",
-      path: "/book",
+      path: `/allEmployees/${user?._id}`,
       icon: FaHome,
     },
     {
-      name: "Staff Information",
-      path: "/book",
+      name: "My Profile",
+      path: `/profile/${user?._id}`,
       icon: FaHome,
     },
   ];
@@ -106,6 +106,11 @@ const DashboardNavbar = () => {
     {
       name: "Past Schedules",
       path: "/book",
+      icon: FaHome,
+    },
+    {
+      name: "My Profile",
+      path: `/profile/${user?._id}`,
       icon: FaHome,
     },
   ];
