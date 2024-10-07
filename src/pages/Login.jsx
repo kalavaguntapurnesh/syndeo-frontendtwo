@@ -46,10 +46,10 @@ const Login = () => {
         if (response.status === 200) {
           localStorage.setItem("token", response.data.token);
           console.log(response.data.token);
-          Swal.fire({
-            title: "Login Success",
-            icon: "success",
-          });
+          // Swal.fire({
+          //   title: "Login Success",
+          //   icon: "success",
+          // });
           navigate("/dashboard");
         } else {
           Swal.fire({
