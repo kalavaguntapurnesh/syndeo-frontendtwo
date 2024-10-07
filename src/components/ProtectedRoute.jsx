@@ -29,9 +29,7 @@ const ProtectedRoute = ({ children }) => {
 
       dispatch(hideLoading());
       if (response.status === 200) {
-        console.log("This is from the getUser");
         dispatch(setUser(response.data.data));
-        console.log("The user in the frontend is : ", user);
       } else {
         console.log("Unable to getUserData ");
         console.log(response.status);

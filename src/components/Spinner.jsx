@@ -1,7 +1,7 @@
 const Spinner = () => {
   return (
     <div className="flex items-center justify-center z-9999 min-h-screen">
-      <div className="text-center">
+      {/* <div className="text-center">
         <div role="status">
           <svg
             aria-hidden="true"
@@ -21,6 +21,9 @@ const Spinner = () => {
           </svg>
           <span className="sr-only">Loading...</span>
         </div>
+      </div> */}
+      <div className="flex justify-center items-center h-screen">
+        <span class="loader"></span>
       </div>
     </div>
   );
