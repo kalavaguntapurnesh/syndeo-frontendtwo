@@ -56,18 +56,22 @@ function Register() {
     e.preventDefault();
     dispatch(showLoading());
     axios
-      .post("https://backend-syndeo.onrender.com/api/v1/registerUser", {
-        firstName,
-        lastName,
-        email,
-        organizationName,
-        organizationCountry,
-        organizationState,
-        organizationCity,
-        password,
-        role,
-        phoneNumber,
-      })
+      .post(
+        // "http://localhost:8080/api/v1/registerUser",
+        "https://backend-syndeo.onrender.com/api/v1/registerUser",
+        {
+          firstName,
+          lastName,
+          email,
+          organizationName,
+          organizationCountry,
+          organizationState,
+          organizationCity,
+          password,
+          role,
+          phoneNumber,
+        }
+      )
       .then((response) => {
         dispatch(hideLoading());
         if (response.status === 201) {

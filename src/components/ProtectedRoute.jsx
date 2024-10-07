@@ -15,6 +15,7 @@ const ProtectedRoute = ({ children }) => {
       dispatch(showLoading());
       // console.log("Called the API");
       const response = await axios.post(
+        // "http://localhost:8080/api/v1/getUserData",
         "https://backend-syndeo.onrender.com/api/v1/getUserData",
         {
           token: localStorage.getItem("token"),
@@ -27,11 +28,12 @@ const ProtectedRoute = ({ children }) => {
       );
 
       dispatch(hideLoading());
-      if (response.data.status) {
-        // console.log("This is from the getUser");
+      if (response.status === 200) {
+        console.log("This is from the getUser");
         dispatch(setUser(response.data.data));
+        console.log("The user in the frontend is : ", user);
       } else {
-        // console.log("Inside the error");
+        console.log("Unable to getUserData ");
         console.log(response.status);
         localStorage.clear();
         <Navigate to="/login" />;

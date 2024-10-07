@@ -83,6 +83,7 @@ const CreateSchedule = () => {
     dispatch(showLoading());
     axios
       .post(
+        // "http://localhost:8080/api/v1/makeIndividualSchedules",
         "https://backend-syndeo.onrender.com/api/v1/makeIndividualSchedules",
         {
           userId: params.id,

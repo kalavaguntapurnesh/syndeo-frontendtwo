@@ -43,16 +43,20 @@ const AddEmployees = () => {
     e.preventDefault();
     dispatch(showLoading());
     axios
-      .post("https://backend-syndeo.onrender.com/api/v1/add-employee", {
-        firstName,
-        lastName,
-        email,
-        password,
-        role: "employee",
-        phoneNumber,
-        adminId: params.id,
-        employeeId,
-      })
+      .post(
+        // "http://localhost:8080/api/v1/add-employee",
+        "https://backend-syndeo.onrender.com/api/v1/add-employee",
+        {
+          firstName,
+          lastName,
+          email,
+          password,
+          role: "employee",
+          phoneNumber,
+          adminId: params.id,
+          employeeId,
+        }
+      )
       .then((response) => {
         dispatch(hideLoading());
         if (response.status === 201) {
