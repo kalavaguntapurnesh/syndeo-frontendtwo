@@ -16,7 +16,7 @@ const Navbar = () => {
           <div className="text-black flex justify-between md:shadow-none shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] h-24 w-full md:top-0 top-0 bg-white max-w-[1400px] mx-auto">
             <div className="flex justify-center items-center">
               <div className=" text-[30px] block ml-4">
-                <h2 className="text-colorFour font-bold">SYNDÈO.</h2>
+                <h2 className="text-colorFour font-bold">Syndèo.</h2>
               </div>
             </div>
 
@@ -46,9 +46,9 @@ const Navbar = () => {
 
             <div onClick={handleNav} className="block md:hidden cursor-pointer">
               {!nav ? (
-                <RiMenu3Fill size={28} className=" mr-4 mt-6" />
+                <RiMenu3Fill size={28} className=" mr-4 mt-8" />
               ) : (
-                <AiOutlineClose size={28} className=" mr-4 mt-6" />
+                <AiOutlineClose size={28} className=" mr-4 mt-8" />
               )}
             </div>
 
@@ -60,7 +60,7 @@ const Navbar = () => {
               }
             >
               <h1 className="w-full text-2xl text-colorFour font-bold m-4 cursor-pointer">
-                SYNDÈO.
+                Syndèo.
               </h1>
               <ul className=" uppercase p-4">
                 <li className="p-4 border-b border-gray-600 text-colorThree cursor-pointer font-medium dark:text-white">

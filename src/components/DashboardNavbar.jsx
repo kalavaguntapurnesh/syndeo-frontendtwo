@@ -132,7 +132,7 @@ const DashboardNavbar = () => {
             <div className="text-black flex justify-between items-center h-[80px] w-full md:top-0 top-0 bg-white max-w-[1400px] mx-auto ">
               <div className="ml-8">
                 <div className="text-xl block">
-                  <h2 className="text-colorFour font-bold">SYNDÈO.</h2>
+                  <h2 className="text-colorFour font-bold">Syndèo.</h2>
                 </div>
               </div>
 
@@ -185,7 +185,7 @@ const DashboardNavbar = () => {
                 }
               >
                 <h1 className="w-full text-2xl text-colorFour font-bold m-4 cursor-pointer">
-                  SYNDÈO.
+                  Syndèo.
                 </h1>
                 <div className="uppercase p-4">
                   {NavbarMenu.map((item) => (
