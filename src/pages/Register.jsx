@@ -13,6 +13,8 @@ import { FaHome } from "react-icons/fa";
 import { FaIndustry } from "react-icons/fa";
 import { FaMicrophone } from "react-icons/fa6";
 import Footer from "../components/Footer";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 function Register() {
   const [eventType, setEventType] = useState("");
@@ -30,27 +32,14 @@ function Register() {
   const [role, setRole] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
   const [phoneNumber, setPhoneNumber] = useState("");
-  // const [valid, setValid] = useState(true);
-
-  const handleChange = (event) => {
-    const input = event.target.value;
-    setPhoneNumber(input);
-    // setValid(validPhoneNumber(input));
-  };
-
-  // const validPhoneNumber = () => {
-  //   const phoneNumberPattern = /^\d{10}$/;
-  //   return phoneNumberPattern.test(phoneNumber);
-  // };
 
   const handleContinue = () => {
-    setShowEventType(true); // Show the event type input on continue
+    setShowEventType(true);
   };
 
   const handleBack = () => {
-    setShowEventType(false); // Go back to the first step
+    setShowEventType(false);
   };
 
   const handleToggle = () => {
@@ -247,8 +236,6 @@ function Register() {
                                           value={password}
                                           id="password"
                                           placeholder="••••••••"
-                                          // pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                                          // pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
                                           title="Password must be within 8 to 12 characters containing alteast 1 uppercase, 1 lowercase, 1 number and a special character"
                                           className=" border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                           required="true"
@@ -289,41 +276,24 @@ function Register() {
                                   >
                                     Go Back
                                   </button>
+
                                   <div>
                                     <label
-                                      htmlFor="phone-input"
-                                      className="block mb-2 text-sm font-bold text-gray-900 dark:text-white"
+                                      htmlFor="phone"
+                                      className="block mb-2 text-sm font-bold text-colorThree dark:text-white"
                                     >
-                                      Phone number
+                                      Phone Number
                                     </label>
-                                    <div className="relative">
-                                      <div className="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none">
-                                        <svg
-                                          className="w-4 h-4 text-gray-500 dark:text-gray-400"
-                                          aria-hidden="true"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          fill="currentColor"
-                                          viewBox="0 0 19 18"
-                                        >
-                                          <path d="M18 13.446a3.02 3.02 0 0 0-.946-1.985l-1.4-1.4a3.054 3.054 0 0 0-4.218 0l-.7.7a.983.983 0 0 1-1.39 0l-2.1-2.1a.983.983 0 0 1 0-1.389l.7-.7a2.98 2.98 0 0 0 0-4.217l-1.4-1.4a2.824 2.824 0 0 0-4.218 0c-3.619 3.619-3 8.229 1.752 12.979C6.785 16.639 9.45 18 11.912 18a7.175 7.175 0 0 0 5.139-2.325A2.9 2.9 0 0 0 18 13.446Z" />
-                                        </svg>
-                                      </div>
-                                      <input
-                                        type="text"
-                                        name="phoneNumber"
-                                        id="phoneNumber"
-                                        aria-describedby="helper-text-explanation"
-                                        className=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                        // pattern="[789][0-9]{9}"
-                                        placeholder="123-456-7890"
-                                        title="Must start with either 7, 8, 9 and should be of 10 numbers"
-                                        required
-                                        value={phoneNumber}
-                                        onChange={handleChange}
-                                      />
-                                    </div>
+
+                                    <PhoneInput
+                                      international
+                                      defaultCountry="US"
+                                      value={phoneNumber}
+                                      onChange={setPhoneNumber}
+                                      className="p-2.5 rounded-lg text-sm border border-gray-300 text-gray-900 outline-none"
+                                    />
                                   </div>
+
                                   <div>
                                     <label
                                       htmlFor="role"

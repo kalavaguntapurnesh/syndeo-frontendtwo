@@ -13,6 +13,7 @@ const AllEmployees = () => {
   const params = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  // const [searchQuery, setSearchQuery] = useState("");
 
   const fetchEmployees = async () => {
     try {
@@ -26,7 +27,7 @@ const AllEmployees = () => {
         console.log("The Employees are : ", response.data);
       }
     } catch (error) {
-      console.log("Error in fetching employyes", error);
+      console.log("Error in fetching employees", error);
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -39,6 +40,34 @@ const AllEmployees = () => {
     fetchEmployees();
   }, []);
 
+  // const handleSearch = async (e) => {
+  //   setSearchQuery(e.target.value);
+  //   if (e.target.value === "") {
+  //     const response = await axios.post(
+  //       "http://localhost:8080/api/v1/getOrganizationEmployees",
+  //       // "https://backend-syndeo.onrender.com/api/v1/getOrganizationEmployees",
+  //       { adminId: params.id }
+  //     );
+  //     if (response.status === 200) {
+  //       setEmployees(response.data);
+  //       console.log("The Employees are : ", response.data);
+  //     }
+  //   }
+
+  //   try {
+  //     const response = await axios.post(
+  //       "http://localhost:8080/api/v1/searchOrganizationEmployees",
+  //       { adminId: params.id, searchQuery: e.target.value }
+  //     );
+  //     if (response.status === 200) {
+  //       setEmployees(response.data);
+  //       console.log("The Searched Employees are : ", response.data);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error searching employees:", error);
+  //   }
+  // };
+
   return (
     <div>
       <Layout>
@@ -47,6 +76,14 @@ const AllEmployees = () => {
             List of Employees
           </h1>
         </div>
+
+        <input
+          type="text"
+          placeholder="Search by name or email..."
+          // value={searchQuery}
+          // onChange={handleSearch}
+          className="border rounded-l px-3 py-2"
+        />
 
         {employees.length > 0 ? (
           <div className="mt-4">
