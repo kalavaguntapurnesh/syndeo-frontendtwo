@@ -48,6 +48,10 @@ function Register() {
     setShowEventType(true); // Show the event type input on continue
   };
 
+  const handleBack = () => {
+    setShowEventType(false); // Go back to the first step
+  };
+
   const handleToggle = () => {
     if (type === "password") {
       setIcon(eye);
@@ -277,6 +281,13 @@ function Register() {
                                 </div>
                               ) : (
                                 <div className="space-y-4">
+                                  <button
+                                    type="button"
+                                    onClick={handleBack}
+                                    className="btn bg-colorFour text-white rounded-lg p-3 text-sm font-semibold"
+                                  >
+                                    Go Back
+                                  </button>
                                   <div>
                                     <label
                                       htmlFor="phone-input"
@@ -317,7 +328,7 @@ function Register() {
                                       htmlFor="role"
                                       className="block mb-2 text-sm font-bold text-colorThree dark:text-white"
                                     >
-                                      Mode of Working
+                                      Registering as
                                     </label>
                                     <select
                                       id="role"
@@ -336,7 +347,7 @@ function Register() {
                                         value="organization"
                                         id="organization"
                                       >
-                                        Organization
+                                        Corporate
                                       </option>
                                     </select>
                                   </div>

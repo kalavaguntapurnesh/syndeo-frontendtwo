@@ -81,7 +81,7 @@ const DashboardNavbar = () => {
       icon: FaHome,
     },
     {
-      name: "Display Employees",
+      name: "List of Employees",
       path: `/allEmployees/${user?._id}`,
       icon: FaHome,
     },
@@ -205,11 +205,8 @@ const DashboardNavbar = () => {
                     Notifications
                   </a>
                 </div> */}
-                <div className="uppercase mt-6 px-8" onClick={handleLogout}>
-                  <a
-                    className="py-2.5 px-8 border-gray-600 cursor-pointer font-medium bg-cdnColorTwo
-        rounded-[4px] text-white text-sm"
-                  >
+                <div className="uppercase mt-6 px-8 cursor-pointer" onClick={handleLogout}>
+                  <a className=" transition duration-1000 font-semibold text-white text-sm bg-colorFour py-3 px-6 rounded-full">
                     Logout
                   </a>
                 </div>

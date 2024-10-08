@@ -23,6 +23,7 @@ const AllEmployees = () => {
       );
       if (response.status === 200) {
         setEmployees(response.data);
+        console.log("The Employees are : ", response.data);
       }
     } catch (error) {
       console.log("Error in fetching employyes", error);
