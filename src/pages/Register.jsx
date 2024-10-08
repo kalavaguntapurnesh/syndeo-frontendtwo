@@ -12,6 +12,7 @@ import { Country, State, City } from "country-state-city";
 import { FaHome } from "react-icons/fa";
 import { FaIndustry } from "react-icons/fa";
 import { FaMicrophone } from "react-icons/fa6";
+import Footer from "../components/Footer";
 
 function Register() {
   const [eventType, setEventType] = useState("");
@@ -574,6 +575,7 @@ function Register() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -23,14 +23,14 @@ const DashboardNavbar = () => {
 
   const handleLogout = () => {
     localStorage.clear();
-    Swal.fire({
-      title: "Logged Out Successfully!!!",
-      icon: "success",
-    });
+    // setTimeout(() => {
+    //   Swal.fire({
+    //     title: "Logged Out Successfully!!!",
+    //     icon: "success",
+    //   });
+    // }, 4000);
     navigate("/login");
-    setTimeout(function () {
-      window.location.reload();
-    }, 1500);
+    window.location.reload();
   };
 
   const adminMenu = [

@@ -10,6 +10,7 @@ import { showLoading, hideLoading } from "../redux/features/alertSlice";
 import { FaHome } from "react-icons/fa";
 import { FaIndustry } from "react-icons/fa";
 import { FaMicrophone } from "react-icons/fa6";
+import Footer from "../components/Footer";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -51,21 +52,14 @@ const Login = () => {
           //   icon: "success",
           // });
           navigate("/dashboard");
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "Incorrect Credentials !!!",
-            text: "The username & password doesn't match. Please enter valid username and correct password.",
-          });
         }
       })
       .catch((error) => {
         dispatch(hideLoading());
-        console.log(error);
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "Something went wrong!",
+          text: "Check your username and password!!!",
         });
       });
   };
@@ -275,6 +269,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
