@@ -11,6 +11,7 @@ import { FaHome } from "react-icons/fa";
 import { FaIndustry } from "react-icons/fa";
 import { FaMicrophone } from "react-icons/fa6";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -66,8 +67,8 @@ const Login = () => {
 
   return (
     <div>
-      {/* <Navbar /> */}
-      <div className="relative ">
+      <Navbar />
+      <div className="relative md:pt-12 pt-20">
         <div className="w-full h-screen">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 h-full ">
             <div className="h-[100%] w-full pt-8">
@@ -215,7 +216,7 @@ const Login = () => {
                 <div className="font-semibold lg:text-2xl text-xl tracking-wide lg:text-start text-center">
                   <h1>Join millions of people who own their time.</h1>
                 </div>
-                <div className="text-base text-gray-600 lg:pb-0 pb-4">
+                <div className="text-base text-gray-600 pb-8">
                   <ul className="space-y-2 ">
                     <li className="lg:text-start text-center">
                       &#x2022; Quick and easy meeting scheduling
@@ -229,40 +230,6 @@ const Login = () => {
                       Sign-up Sheet, 1:1, and Booking Page features
                     </li>
                   </ul>
-                </div>
-
-                <div className="w-full lg:pt-2 pt-4 lg:pb-0 pb-4">
-                  <div className="grid grid-cols-3 gap-3">
-                    <a
-                      href="/"
-                      className="flex flex-row justify-center items-center"
-                    >
-                      <FaHome className="text-colorFour w-4 h-4 mr-1" />
-                      <div className=" text-colorFour font-semibold">
-                        <h1>Home</h1>
-                      </div>
-                    </a>
-
-                    <a
-                      href="/about"
-                      className="flex flex-row justify-center items-center"
-                    >
-                      <FaIndustry className="text-colorFour w-4 h-4 mr-1" />
-                      <div className=" text-colorFour font-semibold">
-                        <h1>About Us</h1>
-                      </div>
-                    </a>
-
-                    <a
-                      href="/contact"
-                      className="flex flex-row justify-center items-center"
-                    >
-                      <FaMicrophone className="text-colorFour w-4 h-4 mr-1" />
-                      <div className=" text-colorFour font-semibold">
-                        <h1>Contact Us</h1>
-                      </div>
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>

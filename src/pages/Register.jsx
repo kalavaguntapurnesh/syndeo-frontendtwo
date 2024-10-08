@@ -15,6 +15,7 @@ import { FaMicrophone } from "react-icons/fa6";
 import Footer from "../components/Footer";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import Navbar from "../components/Navbar";
 
 function Register() {
   const [eventType, setEventType] = useState("");
@@ -106,7 +107,8 @@ function Register() {
 
   return (
     <div>
-      <div className="relative lg:min-h-screen">
+      <Navbar />
+      <div className="relative lg:min-h-screen md:pt-12 pt-20">
         <div className="w-full">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 h-full ">
             <div className="w-full px-4 mx-auto max-w-[1400px] lg:min-h-screen">
@@ -491,7 +493,7 @@ function Register() {
                 <div className="font-semibold lg:text-2xl text-xl tracking-wide lg:text-start text-center">
                   <h1>Join millions of people who own their time.</h1>
                 </div>
-                <div className="text-base text-gray-600 ">
+                <div className="text-base text-gray-600 pb-8">
                   <ul className="space-y-2 ">
                     <li className="lg:text-start text-center">
                       &#x2022; Quick and easy meeting scheduling
@@ -507,7 +509,7 @@ function Register() {
                   </ul>
                 </div>
 
-                <div className="w-full lg:pt-2 pt-4 lg:pb-0 pb-4">
+                {/* <div className="w-full lg:pt-2 pt-4 lg:pb-0 pb-4">
                   <div className="grid grid-cols-3 gap-3">
                     <a
                       href="/"
@@ -539,7 +541,7 @@ function Register() {
                       </div>
                     </a>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
