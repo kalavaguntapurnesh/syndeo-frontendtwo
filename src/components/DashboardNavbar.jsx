@@ -205,7 +205,10 @@ const DashboardNavbar = () => {
                     Notifications
                   </a>
                 </div> */}
-                <div className="uppercase mt-6 px-8 cursor-pointer" onClick={handleLogout}>
+                <div
+                  className="uppercase mt-6 px-8 cursor-pointer"
+                  onClick={handleLogout}
+                >
                   <a className=" transition duration-1000 font-semibold text-white text-sm bg-colorFour py-3 px-6 rounded-full">
                     Logout
                   </a>

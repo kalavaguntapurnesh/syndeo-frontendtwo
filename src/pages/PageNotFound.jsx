@@ -12,7 +12,7 @@ const PageNotFound = () => {
           <span class="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-colorThree group-hover:translate-y-0 group-hover:translate-x-0"></span>
 
           <span class="relative block px-8 py-3 bg-colorFour text-white">
-            <a href="/">Go Home</a>
+            <a href="/">Go to Home</a>
           </span>
         </a>
       </a>
