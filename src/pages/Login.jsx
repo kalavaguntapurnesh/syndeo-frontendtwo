@@ -69,7 +69,7 @@ const Login = () => {
     <div>
       <Navbar />
       <div className="relative md:pt-12 pt-20">
-        <div className="w-full h-screen">
+        <div className="w-full">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 h-full ">
             <div className="h-[100%] w-full pt-8">
               <div className="flex flex-col justify-center px-6 h-full">
