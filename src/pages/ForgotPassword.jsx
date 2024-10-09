@@ -35,7 +35,8 @@ const ForgotPassword = () => {
             icon: "success",
           });
           navigate("/login");
-        } else {
+        }
+        else {
           Swal.fire({
             icon: "error",
             title: "Oops...",
