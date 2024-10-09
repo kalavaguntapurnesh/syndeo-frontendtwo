@@ -5,9 +5,10 @@ export default {
     extend: {
       container: {},
       colors: {
-        footer: "#001327",
+        // footer: "#001327",
+        footer: "#f8f9fb",
         inputColor: "#F8F8F8",
-        footerLinks: "#a6aab6",
+        footerLinks: "#000000",
         scrollToTop: "#e7473c",
         trackColor: "#002147",
         colorThree: "#2a3b2c",

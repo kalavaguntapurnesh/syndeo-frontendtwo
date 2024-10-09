@@ -131,7 +131,7 @@ const DashboardNavbar = () => {
           <div className="justify-center w-full">
             <div className="text-black flex justify-between items-center h-[80px] w-full md:top-0 top-0 bg-white max-w-[1400px] mx-auto ">
               <div className="ml-8">
-                <div className="text-xl block">
+                <div className="text-2xl block">
                   <h2 className="text-colorFour font-bold">Syndèo.</h2>
                 </div>
               </div>

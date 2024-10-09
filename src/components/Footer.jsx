@@ -9,17 +9,17 @@ const Footer = () => {
     <div className="bg-footer">
       <footer className="text-base">
         <div className="w-full max-w-screen px-4 py-12 mx-auto sm:px-6 lg:py-16 lg:px-8">
-          <div className="pb-8 mb-8 border-b border-gray-200">
+          <div className="pb-8 mb-8 border-b border-gray-400">
             <div className="grid grid-cols-2 md:grid-cols-5 ">
               <div className="mb-12 md:mb-0 ">
-                <h4 className="text-sm leading-5 font-bold tracking-wider uppercase flex justify-center items-center mt-1 text-white">
+                <h4 className="text-sm leading-5 font-bold tracking-wider uppercase flex justify-center items-center mt-1 text-footerLinks">
                   Services
                 </h4>
                 <ul className="pl-0 mt-4 space-y-3 list-none">
                   <li className=" flex items-center justify-center">
                     <a
                       href="/"
-                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-white transition duration-1000 ease-in-out"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                     >
                       Customer Success
                     </a>
@@ -27,7 +27,7 @@ const Footer = () => {
                   <li className=" flex items-center justify-center">
                     <a
                       href="/"
-                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-white transition duration-1000 ease-in-out"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                     >
                       Popular Blogs
                     </a>
@@ -35,7 +35,7 @@ const Footer = () => {
                   <li className=" flex items-center justify-center">
                     <a
                       href="/login"
-                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-white transition duration-1000 ease-in-out"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                     >
                       Log In to Syndèo
                     </a>
@@ -43,7 +43,7 @@ const Footer = () => {
                   <li className=" flex items-center justify-center">
                     <a
                       href="/"
-                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-white transition duration-1000 ease-in-out"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                     >
                       Appointment Booking
                     </a>
@@ -51,7 +51,7 @@ const Footer = () => {
                   <li className=" flex items-center justify-center">
                     <a
                       href="/privacy"
-                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-white transition duration-1000 ease-in-out"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                     >
                       Developer Policy
                     </a>
@@ -60,14 +60,14 @@ const Footer = () => {
               </div>
 
               <div className="mb-12 md:mb-0 ">
-                <h4 className="text-sm leading-5 font-bold tracking-wider uppercase flex justify-center items-center mt-1 text-white">
+                <h4 className="text-sm leading-5 font-bold tracking-wider uppercase flex justify-center items-center mt-1 text-footerLinks">
                   Connect
                 </h4>
                 <ul className="pl-0 mt-4 space-y-3 list-none">
                   <li className=" flex items-center justify-center">
                     <a
                       href="/contact"
-                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-white transition duration-1000 ease-in-out"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                     >
                       Help Center
                     </a>
@@ -75,7 +75,7 @@ const Footer = () => {
                   <li className=" flex items-center justify-center">
                     <a
                       href="/"
-                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-white transition duration-1000 ease-in-out"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                     >
                       Syndèo Careers
                     </a>
@@ -83,7 +83,7 @@ const Footer = () => {
                   <li className=" flex items-center justify-center">
                     <a
                       href="/"
-                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-white transition duration-1000 ease-in-out"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                     >
                       Become Partner
                     </a>
@@ -91,7 +91,7 @@ const Footer = () => {
                   <li className=" flex items-center justify-center">
                     <a
                       href="/register"
-                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-white transition duration-1000 ease-in-out"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                     >
                       Sign Up Here
                     </a>
@@ -99,7 +99,7 @@ const Footer = () => {
                   <li className=" flex items-center justify-center">
                     <a
                       href="/about"
-                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-white transition duration-1000 ease-in-out"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                     >
                       Team & Company
                     </a>
@@ -108,14 +108,14 @@ const Footer = () => {
               </div>
 
               <div className="mb-12 md:mb-0">
-                <h4 className="text-sm leading-5 font-bold tracking-wider uppercase flex justify-center items-center mt-1 text-white">
+                <h4 className="text-sm leading-5 font-bold tracking-wider uppercase flex justify-center items-center mt-1 text-footerLinks">
                   Company
                 </h4>
                 <ul className="pl-0 mt-4 space-y-3 list-none">
                   <li className=" flex items-center justify-center">
                     <a
                       href="/privacy"
-                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-white transition duration-1000 ease-in-out"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                     >
                       Terms & Conditions
                     </a>
@@ -123,7 +123,7 @@ const Footer = () => {
                   <li className=" flex items-center justify-center">
                     <a
                       href="/privacy"
-                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-white transition duration-1000 ease-in-out"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                     >
                       Privacy Policy
                     </a>
@@ -131,7 +131,7 @@ const Footer = () => {
                   <li className=" flex items-center justify-center">
                     <a
                       href="/about"
-                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-white transition duration-1000 ease-in-out"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                     >
                       About Syndèo
                     </a>
@@ -139,7 +139,7 @@ const Footer = () => {
                   <li className=" flex items-center justify-center">
                     <a
                       href="/contact"
-                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-white transition duration-1000 ease-in-out"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                     >
                       Contact Us
                     </a>
@@ -147,7 +147,7 @@ const Footer = () => {
                   <li className=" flex items-center justify-center">
                     <a
                       href="/about"
-                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-white transition duration-1000 ease-in-out"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                     >
                       Why Syndèo?
                     </a>
@@ -155,8 +155,56 @@ const Footer = () => {
                 </ul>
               </div>
 
+              <div className="mb-12 md:mb-0 md:hidden block">
+                <h4 className="text-sm leading-5 font-bold tracking-wider uppercase flex justify-center items-center mt-1 text-footerLinks">
+                  Product
+                </h4>
+                <ul className="pl-0 mt-4 space-y-3 list-none">
+                  <li className=" flex items-center justify-center">
+                    <a
+                      href="/contact"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
+                    >
+                      Booking Page
+                    </a>
+                  </li>
+                  <li className=" flex items-center justify-center">
+                    <a
+                      href="/"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
+                    >
+                      Group Calls
+                    </a>
+                  </li>
+                  <li className=" flex items-center justify-center">
+                    <a
+                      href="/"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
+                    >
+                      Sign-up Sheet
+                    </a>
+                  </li>
+                  <li className=" flex items-center justify-center">
+                    <a
+                      href="/register"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
+                    >
+                      Education
+                    </a>
+                  </li>
+                  <li className=" flex items-center justify-center">
+                    <a
+                      href="/about"
+                      className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
+                    >
+                      Recruiting
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
               <div className="mb-12 md:mb-0 col-span-2">
-                <h4 className="text-sm leading-5 font-bold tracking-wider uppercase flex justify-center items-center mt-1 text-white">
+                <h4 className="text-sm leading-5 font-bold tracking-wider uppercase flex justify-center items-center mt-1 text-footerLinks">
                   Contact Us
                 </h4>
                 <form action="">
@@ -190,7 +238,7 @@ const Footer = () => {
                 <FaLinkedin
                   size={25}
                   className="cursor-pointer"
-                  color="white"
+                  color="black"
                 />
               </a>
 
@@ -198,7 +246,7 @@ const Footer = () => {
                 <FaInstagram
                   size={25}
                   className="cursor-pointer"
-                  color="white"
+                  color="black"
                 />
               </a>
 
@@ -206,7 +254,7 @@ const Footer = () => {
                 <FaFacebook
                   size={25}
                   className="cursor-pointer"
-                  color="white"
+                  color="black"
                 />
               </a>
 
@@ -214,18 +262,21 @@ const Footer = () => {
                 <FaXTwitter
                   size={25}
                   className="cursor-pointer"
-                  color="white"
+                  color="black"
                 />
               </a>
               <a href="/about">
-                <FaGoogle size={25} className="cursor-pointer" color="white" />
+                <FaGoogle size={25} className="cursor-pointer" color="black" />
               </a>
             </div>
-            <div className="flex justify-center items-center mt-6">
-              <p className="md:text-sm text-xs text-white">
+            <a
+              href="/privacy"
+              className="flex justify-center items-center mt-6"
+            >
+              <p className="md:text-sm text-xs text-footerLinks">
                 Copyright © 2024 Syndèo. All rights reserved.
               </p>
-            </div>
+            </a>
           </div>
         </div>
       </footer>
