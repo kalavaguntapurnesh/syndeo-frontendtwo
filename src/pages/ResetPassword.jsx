@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
-// import { useNavigate, useParams } from "react-router-dom";
-// import { useDispatch } from "react-redux";
-// import { hideLoading, showLoading } from "../redux/features/alertSlice";
+import { useNavigate, useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { hideLoading, showLoading } from "../redux/features/alertSlice";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { Icon } from "react-icons-kit";
@@ -16,7 +16,6 @@ const ResetPassword = () => {
   const { id, token } = useParams();
   const dispatch = useDispatch();
   const [icon, setIcon] = useState(eyeOff);
-
   const handleToggle = () => {
     if (type === "password") {
       setIcon(eye);
@@ -29,17 +28,17 @@ const ResetPassword = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // dispatch(showLoading());
+    dispatch(showLoading());
     axios
       .post(
-        `https://syndeo-backend.onrender.com/auth/resetPassword/${id}/${token}`,
+        `https://backend-syndeo.onrender.com/api/v1/resetPassword/${id}/${token}`,
         {
           password,
         }
       )
       .then((response) => {
-        // dispatch(hideLoading());
-        if (response.data.status) {
+        dispatch(hideLoading());
+        if (response.status === 200) {
           Swal.fire({
             title: "Password Reset Successful",
             icon: "success",
@@ -48,7 +47,7 @@ const ResetPassword = () => {
         }
       })
       .catch((error) => {
-        // dispatch(hideLoading());
+        dispatch(hideLoading());
         console.log(error);
         Swal.fire({
           icon: "error",
@@ -77,7 +76,7 @@ const ResetPassword = () => {
                           </h1>
                           <form
                             className="space-y-4 md:space-y-6"
-                            // onSubmit={handleSubmit}
+                            onSubmit={handleSubmit}
                           >
                             <div>
                               <label

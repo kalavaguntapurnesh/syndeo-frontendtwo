@@ -1,62 +1,59 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
-// import { useDispatch } from "react-redux";
-// import { hideLoading, showLoading } from "../redux/features/alertSlice";
+import { useDispatch } from "react-redux";
+import { hideLoading, showLoading } from "../redux/features/alertSlice";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { FaUnlock } from "react-icons/fa";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
-
-  //   const navigate = useNavigate();
-
-  //   const dispatch = useDispatch();
-
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     dispatch(showLoading());
-  //     axios
-  //       .post("https://syndeo-backend.onrender.com/auth/forgetPassword", {
-  //         email,
-  //       })
-  //       .then((response) => {
-  //         dispatch(hideLoading());
-  //         if (response.data.status) {
-  //           const verifyMail = response.data.email;
-  //           const partialEmail = verifyMail.replace(
-  //             /(\w{3})[\w.-]+@([\w.]+\w)/,
-  //             "$1***@$2"
-  //           );
-  //           Swal.fire({
-  //             title: "Password Reset Initiated",
-  //             text:
-  //               "We have sent an email to " +
-  //               partialEmail +
-  //               " registered with us, please check the email for password reset.",
-  //             icon: "success",
-  //           });
-  //           navigate("/login");
-  //         } else {
-  //           Swal.fire({
-  //             icon: "error",
-  //             title: "Oops...",
-  //             text: "Something went wrong!",
-  //           });
-  //           navigate("/register");
-  //         }
-  //       })
-  //       .catch((error) => {
-  //         dispatch(hideLoading());
-  //         console.log(error);
-  //         Swal.fire({
-  //           icon: "error",
-  //           title: "Oops...",
-  //           text: "Something went wrong!",
-  //         });
-  //       });
-  //   };
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(showLoading());
+    axios
+      .post("https://backend-syndeo.onrender.com/api/v1/forgotPassword", {
+        email,
+      })
+      .then((response) => {
+        dispatch(hideLoading());
+        if (response.status === 200) {
+          const verifyMail = response.data.email;
+          const partialEmail = verifyMail.replace(
+            /(\w{3})[\w.-]+@([\w.]+\w)/,
+            "$1***@$2"
+          );
+          Swal.fire({
+            title: "Password Reset Initiated",
+            text:
+              "We have sent an email to " +
+              partialEmail +
+              " registered with us, please check the email for password reset.",
+            icon: "success",
+          });
+          navigate("/login");
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+          });
+          navigate("/register");
+        }
+      })
+      .catch((error) => {
+        dispatch(hideLoading());
+        console.log(error);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+        });
+      });
+  };
 
   return (
     <div>
@@ -87,7 +84,7 @@ const ForgotPassword = () => {
 
                           <form
                             className="space-y-4 md:space-y-6"
-                            // onSubmit={handleSubmit}
+                            onSubmit={handleSubmit}
                           >
                             <div>
                               <label
