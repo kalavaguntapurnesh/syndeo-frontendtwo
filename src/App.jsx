@@ -7,115 +7,48 @@ import Register from "./pages/Register";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
-import Dashboard from "./pages/Dashboard";
+import PageNotFound from "./pages/PageNotFound";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
-import MySchedules from "./pages/MySchedules";
-import Profile from "./pages/Profile";
-import CreateSchedule from "./pages/CreateSchedule";
-import AddEmployees from "./pages/AddEmployees";
-import AllEmployees from "./pages/AllEmployees";
-import PageNotFound from "./pages/PageNotFound";
-import { useSelector } from "react-redux";
-import Spinner from "./components/Spinner";
-import ProtectedRoute from "./components/ProtectedRoute";
-import PublicRoute from "./components/PublicRoute";
-import EmployeeSchedules from "./pages/EmployeeSchedules";
+// import Dashboard from "./pages/Dashboard";
+// import MySchedules from "./pages/MySchedules";
+// import Profile from "./pages/Profile";
+// import CreateSchedule from "./pages/CreateSchedule";
+// import AddEmployees from "./pages/AddEmployees";
+// import AllEmployees from "./pages/AllEmployees";
+// import { useSelector } from "react-redux";
+// import Spinner from "./components/Spinner";
+// import ProtectedRoute from "./components/ProtectedRoute";
+// import PublicRoute from "./components/PublicRoute";
+// import EmployeeSchedules from "./pages/EmployeeSchedules";
 
 function App() {
-  const { loading } = useSelector((state) => state.alerts);
+  // const { loading } = useSelector((state) => state.alerts);
 
   return (
     <BrowserRouter>
-      {loading ? (
+      {/* {loading ? (
         <Spinner />
-      ) : (
-        <Routes>
-          <Route
-            path="/"
-            element={
-             
-                <Home />
-             
-            }
-          ></Route>
-          <Route
-            path="/about"
-            element={
-           
-                <About />
-            
-            }
-          ></Route>
-          <Route
-            path="/login"
-            element={
-            
-                <Login />
-             
-            }
-          ></Route>
+      ) : ( */}
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/login" element={<Login />}></Route>
 
-          <Route
-            path="/privacy"
-            element={
-              
-                <Privacy />
-              
-            }
-          ></Route>
-          <Route
-            path="/register"
-            element={
-            
-                <Register />
-            
-            }
-          ></Route>
-          <Route
-            path="/pricing"
-            element={
-           
-                <Pricing />
-          
-            }
-          ></Route>
+        <Route path="/privacy" element={<Privacy />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="/pricing" element={<Pricing />}></Route>
 
-          <Route
-            path="/forgotPassword"
-            element={
-             
-                <ForgotPassword />
-              
-            }
-          ></Route>
-          <Route
-            path="/resetPassword/:id/:token"
-            element={
-            
-                <ResetPassword />
-             
-            }
-          ></Route>
-          <Route
-            path="*"
-            element={
-            
-                <PageNotFound />
-             
-            }
-          ></Route>
+        <Route path="/forgotPassword" element={<ForgotPassword />}></Route>
+        <Route
+          path="/resetPassword/:id/:token"
+          element={<ResetPassword />}
+        ></Route>
+        <Route path="*" element={<PageNotFound />}></Route>
 
-          <Route
-            path="/contact"
-            element={
-            
-                <Contact />
-           
-            }
-          ></Route>
+        <Route path="/contact" element={<Contact />}></Route>
 
-          <Route
+        {/* <Route
             path="/addEmployees/:id"
             element={
               <ProtectedRoute>
@@ -174,9 +107,9 @@ function App() {
                 <Dashboard />
               </ProtectedRoute>
             }
-          ></Route>
-        </Routes>
-      )}
+          ></Route> */}
+      </Routes>
+      {/* )} */}
     </BrowserRouter>
   );
 }

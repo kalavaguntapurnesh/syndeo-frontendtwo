@@ -30,8 +30,8 @@ const Profile = () => {
   const getCustomerInfo = async () => {
     try {
       const response = await axios.post(
-        // "http://localhost:8080/api/v1/getUserData",
-        "https://backend-syndeo.onrender.com/api/v1/getUserData",
+        "http://localhost:8080/api/v1/getUserData",
+        // "https://backend-syndeo.onrender.com/api/v1/getUserData",
         { userId: params.id },
         {
           headers: {
@@ -62,8 +62,8 @@ const Profile = () => {
     try {
       dispatch(showLoading());
       const res = await axios.post(
-        // "http://localhost:8080/api/v1/updateProfile",
-        "https://backend-syndeo.onrender.com/api/v1/updateProfile",
+        "http://localhost:8080/api/v1/updateProfile",
+        // "https://backend-syndeo.onrender.com/api/v1/updateProfile",
         {
           ...values,
           userId: user._id,

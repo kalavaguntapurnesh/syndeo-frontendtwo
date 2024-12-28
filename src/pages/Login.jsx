@@ -35,8 +35,8 @@ const Login = () => {
     dispatch(showLoading());
     axios
       .post(
-        // "http://localhost:8080/api/v1/login",
-        "https://backend-syndeo.onrender.com/api/v1/login",
+        "http://localhost:8080/api/v1/login",
+        // "https://backend-syndeo.onrender.com/api/v1/login",
         {
           email,
           password,
@@ -48,10 +48,10 @@ const Login = () => {
         if (response.status === 200) {
           localStorage.setItem("token", response.data.token);
           console.log(response.data.token);
-          // Swal.fire({
-          //   title: "Login Success",
-          //   icon: "success",
-          // });
+          Swal.fire({
+            title: "Login Success",
+            icon: "success",
+          });
           navigate("/dashboard");
         }
       })

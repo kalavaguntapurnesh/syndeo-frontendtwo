@@ -9,16 +9,13 @@ import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { eye } from "react-icons-kit/feather/eye";
 import Select from "react-select";
 import { Country, State, City } from "country-state-city";
-import { FaHome } from "react-icons/fa";
-import { FaIndustry } from "react-icons/fa";
-import { FaMicrophone } from "react-icons/fa6";
 import Footer from "../components/Footer";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import Navbar from "../components/Navbar";
 
 function Register() {
-  const [eventType, setEventType] = useState("");
+  // const [eventType, setEventType] = useState("");
   const [showEventType, setShowEventType] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -58,8 +55,8 @@ function Register() {
     dispatch(showLoading());
     axios
       .post(
-        // "http://localhost:8080/api/v1/registerUser",
-        "https://backend-syndeo.onrender.com/api/v1/registerUser",
+        "http://localhost:8080/api/v1/registerUser",
+        // "https://backend-syndeo.onrender.com/api/v1/registerUser",
         {
           firstName,
           lastName,

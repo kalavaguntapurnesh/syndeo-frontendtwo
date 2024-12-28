@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Dashboard = () => {
   const { user } = useSelector((state) => state.user);
@@ -20,8 +21,8 @@ const Dashboard = () => {
   const getCustomerInfo = async () => {
     try {
       const response = await axios.post(
-        // "http://localhost:8080/api/v1/getUserData",
-        "https://backend-syndeo.onrender.com/api/v1/getUserData",
+        "http://localhost:8080/api/v1/getUserData",
+        // "https://backend-syndeo.onrender.com/api/v1/getUserData",
         { userId: user?._id },
         {
           headers: {
