@@ -7,41 +7,57 @@ const Pricing = () => {
   return (
     <div>
       <Navbar />
-      <div class="max-w-[1400px] m-auto pt-28 pb-12">
+      <div className="max-w-[1400px] m-auto pt-28 pb-12">
         <section id="pricing">
-          <header class="text-center">
-            <h3 class="text-4xl font-bold mb-5 text-cdnColor">
-              Our <span className="text-colorFour">Pricing</span> Plans
-            </h3>
-            <p class="text-xl text-gray-600 mb-2 mx-2">
-              Upgrade your plan for enhanced features and a richer experience.
-            </p>
-          </header>
-          <div class="flex flex-col mt-10 mx-5 space-y-5 md:space-y-0 md:flex-row md:space-x-5 md:mx-0 justify-between">
-            <div class="flex-1 cursor-pointer rounded-lg border-[1px] border-colorFour">
-              <div class="bg-white p-10 rounded-lg">
-                <div class="flex justify-between items-center">
+          <div className="space-y-3">
+            <div className="flex items-center text-center justify-center ">
+              <div className="h-4 w-1 bg-mainColor"></div>
+
+              <p className="ml-2 lg:text-lg font-semibold text-mainColor">
+                Our Plans
+              </p>
+            </div>
+
+            <div className="text-center mt-4">
+              <h3 className="lg:text-4xl text-2xl font-bold text-headingColor">
+                Explore our pricing options
+              </h3>
+            </div>
+
+            <div className="text-gray-600 text-center">
+              <p>
+                Choose a plan that fits your needs, offering flexibility, value,
+                and transparency every step forward.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col mt-10 mx-5 space-y-5 md:space-y-0 md:flex-row md:space-x-5 md:mx-0 justify-between">
+            <div className="flex-1 cursor-pointer bg-white border border-gray-200 rounded">
+              <div className="bg-white p-10 rounded">
+                <div className="flex justify-between items-center">
                   <div>
-                    <h4 class="text-2xl font-bold text-gray-900">Basic</h4>
-                    <p class="text-xs text-gray-500">
+                    <h4 className="text-2xl font-bold text-gray-900">Basic</h4>
+                    <p className="text-xs text-gray-500">
                       Basic feature at no cost
                     </p>
                   </div>
                   <div>
-                    <div class="bg-gray-100 p-2 rounded-lg text-center">
-                      <h4 class="text-2xl font-bold text-gray-900">$0.00</h4>
-                      <p class="text-xs text-gray-500">Per month</p>
+                    <div className="bg-gray-100 p-2 rounded text-center">
+                      <h4 className="text-2xl font-bold text-gray-900">
+                        $0.00
+                      </h4>
+                      <p className="text-xs text-gray-500">Per month</p>
                     </div>
                   </div>
                 </div>
-                <hr class="text-gray-100 mt-5" />
+                <hr className="text-gray-100 mt-5" />
 
-                <div class="mt-10">
-                  <ul role="list" class="space-y-4">
-                    <li class="flex items-center">
-                      <div class="bg-colorFour rounded-full p-1">
+                <div className="mt-10">
+                  <ul role="list" className="space-y-4">
+                    <li className="flex items-center">
+                      <div className="bg-colorFour rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -49,22 +65,22 @@ const Pricing = () => {
                           aria-hidden="true"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-cdnColor">
+                      <span className="ml-3 text-base text-cdnColor">
                         2 appointments per month
                       </span>
                     </li>
-                    <li class="flex items-center">
-                      <div class="bg-colorFour rounded-full p-1">
+                    <li className="flex items-center">
+                      <div className="bg-colorFour rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -72,22 +88,22 @@ const Pricing = () => {
                           aria-hidden="true"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-cdnColor">
+                      <span className="ml-3 text-base text-cdnColor">
                         Email Notifications & Reminders
                       </span>
                     </li>
-                    <li class="flex items-center">
-                      <div class="bg-colorFour rounded-full p-1">
+                    <li className="flex items-center">
+                      <div className="bg-colorFour rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -95,94 +111,94 @@ const Pricing = () => {
                           aria-hidden="true"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-cdnColor">
+                      <span className="ml-3 text-base text-cdnColor">
                         Custom help desk
                       </span>
                     </li>
-                    <li class="flex items-center">
-                      <div class="bg-red-500 rounded-full p-1">
+                    <li className="flex items-center">
+                      <div className="bg-red-500 rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
-                          // class="h-6 w-6"
+                          // className="h-6 w-6"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M6 18L18 6M6 6l12 12"
                           />
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-gray-500">
+                      <span className="ml-3 text-base text-gray-500">
                         Worldwide Accessibility
                       </span>
                     </li>
-                    <li class="flex items-center">
-                      <div class="bg-red-500 rounded-full p-1">
+                    <li className="flex items-center">
+                      <div className="bg-red-500 rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
-                          // class="h-6 w-6"
+                          // className="h-6 w-6"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M6 18L18 6M6 6l12 12"
                           />
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-gray-500">
+                      <span className="ml-3 text-base text-gray-500">
                         Automatic Timezone Conversion
                       </span>
                     </li>
-                    <li class="flex items-center">
-                      <div class="bg-red-500 rounded-full p-1">
+                    <li className="flex items-center">
+                      <div className="bg-red-500 rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
-                          // class="h-6 w-6"
+                          // className="h-6 w-6"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M6 18L18 6M6 6l12 12"
                           />
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-gray-500">
+                      <span className="ml-3 text-base text-gray-500">
                         Employee Verified Online Booking
                       </span>
                     </li>
                   </ul>
                 </div>
 
-                <div class="mt-12">
+                <div className="mt-12">
                   <button
                     onClick={() => navigate("/login")}
-                    class="bg-colorFour text-lg text-white w-full py-3 rounded-lg"
+                    className="bg-white border border-colorFour text-colorFour  w-full py-3 rounded"
                   >
                     Get started
                   </button>
@@ -190,28 +206,32 @@ const Pricing = () => {
               </div>
             </div>
 
-            <div class="flex-1 cursor-pointer rounded-lg border-[1px] border-colorFour">
-              <div class="bg-cdnColor p-10 rounded-lg">
-                <div class="flex justify-between items-center">
+            <div className="flex-1 cursor-pointer rounded bg-white border border-gray-200">
+              <div className="bg-cdnColor p-10 rounded">
+                <div className="flex justify-between items-center">
                   <div>
-                    <h4 class="text-2xl font-bold text-black">Professional</h4>
-                    <p class="text-xs text-gray-500">Individual level</p>
+                    <h4 className="text-2xl font-bold text-black">
+                      Professional
+                    </h4>
+                    <p className="text-xs text-gray-500">Individual level</p>
                   </div>
                   <div>
-                    <div class="bg-gray-100 p-2 rounded-lg text-center">
-                      <h4 class="text-2xl font-bold text-gray-900">$9.90</h4>
-                      <p class="text-xs text-gray-500">Per month</p>
+                    <div className="bg-gray-100 p-2 rounded text-center">
+                      <h4 className="text-2xl font-bold text-gray-900">
+                        $9.90
+                      </h4>
+                      <p className="text-xs text-gray-500">Per month</p>
                     </div>
                   </div>
                 </div>
-                <hr class="text-gray-800 mt-5" />
+                <hr className="text-gray-800 mt-5" />
 
-                <div class="mt-10 flex-grow">
-                  <ul role="list" class="space-y-4">
-                    <li class="flex items-center">
-                      <div class="bg-colorFour rounded-full p-1">
+                <div className="mt-10 flex-grow">
+                  <ul role="list" className="space-y-4">
+                    <li className="flex items-center">
+                      <div className="bg-colorFour rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -219,22 +239,22 @@ const Pricing = () => {
                           aria-hidden="true"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M5 13l4 4L19 7"
                           ></path>
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-black">
+                      <span className="ml-3 text-base text-black">
                         Unlimited appointments per month
                       </span>
                     </li>
-                    <li class="flex items-center">
-                      <div class="bg-colorFour rounded-full p-1">
+                    <li className="flex items-center">
+                      <div className="bg-colorFour rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -242,22 +262,22 @@ const Pricing = () => {
                           aria-hidden="true"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M5 13l4 4L19 7"
                           ></path>
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-black">
+                      <span className="ml-3 text-base text-black">
                         Email Notifications & Reminders
                       </span>
                     </li>
-                    <li class="flex items-center">
-                      <div class="bg-colorFour rounded-full p-1">
+                    <li className="flex items-center">
+                      <div className="bg-colorFour rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -265,22 +285,22 @@ const Pricing = () => {
                           aria-hidden="true"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M5 13l4 4L19 7"
                           ></path>
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-black">
+                      <span className="ml-3 text-base text-black">
                         Custom help desk
                       </span>
                     </li>
-                    <li class="flex items-center">
-                      <div class="bg-colorFour rounded-full p-1">
+                    <li className="flex items-center">
+                      <div className="bg-colorFour rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -288,23 +308,23 @@ const Pricing = () => {
                           aria-hidden="true"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M5 13l4 4L19 7"
                           ></path>
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-black">
+                      <span className="ml-3 text-base text-black">
                         Worldwide Accessibility
                       </span>
                     </li>
 
-                    <li class="flex items-center">
-                      <div class="bg-colorFour rounded-full p-1">
+                    <li className="flex items-center">
+                      <div className="bg-colorFour rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -312,49 +332,49 @@ const Pricing = () => {
                           aria-hidden="true"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M5 13l4 4L19 7"
                           ></path>
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-black">
+                      <span className="ml-3 text-base text-black">
                         Automatic Timezone Conversion
                       </span>
                     </li>
 
-                    <li class="flex items-center">
-                      <div class="bg-red-500 rounded-full p-1">
+                    <li className="flex items-center">
+                      <div className="bg-red-500 rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
-                          // class="h-6 w-6"
+                          // className="h-6 w-6"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M6 18L18 6M6 6l12 12"
                           />
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-gray-500">
+                      <span className="ml-3 text-base text-gray-500">
                         Employee Verified Online Booking
                       </span>
                     </li>
                   </ul>
                 </div>
 
-                <div class="mt-12">
+                <div className="mt-12">
                   <button
                     onClick={() => navigate("/login")}
-                    class="bg-colorFour text-lg text-white w-full py-3 rounded-lg"
+                    className="bg-white border border-colorFour text-colorFour  w-full py-3 rounded"
                   >
                     Get started
                   </button>
@@ -362,30 +382,32 @@ const Pricing = () => {
               </div>
             </div>
 
-            <div class="flex-1 cursor-pointer rounded-lg border-[1px] border-colorFour">
-              <div class="bg-white p-10 rounded-lg">
-                <div class="flex justify-between items-center">
+            <div className="flex-1 cursor-pointer rounded bg-white border border-gray-200">
+              <div className="bg-white p-10 rounded">
+                <div className="flex justify-between items-center">
                   <div>
-                    <h4 class="text-2xl font-bold text-gray-900">
+                    <h4 className="text-2xl font-bold text-gray-900">
                       Organization
                     </h4>
-                    <p class="text-xs text-gray-500">Enterprise level</p>
+                    <p className="text-xs text-gray-500">Enterprise level</p>
                   </div>
                   <div>
-                    <div class="bg-gray-100 p-2 rounded-lg text-center">
-                      <h4 class="text-2xl font-bold text-gray-900">$14.90</h4>
-                      <p class="text-xs text-gray-500">Per month</p>
+                    <div className="bg-gray-100 p-2 rounded text-center">
+                      <h4 className="text-2xl font-bold text-gray-900">
+                        $14.90
+                      </h4>
+                      <p className="text-xs text-gray-500">Per month</p>
                     </div>
                   </div>
                 </div>
-                <hr class="text-gray-100 mt-5" />
+                <hr className="text-gray-100 mt-5" />
 
-                <div class="mt-10 flex-grow">
-                  <ul role="list" class="space-y-4">
-                    <li class="flex items-center">
-                      <div class="bg-colorFour rounded-full p-1">
+                <div className="mt-10 flex-grow">
+                  <ul role="list" className="space-y-4">
+                    <li className="flex items-center">
+                      <div className="bg-colorFour rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -393,22 +415,22 @@ const Pricing = () => {
                           aria-hidden="true"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-cdnColor">
+                      <span className="ml-3 text-base text-cdnColor">
                         Unlimited appointments per month
                       </span>
                     </li>
-                    <li class="flex items-center">
-                      <div class="bg-colorFour rounded-full p-1">
+                    <li className="flex items-center">
+                      <div className="bg-colorFour rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -416,22 +438,22 @@ const Pricing = () => {
                           aria-hidden="true"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-cdnColor">
+                      <span className="ml-3 text-base text-cdnColor">
                         Customizable Emails & Reminders
                       </span>
                     </li>
-                    <li class="flex items-center">
-                      <div class="bg-colorFour rounded-full p-1">
+                    <li className="flex items-center">
+                      <div className="bg-colorFour rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -439,22 +461,22 @@ const Pricing = () => {
                           aria-hidden="true"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-black">
+                      <span className="ml-3 text-base text-black">
                         Custom help desk
                       </span>
                     </li>
-                    <li class="flex items-center">
-                      <div class="bg-colorFour rounded-full p-1">
+                    <li className="flex items-center">
+                      <div className="bg-colorFour rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -462,23 +484,23 @@ const Pricing = () => {
                           aria-hidden="true"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-black">
+                      <span className="ml-3 text-base text-black">
                         Worldwide Accessibility
                       </span>
                     </li>
 
-                    <li class="flex items-center">
-                      <div class="bg-colorFour rounded-full p-1">
+                    <li className="flex items-center">
+                      <div className="bg-colorFour rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -486,23 +508,23 @@ const Pricing = () => {
                           aria-hidden="true"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M5 13l4 4L19 7"
                           ></path>
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-black">
+                      <span className="ml-3 text-base text-black">
                         Automatic Timezone Conversion
                       </span>
                     </li>
 
-                    <li class="flex items-center">
-                      <div class="bg-colorFour rounded-full p-1">
+                    <li className="flex items-center">
+                      <div className="bg-colorFour rounded-full p-1">
                         <svg
-                          class="flex-shrink-0 h-4 w-4 text-white"
+                          className="flex-shrink-0 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -510,25 +532,25 @@ const Pricing = () => {
                           aria-hidden="true"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
                       </div>
 
-                      <span class="ml-3 text-base text-black">
+                      <span className="ml-3 text-base text-black">
                         Employee Verified Online Booking
                       </span>
                     </li>
                   </ul>
                 </div>
 
-                <div class="mt-12">
+                <div className="mt-12">
                   <button
                     onClick={() => navigate("/login")}
-                    class="bg-colorFour text-lg text-white w-full py-3 rounded-lg"
+                    className="bg-white border border-colorFour text-colorFour  w-full py-3 rounded"
                   >
                     Get started
                   </button>
