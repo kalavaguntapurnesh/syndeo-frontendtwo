@@ -20,8 +20,8 @@ const MySchedules = () => {
   const getIndividualSchedules = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/getIndividualSchedules",
-        // "https://backend-syndeo.onrender.com/api/v1/getIndividualSchedules",
+        // "http://localhost:8080/api/v1/getIndividualSchedules",
+        "https://backend-syndeo.onrender.com/api/v1/getIndividualSchedules",
         { userId: params.id }
       );
       if (Array.isArray(response.data)) {
@@ -66,7 +66,7 @@ const MySchedules = () => {
             <button
               onClick={() => navigate("/dashboard")}
               type="button"
-              class="text-gray-500 bg-white border hover:bg-colorFour hover:text-white transition duration-1000 ease-in-out border-gray-500 font-medium rounded-full text-sm md:px-5 md:py-2.5 px-2"
+              className="text-gray-500 bg-white border hover:bg-colorFour hover:text-white transition duration-1000 ease-in-out border-gray-500 font-medium rounded-full text-sm md:px-5 md:py-2.5 px-2"
             >
               Go to Home
             </button>

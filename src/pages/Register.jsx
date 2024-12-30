@@ -55,8 +55,8 @@ function Register() {
     // dispatch(showLoading());
     axios
       .post(
-        "http://localhost:8080/api/v1/registerUser",
-        // "https://backend-syndeo.onrender.com/api/v1/registerUser",
+        // "http://localhost:8080/api/v1/registerUser",
+        "https://backend-syndeo.onrender.com/api/v1/registerUser",
         {
           firstName,
           lastName,
@@ -117,7 +117,7 @@ function Register() {
                       <div className="flex flex-col items-center justify-center px-6 mx-auto">
                         <div className="w-full bg-white rounded shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:border md:mt-0 sm:max-w-xl xl:p-0 dark:bg-gray-800 dark:border-gray-700 ">
                           <div className="p-6 space-y-4 md:space-y-4 sm:p-8">
-                            <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-colorThree md:text-2xl dark:text-white">
+                            <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-footerLinks md:text-2xl dark:text-white">
                               Sign up to your account
                             </h1>
 

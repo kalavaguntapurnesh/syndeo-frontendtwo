@@ -12,6 +12,8 @@ import { useNavigate } from "react-router-dom";
 // import { FaMicrophone } from "react-icons/fa6";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import apple from "../assets/Apple.svg";
+import google from "../assets/Google.svg";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -35,8 +37,8 @@ const Login = () => {
     // dispatch(showLoading());
     axios
       .post(
-        "http://localhost:8080/api/v1/login",
-        // "https://backend-syndeo.onrender.com/api/v1/login",
+        // "http://localhost:8080/api/v1/login",
+        "https://backend-syndeo.onrender.com/api/v1/login",
         {
           email,
           password,
@@ -76,7 +78,7 @@ const Login = () => {
                 <div className="flex justify-center items-center">
                   <div className="w-full bg-white rounded-lg shadow md:mt-0 xl:p-0 max-w-md">
                     <div className="p-6 space-y-4 md:space-y-4 sm:p-8">
-                      <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-colorThree md:text-2xl dark:text-white">
+                      <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-footerLinks md:text-2xl dark:text-white">
                         Log in to Syndèo
                       </h1>
                       <form
@@ -172,20 +174,12 @@ const Login = () => {
                         </div>
 
                         <button className="w-full flex text-black font-medium items-center justify-center gap-x-3 py-2.5 border rounded hover:bg-gray-50 duration-150 active:bg-gray-100">
-                          <img
-                            src="https://secure.meetupstatic.com/next/images/login/google.svg?w=48"
-                            alt=""
-                            className="w-5 h-5"
-                          />
+                          <img src={google} alt="" className="w-5 h-5" />
                           Log in with Google
                         </button>
 
                         <button className="w-full flex text-black font-medium items-center justify-center gap-x-3 py-2.5 border rounded hover:bg-gray-50 duration-150 active:bg-gray-100">
-                          <img
-                            src="https://secure.meetupstatic.com/next/images/login/apple.svg?w=48"
-                            alt=""
-                            className="w-5 h-5"
-                          />
+                          <img src={apple} alt="" className="w-5 h-5" />
                           Log in with Apple
                         </button>
 
