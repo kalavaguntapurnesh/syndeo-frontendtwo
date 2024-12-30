@@ -14,7 +14,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import PageNotFound from "./pages/PageNotFound";
 import ForgotPassword from "./pages/ForgotPassword";
-import ResetPassword from "./pages/ResetPassword";
+// import ResetPassword from "./pages/ResetPassword";
 // import Dashboard from "./pages/Dashboard";
 // import MySchedules from "./pages/MySchedules";
 // import Profile from "./pages/Profile";
@@ -46,10 +46,10 @@ function App() {
           <Route path="/pricing" element={<Pricing />}></Route>
 
           <Route path="/forgotPassword" element={<ForgotPassword />}></Route>
-          <Route
+          {/* <Route
             path="/resetPassword/:id/:token"
             element={<ResetPassword />}
-          ></Route>
+          ></Route> */}
           <Route path="*" element={<PageNotFound />}></Route>
 
           <Route path="/contact" element={<Contact />}></Route>

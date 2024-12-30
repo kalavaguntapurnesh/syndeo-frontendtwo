@@ -5,9 +5,9 @@ import { useNavigate, useParams } from "react-router-dom";
 // import { hideLoading, showLoading } from "../redux/features/alertSlice";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { Icon } from "react-icons-kit";
-import { eyeOff } from "react-icons-kit/feather/eyeOff";
-import { eye } from "react-icons-kit/feather/eye";
+// import { Icon } from "react-icons-kit";
+// import { eyeOff } from "react-icons-kit/feather/eyeOff";
+// import { eye } from "react-icons-kit/feather/eye";
 
 const ResetPassword = () => {
   const navigate = useNavigate();
@@ -15,16 +15,16 @@ const ResetPassword = () => {
   const [type, setType] = useState("password");
   const { id, token } = useParams();
   // const dispatch = useDispatch();
-  const [icon, setIcon] = useState(eyeOff);
-  const handleToggle = () => {
-    if (type === "password") {
-      setIcon(eye);
-      setType("text");
-    } else {
-      setIcon(eyeOff);
-      setType("password");
-    }
-  };
+  // const [icon, setIcon] = useState(eyeOff);
+  // const handleToggle = () => {
+  //   if (type === "password") {
+  //     setIcon(eye);
+  //     setType("text");
+  //   } else {
+  //     setIcon(eyeOff);
+  //     setType("password");
+  //   }
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -98,7 +98,7 @@ const ResetPassword = () => {
                                   required="true"
                                   onChange={(e) => setPassword(e.target.value)}
                                 ></input>
-                                <span
+                                {/* <span
                                   onClick={handleToggle}
                                   className="cursor-pointer flex justify-center items-center"
                                 >
@@ -107,7 +107,7 @@ const ResetPassword = () => {
                                     icon={icon}
                                     size={20}
                                   ></Icon>
-                                </span>
+                                </span> */}
                               </div>
                             </div>
 

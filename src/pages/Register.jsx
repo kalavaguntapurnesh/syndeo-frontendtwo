@@ -4,11 +4,11 @@ import { useNavigate } from "react-router-dom";
 // import { useDispatch } from "react-redux";
 // import { showLoading, hideLoading } from "../redux/features/alertSlice";
 import Swal from "sweetalert2";
-import { Icon } from "react-icons-kit";
-import { eyeOff } from "react-icons-kit/feather/eyeOff";
-import { eye } from "react-icons-kit/feather/eye";
-import Select from "react-select";
-import { Country, State, City } from "country-state-city";
+// import { Icon } from "react-icons-kit";
+// import { eyeOff } from "react-icons-kit/feather/eyeOff";
+// import { eye } from "react-icons-kit/feather/eye";
+// import Select from "react-select";
+// import { Country, State, City } from "country-state-city";
 import Footer from "../components/Footer";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
@@ -26,7 +26,7 @@ function Register() {
   const [organizationCountry, setOrganizationCountry] = useState(null);
   const [organizationState, setOrganizationState] = useState(null);
   const [organizationCity, setOrganizationCity] = useState(null);
-  const [icon, setIcon] = useState(eyeOff);
+  // const [icon, setIcon] = useState(eyeOff);
   const [role, setRole] = useState("");
   const navigate = useNavigate();
   // const dispatch = useDispatch();
@@ -40,15 +40,15 @@ function Register() {
     setShowEventType(false);
   };
 
-  const handleToggle = () => {
-    if (type === "password") {
-      setIcon(eye);
-      setType("text");
-    } else {
-      setIcon(eyeOff);
-      setType("password");
-    }
-  };
+  // const handleToggle = () => {
+  //   if (type === "password") {
+  //     setIcon(eye);
+  //     setType("text");
+  //   } else {
+  //     setIcon(eyeOff);
+  //     setType("password");
+  //   }
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -74,10 +74,11 @@ function Register() {
         // dispatch(hideLoading());
         if (response.status === 201) {
           const verifyMail = response.data.email;
-          const partialEmail = verifyMail.replace(
-            /(\w{3})[\w.-]+@([\w.]+\w)/,
-            "$1***@$2"
-          );
+          // const partialEmail = verifyMail.replace(
+          //   /(\w{3})[\w.-]+@([\w.]+\w)/,
+          //   "$1***@$2"
+          // );
+          const partialEmail = verifyMail;
           Swal.fire({
             title: "Registration Success",
             text:
@@ -242,7 +243,7 @@ function Register() {
                                             setPassword(e.target.value)
                                           }
                                         ></input>
-                                        <span
+                                        {/* <span
                                           onClick={handleToggle}
                                           className="cursor-pointer flex justify-center items-center"
                                         >
@@ -251,7 +252,7 @@ function Register() {
                                             icon={icon}
                                             size={20}
                                           ></Icon>
-                                        </span>
+                                        </span> */}
                                       </div>
                                     </div>
                                   </div>
@@ -346,7 +347,7 @@ function Register() {
                                               }
                                             ></input>
                                           </div>
-                                          <div>
+                                          {/* <div>
                                             <label
                                               htmlFor="organizationCountry"
                                               className="block mb-2 text-sm font-bold text-colorThree dark:text-white"
@@ -413,7 +414,7 @@ function Register() {
                                                 setOrganizationCity(item);
                                               }}
                                             />
-                                          </div>
+                                          </div> */}
                                         </div>
                                       </>
                                     )}

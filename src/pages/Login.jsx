@@ -1,7 +1,7 @@
-import { Icon } from "react-icons-kit";
-import { eyeOff } from "react-icons-kit/feather/eyeOff";
+// import { Icon } from "react-icons-kit";
+// import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { useState } from "react";
-import { eye } from "react-icons-kit/feather/eye";
+// import { eye } from "react-icons-kit/feather/eye";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
@@ -17,18 +17,18 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [type, setType] = useState("password");
-  const [icon, setIcon] = useState(eyeOff);
+  // const [icon, setIcon] = useState(eyeOff);
   const navigate = useNavigate();
   // const dispatch = useDispatch();
-  const handleToggle = () => {
-    if (type === "password") {
-      setIcon(eye);
-      setType("text");
-    } else {
-      setIcon(eyeOff);
-      setType("password");
-    }
-  };
+  // const handleToggle = () => {
+  //   if (type === "password") {
+  //     setIcon(eye);
+  //     setType("text");
+  //   } else {
+  //     setIcon(eyeOff);
+  //     setType("password");
+  //   }
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -118,7 +118,7 @@ const Login = () => {
                               required="true"
                               onChange={(e) => setPassword(e.target.value)}
                             ></input>
-                            <span
+                            {/* <span
                               onClick={handleToggle}
                               className="cursor-pointer flex justify-center items-center"
                             >
@@ -127,7 +127,7 @@ const Login = () => {
                                 icon={icon}
                                 size={20}
                               ></Icon>
-                            </span>
+                            </span> */}
                           </div>
                         </div>
                         <div className="flex items-center justify-between">

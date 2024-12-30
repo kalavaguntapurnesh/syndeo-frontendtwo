@@ -22,10 +22,11 @@ const ForgotPassword = () => {
         // dispatch(hideLoading());
         if (response.status === 200) {
           const verifyMail = response.data.email;
-          const partialEmail = verifyMail.replace(
-            /(\w{3})[\w.-]+@([\w.]+\w)/,
-            "$1***@$2"
-          );
+          // const partialEmail = verifyMail.replace(
+          //   /(\w{3})[\w.-]+@([\w.]+\w)/,
+          //   "$1***@$2"
+          // );
+          const partialEmail = verifyMail;
           Swal.fire({
             title: "Password Reset Initiated",
             text:
@@ -35,8 +36,7 @@ const ForgotPassword = () => {
             icon: "success",
           });
           navigate("/login");
-        }
-        else {
+        } else {
           Swal.fire({
             icon: "error",
             title: "Oops...",
