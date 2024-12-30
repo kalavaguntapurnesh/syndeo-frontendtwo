@@ -2,7 +2,7 @@ import { useState } from "react";
 import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { hideLoading, showLoading } from "../redux/features/alertSlice";
+// import { hideLoading, showLoading } from "../redux/features/alertSlice";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { FaUnlock } from "react-icons/fa";

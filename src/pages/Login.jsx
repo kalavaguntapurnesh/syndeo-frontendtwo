@@ -6,10 +6,10 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { showLoading, hideLoading } from "../redux/features/alertSlice";
-import { FaHome } from "react-icons/fa";
-import { FaIndustry } from "react-icons/fa";
-import { FaMicrophone } from "react-icons/fa6";
+// import { showLoading, hideLoading } from "../redux/features/alertSlice";
+// import { FaHome } from "react-icons/fa";
+// import { FaIndustry } from "react-icons/fa";
+// import { FaMicrophone } from "react-icons/fa6";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
@@ -19,7 +19,7 @@ const Login = () => {
   const [type, setType] = useState("password");
   const [icon, setIcon] = useState(eyeOff);
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const handleToggle = () => {
     if (type === "password") {
       setIcon(eye);
@@ -32,7 +32,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(showLoading());
+    // dispatch(showLoading());
     axios
       .post(
         "http://localhost:8080/api/v1/login",
@@ -44,7 +44,7 @@ const Login = () => {
       )
       .then((response) => {
         window.location.reload();
-        dispatch(hideLoading());
+        // dispatch(hideLoading());
         if (response.status === 200) {
           localStorage.setItem("token", response.data.token);
           console.log(response.data.token);
@@ -56,7 +56,7 @@ const Login = () => {
         }
       })
       .catch((error) => {
-        dispatch(hideLoading());
+        // dispatch(hideLoading());
         Swal.fire({
           icon: "error",
           title: "Oops...",

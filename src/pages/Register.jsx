@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { showLoading, hideLoading } from "../redux/features/alertSlice";
+// import { showLoading, hideLoading } from "../redux/features/alertSlice";
 import Swal from "sweetalert2";
 import { Icon } from "react-icons-kit";
 import { eyeOff } from "react-icons-kit/feather/eyeOff";
@@ -29,7 +29,7 @@ function Register() {
   const [icon, setIcon] = useState(eyeOff);
   const [role, setRole] = useState("");
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const [phoneNumber, setPhoneNumber] = useState("");
 
   const handleContinue = () => {
@@ -52,7 +52,7 @@ function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(showLoading());
+    // dispatch(showLoading());
     axios
       .post(
         "http://localhost:8080/api/v1/registerUser",
@@ -71,7 +71,7 @@ function Register() {
         }
       )
       .then((response) => {
-        dispatch(hideLoading());
+        // dispatch(hideLoading());
         if (response.status === 201) {
           const verifyMail = response.data.email;
           const partialEmail = verifyMail.replace(
@@ -90,7 +90,7 @@ function Register() {
         }
       })
       .catch((error) => {
-        dispatch(hideLoading());
+        // dispatch(hideLoading());
         console.log(error);
         Swal.fire({
           icon: "error",
