@@ -105,7 +105,7 @@ function Register() {
   return (
     <div>
       <Navbar />
-      <div className="relative lg:min-h-screen md:pt-12 pt-20">
+      <div className="relative lg:min-h-screen md:pt-12 pt-20 pb-12">
         <div className="w-full">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 h-full ">
             <div className="w-full px-4 mx-auto max-w-[1400px] lg:min-h-screen">
@@ -114,13 +114,13 @@ function Register() {
                   <div>
                     <section className="lg:mt-20 my-8">
                       <div className="flex flex-col items-center justify-center px-6 mx-auto">
-                        <div className="w-full bg-white rounded-lg shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:border md:mt-0 sm:max-w-xl xl:p-0 dark:bg-gray-800 dark:border-gray-700 ">
+                        <div className="w-full bg-white rounded shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:border md:mt-0 sm:max-w-xl xl:p-0 dark:bg-gray-800 dark:border-gray-700 ">
                           <div className="p-6 space-y-4 md:space-y-4 sm:p-8">
                             <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-colorThree md:text-2xl dark:text-white">
                               Sign up to your account
                             </h1>
 
-                            {/* <button className="w-full flex text-black font-medium items-center justify-center gap-x-3 py-2.5 border rounded-lg hover:bg-gray-50 duration-150 active:bg-gray-100">
+                            {/* <button className="w-full flex text-black font-medium items-center justify-center gap-x-3 py-2.5 border rounded hover:bg-gray-50 duration-150 active:bg-gray-100">
                               <img
                                 src="https://secure.meetupstatic.com/next/images/login/google.svg?w=48"
                                 alt=""
@@ -137,7 +137,7 @@ function Register() {
                               <div className="flex-grow border-t border-gray-400"></div>
                             </div>
 
-                            <button className="w-full flex text-black font-medium items-center justify-center gap-x-3 py-2.5 border rounded-lg hover:bg-gray-50 duration-150 active:bg-gray-100">
+                            <button className="w-full flex text-black font-medium items-center justify-center gap-x-3 py-2.5 border rounded hover:bg-gray-50 duration-150 active:bg-gray-100">
                               <img
                                 src="https://secure.meetupstatic.com/next/images/login/apple.svg?w=48"
                                 alt=""
@@ -260,7 +260,7 @@ function Register() {
                                     <button
                                       type="button"
                                       onClick={handleContinue}
-                                      className="w-full text-white bg-colorFour text-base hover:bg-colorFour transition ease-in-out duration-1000 focus:outline-none font-semibold rounded-lg px-5 py-2.5 text-center cursor-pointer"
+                                      className="w-full text-white bg-colorFour text-base hover:bg-colorFour transition ease-in-out duration-1000 focus:outline-none font-semibold rounded px-5 py-2.5 text-center cursor-pointer"
                                     >
                                       Continue
                                     </button>
@@ -271,7 +271,7 @@ function Register() {
                                   <button
                                     type="button"
                                     onClick={handleBack}
-                                    className="btn bg-colorFour text-white rounded-lg p-3 text-sm font-semibold"
+                                    className="btn bg-colorFour text-white rounded p-3 text-sm font-semibold"
                                   >
                                     Go Back
                                   </button>
@@ -289,7 +289,7 @@ function Register() {
                                       defaultCountry="US"
                                       value={phoneNumber}
                                       onChange={setPhoneNumber}
-                                      className="p-2.5 rounded-lg text-sm border border-gray-300 text-gray-900 outline-none"
+                                      className="p-2.5 rounded text-sm border border-gray-300 text-gray-900 outline-none"
                                     />
                                   </div>
 
@@ -446,7 +446,7 @@ function Register() {
                                   </div>
                                   <button
                                     type="submit"
-                                    className="w-full text-white bg-colorFour text-base hover:bg-colorFour transition ease-in-out duration-1000 focus:outline-none font-semibold rounded-lg px-5 py-2.5 text-center cursor-pointer"
+                                    className="w-full text-white bg-colorFour text-base hover:bg-colorFour transition ease-in-out duration-1000 focus:outline-none font-semibold rounded px-5 py-2.5 text-center cursor-pointer"
                                   >
                                     Sign up
                                   </button>

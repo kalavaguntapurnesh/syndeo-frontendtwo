@@ -12,9 +12,9 @@ const Privacy = () => {
             <div className="justify-center w-full">
               <div className="w-full max-w-[14000px] mx-auto space-y-4 ">
                 <div>
-                  <section className="my-8 border border-gray-300 rounded-lg">
+                  <section className="my-8 border border-gray-300 rounded">
                     <div className="py-2">
-                      <h1 className="text-center font-medium text-xl text-colorFour">
+                      <h1 className="text-center font-semibold text-xl text-colorFour">
                         Terms & Conditions
                       </h1>
                     </div>

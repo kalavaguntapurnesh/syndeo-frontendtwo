@@ -6,21 +6,21 @@ const Accordion = ({ title, answer }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
-    <div className="py-6 border-b-[1px] pt-2 text-lg">
+    <div className="py-6 border-b-[1px] pt-2 md:text-lg">
       <button
         onClick={() => {
           setAccordionOpen(!accordionOpen);
         }}
         className="flex justify-between w-full"
       >
-        <div className=" flex justify-start w-full items-center">
-          <span className="font-medium tracking-normal px-4">{title}</span>
+        <div className=" flex justify-start w-full items-center mt-2">
+          <span className="font-medium tracking-normal px-4 text-footerLinks">{title}</span>
         </div>
-        <div className="px-4 py-1">
+        <div className="px-4 py-2">
           {accordionOpen ? (
-            <LuMinus color="red" />
+            <LuMinus color="Maroon" />
           ) : (
-            <LuPlus color="[#00684A]" />
+            <LuPlus color="Maroon" />
           )}
         </div>
       </button>
@@ -32,7 +32,7 @@ const Accordion = ({ title, answer }) => {
         }`}
       >
         <div className="overflow-hidden md:mx-0 mx-1">
-          <span className="px-4 text-lg">{answer}</span>
+          <span className="px-4 md:text-lg text-footerLinks">{answer}</span>
         </div> 
       </div>
     </div>

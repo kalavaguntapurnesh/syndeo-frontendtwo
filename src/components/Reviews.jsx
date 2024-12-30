@@ -1,117 +1,98 @@
-import Star from "../assets/Star.svg";
+import user from "../assets/user.svg";
+import message from "../assets/message.svg";
+import schedule from "../assets/schedule.svg";
 
 const Reviews = () => {
+  const values1 = [
+    {
+      icon: user,
+      Title: "1. Create an account",
+      description:
+        "Sign up to unlock the full potential of our platform and start managing your appointments with ease.",
+    },
+    {
+      icon: schedule,
+      Title: "2. Create your schedule",
+      description:
+        "Easily organize and share your booking link to simplify scheduling and ensure a hassle-free experience for everyone",
+    },
+    {
+      icon: message,
+      Title: "3. Receive early notifications",
+      description:
+        "Get notified promptly to stay prepared, keeping track of important updates and events without any hassle.",
+    },
+  ];
   return (
-    <section>
-      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-12 flex justify-center flex-col">
-        <div class="py-8">
-          <div class="text-center flex justify-center items-center">
-            <h1 class="font-bold md:text-5xl text-4xl">
-              What users love <span class="text-colorFour"> about our </span>
-              scheduling software.
-            </h1>
-          </div>
+    <div className="lg:pt-12 pt-8 pb-12">
+      <div className="relative">
+        <div className="w-full">
+          <div className="w-full mx-auto max-w-[1400px]">
+            <div className="p-4">
+              <div className="space-y-3">
+                <div className="flex items-center text-center justify-center ">
+                  <div className="h-4 w-1 bg-mainColor"></div>
 
-          <div class="pt-16">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4">
-              <div class="flex md:justify-start justify-center">
-                <div class="w-full max-w-sm p-4 shadow rounded-lg sm:p-6 md:p-8 border-colorFour border-[1px]">
-                  <div class="space-y-4">
-                    <div>
-                      <h2 class="text-sm text-gray-400">
-                        Dean C., Senior Software Engineer
-                      </h2>
-                    </div>
-                    <div class="flex flex-row">
-                      <img src={Star} alt="" class="w-5 h-5" />
-                      <img src={Star} alt="" class="w-5 h-5" />
-                      <img src={Star} alt="" class="w-5 h-5" />
-                      <img src={Star} alt="" class="w-5 h-5" />
-                      <img src={Star} alt="" class="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h1 class="font-semibold text-2xl">
-                        Great experience so far
-                      </h1>
-                    </div>
-                    <div>
-                      <p>
-                        Return on investment is great. We can setup our own
-                        status pages with both public and internal ones being
-                        able to show us different details.
-                      </p>
-                    </div>
-                  </div>
+                  <p className="ml-2 lg:text-lg font-semibold text-mainColor">
+                    How does it work?
+                  </p>
+                </div>
+
+                <div className="text-center mt-4">
+                  <h3 className="lg:text-4xl text-2xl font-bold text-headingColor">
+                    Discover the process behind scheduling simplicity
+                  </h3>
+                </div>
+
+                <div className="text-gray-600 text-center">
+                  <p>
+                    Learn how our intuitive platform simplifies appointment
+                    management, ensuring efficiency, clarity, and ease for
+                    individuals and businesses alike.
+                  </p>
                 </div>
               </div>
 
-              <div class="flex md:justify-start justify-center">
-                <div class="w-full max-w-sm p-4 shadow rounded-lg sm:p-6 md:p-8 border-colorFour border-[1px]">
-                  <div class="space-y-4">
-                    <div>
-                      <h2 class="text-sm text-gray-400">
-                        Roberto B., Executive Vice President
-                      </h2>
-                    </div>
-                    <div class="flex flex-row">
-                      <img src={Star} alt="" class="w-5 h-5" />
-                      <img src={Star} alt="" class="w-5 h-5" />
-                      <img src={Star} alt="" class="w-5 h-5" />
-                      <img src={Star} alt="" class="w-5 h-5" />
-                      <img src={Star} alt="" class="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h1 class="font-semibold text-2xl">
-                        Simple and precious
-                      </h1>
-                    </div>
-                    <div>
-                      <p>
-                        The public status page is the best I have found for this
-                        price, you can set custom logo and custom domain and it
-                        is https. Other services claims to have powerful status
-                        pages but they are cumbersome or expensive.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 pt-8">
+                {values1.map((value, index) => (
+                  <div
+                    key={index}
+                    className="flex md:justify-start justify-center"
+                  >
+                    <div className="w-full bg-white p-6">
+                      <div className="space-y-3">
+                        <div className="flex md:justify-start justify-center items-center">
+                          <img src={value.icon} alt="" className="w-12 h-12" />
+                        </div>
 
-              <div class="flex md:justify-start justify-center">
-                <div class="w-full max-w-sm p-4 shadow rounded-lg sm:p-6 md:p-8 border-colorFour border-[1px]">
-                  <div class="space-y-4">
-                    <div>
-                      <h2 class="text-sm text-gray-400">
-                        Lee E., Director of Information Technology
-                      </h2>
-                    </div>
-                    <div class="flex flex-row">
-                      <img src={Star} alt="" class="w-5 h-5" />
-                      <img src={Star} alt="" class="w-5 h-5" />
-                      <img src={Star} alt="" class="w-5 h-5" />
-                      <img src={Star} alt="" class="w-5 h-5" />
-                      <img src={Star} alt="" class="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h1 class="font-semibold text-2xl">
-                        Simple and affordable
-                      </h1>
-                    </div>
-                    <div>
-                      <p>
-                        I like the public status page. There is a decent
-                        selection of monitor types and settings to help cutdown
-                        on false positives. Solid little mobile app.
-                      </p>
+                        <div className="flex md:justify-start justify-center items-center pt-4">
+                          <h1 className="text-2xl text-headingColor font-bold text-center">
+                            {value.Title}
+                          </h1>
+                        </div>
+                        <div className="flex md:justify-start justify-center items-center text-gray-600 md:text-start text-center">
+                          <p>{value.description}</p>
+                        </div>
+
+                        {/* <div className="px-6 flex md:justify-start justify-center">
+                          <a
+                            href="/login"
+                            className="flex flex-row items-center text-mainColor hover:text-headingColor transition ease-in-out duration-500 hover:-translate-y-1"
+                          >
+                            <span className="relative z-10 ">Know More</span>
+                            <MdArrowRightAlt className="ml-1 mt-1 w-5 h-5 " />
+                          </a>
+                        </div> */}
+                      </div>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

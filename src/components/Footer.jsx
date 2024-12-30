@@ -20,8 +20,8 @@ const Footer = () => {
                         className="flex flex-row items-center md:justify-start justify-center "
                       >
                         <h3 className="ml-1 text-2xl text-mainColor font-bold cursor-pointer">
-                          Mannam &{" "}
-                          <span className="text-[#0A3161]">Associates</span>
+                          Syndèo
+                          {/* <span className="text-[#0A3161]">Associates</span> */}
                         </h3>
                       </a>
                       <div></div>
@@ -101,7 +101,7 @@ const Footer = () => {
                           href="/why-mannam-and-associates"
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Mannam & Associates
+                          About Syndèo
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -145,7 +145,7 @@ const Footer = () => {
                           onClick={(e) => {
                             e.preventDefault();
                             const userConfirmed = window.confirm(
-                              "You are visiting a web page outside Mannam & Associates and we don't have control over it. Do you wish to continue?"
+                              "You are visiting a web page outside Syndèo and we don't have control over it. Do you wish to continue?"
                             );
                             if (userConfirmed) {
                               window.location.href =
@@ -197,7 +197,7 @@ const Footer = () => {
                           onClick={(event) => {
                             event.preventDefault();
                             const userConfirmed = window.confirm(
-                              "You are visiting a webpage outside Mannam & Associates. Do you wish to continue?"
+                              "You are visiting a webpage outside Syndèo. Do you wish to continue?"
                             );
                             if (userConfirmed) {
                               window.location.href =
@@ -350,7 +350,7 @@ const Footer = () => {
 
             <div className="text-center text-xs pb-6">
               <p className="text-headingColor">
-                © 2024 Manna Law Firm. All Rights Reserved.
+                © 2024 Syndèo. All Rights Reserved.
               </p>
             </div>
           </div>

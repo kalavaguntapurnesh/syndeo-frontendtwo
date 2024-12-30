@@ -61,9 +61,9 @@ const Navbar = () => {
         {/* Desktop Nav Links */}
         <ul className="hidden lg:flex flex-grow justify-center space-x-8 items-center">
           {/* <Tabs /> */}
-          <FlyoutLink href="/our-practices" FlyoutContent={SupportContent}>
+          {/* <FlyoutLink href="/our-practices" FlyoutContent={SupportContent}>
             Our Practice
-          </FlyoutLink>
+          </FlyoutLink> */}
           {/* <FlyoutLink
             href="/managed-it-services"
             FlyoutContent={ServicesContent}
@@ -77,12 +77,27 @@ const Navbar = () => {
             Our Experts
           </FlyoutLink> */}
 
-          <FlyoutLink
+          {/* <FlyoutLink
             href="/why-mannam-and-associates"
             FlyoutContent={AboutUsContent}
           >
             About Us
-          </FlyoutLink>
+          </FlyoutLink> */}
+
+          <li
+            className={` group transition duration-300 uppercase ${
+              isScrolled
+                ? "text-headingColor hover:text-mainColor transition ease-in-out duration-500"
+                : "text-headingColor hover:text-mainColor transition ease-in-out duration-500"
+            }`}
+          >
+            <a href="/">Home</a>
+            <div
+              className={` h-[2px] w-0 group-hover:w-full transition-all duration-300 ${
+                isScrolled ? "bg-mainColor" : "bg-mainColor"
+              }`}
+            ></div>
+          </li>
 
           <li
             className={` group transition duration-300 uppercase ${
@@ -107,6 +122,21 @@ const Navbar = () => {
             }`}
           >
             <a href="/pricing">Pricings</a>
+            <div
+              className={` h-[2px] w-0 group-hover:w-full transition-all duration-300 ${
+                isScrolled ? "bg-mainColor" : "bg-mainColor"
+              }`}
+            ></div>
+          </li>
+
+          <li
+            className={` group transition duration-300 uppercase ${
+              isScrolled
+                ? "text-headingColor hover:text-mainColor transition ease-in-out duration-500"
+                : "text-headingColor hover:text-mainColor transition ease-in-out duration-500"
+            }`}
+          >
+            <a href="/contact">Contact Us</a>
             <div
               className={` h-[2px] w-0 group-hover:w-full transition-all duration-300 ${
                 isScrolled ? "bg-mainColor" : "bg-mainColor"
@@ -159,7 +189,7 @@ const Navbar = () => {
           </a>
 
           <ul className="p-4">
-            <li className="p-4 border-b border-headingColor">
+            {/* <li className="p-4 border-b border-headingColor">
               <div
                 onClick={() => toggleMobileDropdown("subscription")}
                 className="flex items-center justify-between cursor-pointer text-footerLinks font-medium"
@@ -236,7 +266,7 @@ const Navbar = () => {
                   </motion.ul>
                 )}
               </AnimatePresence>
-            </li>
+            </li> */}
             {/* <li className="p-4 border-b border-headingColor">
               <a
                 href="/contact"
@@ -245,6 +275,15 @@ const Navbar = () => {
                 Achievements
               </a>
             </li> */}
+
+            <li className="p-4 border-b border-headingColor">
+              <a
+                href="/"
+                className="flex items-center justify-between cursor-pointer text-footerLinks font-medium"
+              >
+                Home
+              </a>
+            </li>
 
             <li className="p-4 border-b border-headingColor">
               <a
