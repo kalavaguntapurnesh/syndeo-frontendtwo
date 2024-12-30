@@ -120,7 +120,7 @@ const Navbar = () => {
                 : "text-headingColor hover:text-mainColor transition ease-in-out duration-500"
             }`}
           >
-            <a href="/pricing">Pricings</a>
+            <a href="/pricing">Pricing</a>
             <div
               className={` h-[2px] w-0 group-hover:w-full transition-all duration-300 ${
                 isScrolled ? "bg-mainColor" : "bg-mainColor"
@@ -289,7 +289,7 @@ const Navbar = () => {
                 href="/about"
                 className="flex items-center justify-between cursor-pointer text-footerLinks font-medium"
               >
-                About Us
+                About Syndèo
               </a>
             </li>
 
@@ -298,7 +298,7 @@ const Navbar = () => {
                 href="/pricing"
                 className="flex items-center justify-between cursor-pointer text-footerLinks font-medium"
               >
-                Pricing
+                Our Pricing
               </a>
             </li>
 
@@ -319,6 +319,15 @@ const Navbar = () => {
                 Contact Us
               </a>
             </li>
+
+            <li className="p-4 border-b border-headingColor">
+              <a
+                href="/login"
+                className="flex items-center justify-between cursor-pointer text-footerLinks font-medium"
+              >
+                Login / Register
+              </a>
+            </li>
           </ul>
 
           <div className="px-4">
@@ -327,17 +336,17 @@ const Navbar = () => {
             </h5>
             <div className="p-4">
               <div className="grid grid-cols-4">
-                <a href="https://www.linkedin.com/company/mannam-&-associates-llc/">
+                <a href="">
                   <FaLinkedinIn className="w-6 h-6 text-footerLinks duration-1000 hover:text-mainColor ease-in-out" />
                 </a>
-                <a href="https://www.linkedin.com/company/mannam-&-associates-llc/">
+                <a href="">
                   <FaXTwitter className="w-6 h-6 text-footerLinks duration-1000 hover:text-mainColor ease-in-out" />
                 </a>
-                <a href="https://www.linkedin.com/company/mannam-&-associates-llc/">
+                <a href="">
                   {" "}
                   <FaInstagram className="w-6 h-6 text-footerLinks duration-1000 hover:text-mainColor ease-in-out" />
                 </a>
-                <a href="https://www.linkedin.com/company/mannam-&-associates-llc/">
+                <a href="">
                   {" "}
                   <FaFacebookF className="w-6 h-6 text-footerLinks duration-1000 hover:text-mainColor ease-in-out" />
                 </a>

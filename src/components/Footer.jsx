@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="pb-8 mb-8 border-b border-gray-600">
               <div className="w-full p-8">
                 <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6 mt-8">
-                  <div className="flex flex-col lg:mb-0 mb-8 gap-4 col-span-2 ">
+                  <div className="flex flex-col lg:mb-0 mb-8 gap-4 lg:col-span-1 col-span-2">
                     <div className="w-full">
                       <a
                         href="/"
@@ -24,58 +24,116 @@ const Footer = () => {
                           {/* <span className="text-[#0A3161]">Associates</span> */}
                         </h3>
                       </a>
-                      <div></div>
+                      {/* <div className="text-footerLinks py-4">
+                        <p className="font-medium text-headingColor no-underline  leading-6 ">
+                          An easy & cost-effective solution for online meeting
+                          scheduling.
+                        </p>
+                      </div> */}
                     </div>
+                  </div>
+
+                  <div className="mb-12 md:mb-0 lg:block hidden">
+                    <div className="flex items-center md:justify-start justify-center">
+                      {/* <div className="h-4 w-1 bg-mainColor"></div> */}
+                      <h4 className=" text-sm leading-5 text-mainColor font-bold tracking-wider uppercase flex md:justify-start justify-center items-start mt-1 ">
+                        Quick Links
+                      </h4>
+                    </div>
+                    <ul className="pl-0 mt-4 space-y-3 list-none">
+                      <li className=" flex items-start md:justify-start justify-center">
+                        <a
+                          href="/"
+                          className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
+                        >
+                          LinkedIn Page
+                        </a>
+                      </li>
+                      <li className=" flex items-start md:justify-start justify-center">
+                        <a
+                          href="/login"
+                          className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
+                        >
+                          Log In Page
+                        </a>
+                      </li>
+                      <li className=" flex items-start md:justify-start justify-center">
+                        <a
+                          href="/about"
+                          className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
+                        >
+                          Product Features
+                        </a>
+                      </li>
+
+                      <li className=" flex items-start md:justify-start justify-center">
+                        <a
+                          href="/contact"
+                          className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
+                        >
+                          Client Testimonials
+                        </a>
+                      </li>
+
+                      <li className=" flex items-start md:justify-start justify-center">
+                        <a
+                          href="/"
+                          className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
+                        >
+                          Syndèo Mobile App
+                        </a>
+                      </li>
+                    </ul>
                   </div>
 
                   <div className="mb-12 md:mb-0">
                     <div className="flex items-center md:justify-start justify-center">
                       {/* <div className="h-4 w-1 bg-mainColor"></div> */}
                       <h4 className=" text-sm leading-5 text-mainColor font-bold tracking-wider uppercase flex md:justify-start justify-center items-start mt-1 ">
-                        Practices
+                        Company
                       </h4>
                     </div>
                     <ul className="pl-0 mt-4 space-y-3 list-none">
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/employment-based-visa"
+                          href="/privacy"
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Employment Based Visas
+                          Terms & Conditions
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/investor-based-visa"
+                          href="/privacy"
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Investor Based Visas
+                          Privacy & Policy
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/family-based-visa"
+                          href="/about"
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Family Based Visas
-                        </a>
-                      </li>
-
-                      <li className=" flex items-start md:justify-start justify-center">
-                        <a
-                          href="/student-based-visa"
-                          className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
-                        >
-                          Students and Scholars
+                          Our Leadership
                         </a>
                       </li>
 
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/naturalization"
+                          href="/privacy"
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Naturalization
+                          Developer Policy
+                        </a>
+                      </li>
+
+                      <li className=" flex items-start md:justify-start justify-center">
+                        <a
+                          href="/"
+                          className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
+                        >
+                          Our Partnerships
                         </a>
                       </li>
                     </ul>
@@ -84,40 +142,40 @@ const Footer = () => {
                     <div className="flex items-center md:justify-start justify-center">
                       {/* <div className="h-4 w-1 bg-mainColor"></div> */}
                       <h4 className=" text-sm leading-5 font-bold text-mainColor tracking-wider uppercase flex md:justify-start justify-center items-start mt-1 ">
-                        About us
+                        General
                       </h4>
                     </div>
                     <ul className="pl-0 mt-4 space-y-3 list-none">
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/privacy-policy"
+                          href="/pricing"
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Our Privacy Policy
+                          Our Pricing
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/why-mannam-and-associates"
+                          href="/"
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          About Syndèo
+                          Affliate Program
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/experts"
+                          href="/"
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Our Leadership
+                          Admin Management
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/terms-and-conditions"
+                          href="/"
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Terms & Conditions
+                          Customize Availability
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -135,78 +193,48 @@ const Footer = () => {
                     <div className="flex items-center md:justify-start justify-center">
                       {/* <div className="h-4 w-1 bg-mainColor"></div> */}
                       <h4 className="  text-sm leading-5 font-bold text-mainColor tracking-wider uppercase flex md:justify-start justify-center items-start mt-1">
-                        Government
+                        Resources
                       </h4>
                     </div>
                     <ul className="pl-0 mt-4 space-y-3 list-none">
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="#"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            const userConfirmed = window.confirm(
-                              "You are visiting a web page outside Syndèo and we don't have control over it. Do you wish to continue?"
-                            );
-                            if (userConfirmed) {
-                              window.location.href =
-                                "https://www.uscis.gov/newsroom/all-news";
-                            }
-                          }}
-                          className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
-                        >
-                          USCIS News
-                        </a>
-                      </li>
-                      <li className=" flex items-start md:justify-start justify-center">
-                        <a
                           href="/about-us"
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Homeland Security
+                          Help Center
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="https://www.linkedin.com/company/mannam-&-associates-llc/"
+                          href="/about"
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Processing Times
+                          Client Stories
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="#"
-                          onClick={(event) => {
-                            event.preventDefault();
-                            const userConfirmed = window.confirm(
-                              "You will be navigated to the U.S Department of State - Bureau of Consumer Affairs website. Do you wish to continue?"
-                            );
-                            if (userConfirmed) {
-                              window.location.href =
-                                "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html";
-                            }
-                          }}
+                          href=""
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          VISA Bulletin
+                          Syndèo Community
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="#"
-                          onClick={(event) => {
-                            event.preventDefault();
-                            const userConfirmed = window.confirm(
-                              "You are visiting a webpage outside Syndèo. Do you wish to continue?"
-                            );
-                            if (userConfirmed) {
-                              window.location.href =
-                                "https://www.usembassy.gov/";
-                            }
-                          }}
+                          href=""
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          U.S Consulates
+                          Sign up for free
+                        </a>
+                      </li>
+                      <li className=" flex items-start md:justify-start justify-center">
+                        <a
+                          href=""
+                          className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
+                        >
+                          Data Security
                         </a>
                       </li>
                     </ul>
@@ -222,18 +250,18 @@ const Footer = () => {
                     <ul className="pl-0 mt-4 space-y-3 list-none">
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/trademarks"
+                          href="/"
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Trademarks
+                          Our Cookie Policy
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/copyright"
+                          href="/"
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Copyright
+                          Product Overview
                         </a>
                       </li>
 
@@ -242,7 +270,7 @@ const Footer = () => {
                           href="/"
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Disclaimer
+                          Data Processing Agreement
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -250,7 +278,7 @@ const Footer = () => {
                           href="/"
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Job Paths
+                          Data Retention Policy
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -258,7 +286,7 @@ const Footer = () => {
                           href="/"
                           className="hover:text-mainColor font-medium text-headingColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Bar Membership
+                          Accessibility Statement
                         </a>
                       </li>
                     </ul>
@@ -266,49 +294,34 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="w-full">
+              <div className="w-full py-2">
                 <div className="grid grid-cols-1 gap-8 lg:gap-4 w-full">
                   <div className="grid grid-cols-5">
-                    <a
-                      href="https://www.linkedin.com/company/mannam-&-associates-llc/"
-                      className="flex justify-center items-center "
-                    >
+                    <a href="" className="flex justify-center items-center ">
                       <FaLinkedin
                         size={25}
                         className="cursor-pointer text-headingColor"
                       />
                     </a>
-                    <a
-                      href="https://g.co/kgs/L7ak23S"
-                      className="flex justify-center items-center"
-                    >
+                    <a href="" className="flex justify-center items-center">
                       <FaXTwitter
                         size={25}
                         className="cursor-pointer text-headingColor"
                       />
                     </a>
-                    <a
-                      href="https://g.co/kgs/L7ak23S"
-                      className="flex justify-center items-center"
-                    >
+                    <a href="" className="flex justify-center items-center">
                       <FaInstagram
                         size={25}
                         className="cursor-pointer text-headingColor"
                       />
                     </a>
-                    <a
-                      href="https://g.co/kgs/L7ak23S"
-                      className="flex justify-center items-center"
-                    >
+                    <a href="" className="flex justify-center items-center">
                       <FaGoogle
                         size={25}
                         className="cursor-pointer text-headingColor"
                       />
                     </a>
-                    <a
-                      href="https://g.co/kgs/L7ak23S"
-                      className="flex justify-center items-center"
-                    >
+                    <a href="" className="flex justify-center items-center">
                       <FaFacebook
                         size={25}
                         className="cursor-pointer text-headingColor"
@@ -350,7 +363,7 @@ const Footer = () => {
 
             <div className="text-center text-xs pb-6">
               <p className="text-headingColor">
-                © 2024 Syndèo. All Rights Reserved.
+                © 2024 Syndèo - All rights reserved.
               </p>
             </div>
           </div>

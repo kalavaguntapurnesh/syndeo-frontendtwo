@@ -70,7 +70,7 @@ const Login = () => {
   return (
     <div>
       <Navbar />
-      <div className="relative md:pt-12 pt-20 pb-12">
+      <div className="relative md:pt-12 pt-24 pb-12">
         <div className="w-full">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 h-full ">
             <div className="h-[100%] w-full pt-8">
