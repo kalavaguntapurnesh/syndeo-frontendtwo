@@ -1,4 +1,3 @@
-
 import One from "../assets/One.svg";
 import Two from "../assets/Two.svg";
 import Three from "../assets/Three.svg";
@@ -142,33 +141,35 @@ const Carousel = () => {
                       </p>
                     </div>
 
-                    <div className="lg:block hidden mt-20 bg-slate-100 rounded space-y-4 h-24">
-                      <div className="md:pb-2 pb-6 h-[100%]">
-                        <div className="grid md:grid-cols-3 grid-cols-1 gap-4 lg:h-[100%] h-auto">
-                          <div className="flex flex-col justify-center items-center space-y-1">
-                            <div className="text-footerLinks lg:text-4xl text-2xl font-bold ">
-                              <h1>2023 </h1>
+                    <div className=" pt-4">
+                      <div className="lg:block hidden bg-slate-100 rounded space-y-4 h-24">
+                        <div className="md:pb-2 pb-6 h-[100%]">
+                          <div className="grid md:grid-cols-3 grid-cols-1 gap-4 lg:h-[100%] h-auto">
+                            <div className="flex flex-col justify-center items-center space-y-1">
+                              <div className="text-footerLinks lg:text-4xl text-2xl font-bold ">
+                                <h1>2023 </h1>
+                              </div>
+                              <div className="text-gray-600">
+                                <p>Year Founded</p>
+                              </div>
                             </div>
-                            <div className="text-gray-600">
-                              <p>Year Founded</p>
-                            </div>
-                          </div>
 
-                          <div className="flex flex-col justify-center items-center space-y-1">
-                            <div className="text-footerLinks lg:text-4xl text-2xl font-bold ">
-                              <h1>180+</h1>
+                            <div className="flex flex-col justify-center items-center space-y-1">
+                              <div className="text-footerLinks lg:text-4xl text-2xl font-bold ">
+                                <h1>180+</h1>
+                              </div>
+                              <div className="text-gray-600">
+                                <p>Countries Availability</p>
+                              </div>
                             </div>
-                            <div className="text-gray-600">
-                              <p>Countries Availability</p>
-                            </div>
-                          </div>
 
-                          <div className="flex flex-col justify-center items-center space-y-1">
-                            <div className="text-footerLinks lg:text-4xl text-2xl font-bold ">
-                              <h1>24/7</h1>
-                            </div>
-                            <div className="text-gray-600">
-                              <p>Application Usage</p>
+                            <div className="flex flex-col justify-center items-center space-y-1">
+                              <div className="text-footerLinks lg:text-4xl text-2xl font-bold ">
+                                <h1>24/7</h1>
+                              </div>
+                              <div className="text-gray-600">
+                                <p>Application Usage</p>
+                              </div>
                             </div>
                           </div>
                         </div>
