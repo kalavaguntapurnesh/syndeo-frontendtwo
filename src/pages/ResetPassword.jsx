@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import { useNavigate, useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 // import { hideLoading, showLoading } from "../redux/features/alertSlice";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -14,7 +14,7 @@ const ResetPassword = () => {
   const [password, setPassword] = useState("");
   const [type, setType] = useState("password");
   const { id, token } = useParams();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const [icon, setIcon] = useState(eyeOff);
   const handleToggle = () => {
     if (type === "password") {
@@ -28,7 +28,7 @@ const ResetPassword = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(showLoading());
+    // dispatch(showLoading());
     axios
       .post(
         `https://backend-syndeo.onrender.com/api/v1/resetPassword/${id}/${token}`,
@@ -37,7 +37,7 @@ const ResetPassword = () => {
         }
       )
       .then((response) => {
-        dispatch(hideLoading());
+        // dispatch(hideLoading());
         if (response.status === 200) {
           Swal.fire({
             title: "Password Reset Successful",
@@ -47,7 +47,7 @@ const ResetPassword = () => {
         }
       })
       .catch((error) => {
-        dispatch(hideLoading());
+        // dispatch(hideLoading());
         console.log(error);
         Swal.fire({
           icon: "error",

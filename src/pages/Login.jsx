@@ -5,7 +5,7 @@ import { eye } from "react-icons-kit/feather/eye";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 // import { showLoading, hideLoading } from "../redux/features/alertSlice";
 // import { FaHome } from "react-icons/fa";
 // import { FaIndustry } from "react-icons/fa";

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 // import { hideLoading, showLoading } from "../redux/features/alertSlice";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -10,16 +10,16 @@ import { FaUnlock } from "react-icons/fa";
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(showLoading());
+    // dispatch(showLoading());
     axios
       .post("https://backend-syndeo.onrender.com/api/v1/forgotPassword", {
         email,
       })
       .then((response) => {
-        dispatch(hideLoading());
+        // dispatch(hideLoading());
         if (response.status === 200) {
           const verifyMail = response.data.email;
           const partialEmail = verifyMail.replace(
@@ -46,7 +46,7 @@ const ForgotPassword = () => {
         }
       })
       .catch((error) => {
-        dispatch(hideLoading());
+        // dispatch(hideLoading());
         console.log(error);
         Swal.fire({
           icon: "error",
