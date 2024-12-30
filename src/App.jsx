@@ -17,15 +17,15 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import Dashboard from "./pages/Dashboard";
 import MySchedules from "./pages/MySchedules";
-import Profile from "./pages/Profile";
-import CreateSchedule from "./pages/CreateSchedule";
+// import Profile from "./pages/Profile";
+// import CreateSchedule from "./pages/CreateSchedule";
 import AddEmployees from "./pages/AddEmployees";
 import AllEmployees from "./pages/AllEmployees";
 import { useSelector } from "react-redux";
 import Spinner from "./components/Spinner";
 import ProtectedRoute from "./components/ProtectedRoute";
 // import PublicRoute from "./components/PublicRoute";
-import EmployeeSchedules from "./pages/EmployeeSchedules";
+// import EmployeeSchedules from "./pages/EmployeeSchedules";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -66,30 +66,30 @@ function App() {
                 </ProtectedRoute>
               }
             ></Route>
-            <Route
+            {/* <Route
               path="/profile/:id"
               element={
                 <ProtectedRoute>
                   <Profile />
                 </ProtectedRoute>
               }
-            ></Route>
-            <Route
+            ></Route> */}
+            {/* <Route
               path="/employeeSchedules/:id"
               element={
                 <ProtectedRoute>
                   <EmployeeSchedules />
                 </ProtectedRoute>
               }
-            ></Route>
-            <Route
+            ></Route> */}
+            {/* <Route
               path="/createSchedule/:id"
               element={
                 <ProtectedRoute>
                   <CreateSchedule />
                 </ProtectedRoute>
               }
-            ></Route>
+            ></Route> */}
             <Route
               path="/bookings/:id"
               element={

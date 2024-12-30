@@ -60,10 +60,10 @@ const Dashboard = () => {
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 pt-8">
           <button
             onClick={() => navigate(`/createSchedule/${user?._id}`)}
-            class="flex md:justify-start justify-center"
+            className="flex md:justify-start justify-center"
           >
-            <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
-              <div class="space-y-4">
+            <div className="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+              <div className="space-y-4">
                 <div className="py-8 space-y-2">
                   <div className="flex justify-center items-center">
                     <img src={ai} alt="" className="w-12 h-12" />
@@ -95,10 +95,10 @@ const Dashboard = () => {
           <button
             onClick={() => navigate(`/bookings/${user?._id}`)}
             href=""
-            class="flex md:justify-start justify-center"
+            className="flex md:justify-start justify-center"
           >
-            <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
-              <div class="space-y-4">
+            <div className="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+              <div className="space-y-4">
                 <div className="py-8 space-y-2">
                   <div className="flex justify-center items-center">
                     <img src={calendar} alt="" className="w-12 h-12" />
@@ -129,10 +129,10 @@ const Dashboard = () => {
 
           <button
             onClick={() => navigate(`/createSchedule/${user?._id}`)}
-            class="flex md:justify-start justify-center"
+            className="flex md:justify-start justify-center"
           >
-            <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
-              <div class="space-y-4">
+            <div className="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+              <div className="space-y-4">
                 <div className="flex justify-center items-center">
                   <img src={premium} alt="" className="w-12 h-12" />
                 </div>
@@ -171,7 +171,7 @@ const Dashboard = () => {
                 <div className="flex justify-center py-6">
                   <button
                     onClick={() => navigate(`/createSchedule/${user?._id}`)}
-                    class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full"
+                    className="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full"
                   >
                     Start making event
                   </button>
@@ -188,9 +188,9 @@ const Dashboard = () => {
         </div>
 
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 pt-4">
-          <a href="" class="flex md:justify-start justify-center">
-            <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
-              <div class="flex flex-row justify-between">
+          <a href="" className="flex md:justify-start justify-center">
+            <div className="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+              <div className="flex flex-row justify-between">
                 <div className="flex justify-center items-center">
                   <img src={gc} alt="" className="w-8 h-8" />
                 </div>
@@ -204,9 +204,9 @@ const Dashboard = () => {
             </div>
           </a>
 
-          <a href="" class="flex md:justify-start justify-center">
-            <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
-              <div class="flex flex-row justify-between">
+          <a href="" className="flex md:justify-start justify-center">
+            <div className="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+              <div className="flex flex-row justify-between">
                 <div className="flex justify-center items-center">
                   <img src={chrome} alt="" className="w-8 h-8" />
                 </div>
@@ -220,9 +220,9 @@ const Dashboard = () => {
             </div>
           </a>
 
-          <a href="" class="flex md:justify-start justify-center">
-            <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
-              <div class="flex flex-row justify-between">
+          <a href="" className="flex md:justify-start justify-center">
+            <div className="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+              <div className="flex flex-row justify-between">
                 <div className="flex justify-center items-center">
                   <img src={clock} alt="" className="w-8 h-8" />
                 </div>
