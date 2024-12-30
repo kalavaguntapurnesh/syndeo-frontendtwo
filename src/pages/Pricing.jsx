@@ -1,7 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
-import Star from "../assets/Star.svg";
 import quote from "../assets/Quote.svg";
 
 const Pricing = () => {

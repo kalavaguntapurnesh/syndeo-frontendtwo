@@ -1,5 +1,10 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Privacy from "./pages/Privacy";
@@ -26,29 +31,30 @@ function App() {
   // const { loading } = useSelector((state) => state.alerts);
 
   return (
-    <BrowserRouter>
-      {/* {loading ? (
+    <>
+      <BrowserRouter>
+        {/* {loading ? (
         <Spinner />
       ) : ( */}
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/login" element={<Login />}></Route>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/login" element={<Login />}></Route>
 
-        <Route path="/privacy" element={<Privacy />}></Route>
-        <Route path="/register" element={<Register />}></Route>
-        <Route path="/pricing" element={<Pricing />}></Route>
+          <Route path="/privacy" element={<Privacy />}></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/pricing" element={<Pricing />}></Route>
 
-        <Route path="/forgotPassword" element={<ForgotPassword />}></Route>
-        <Route
-          path="/resetPassword/:id/:token"
-          element={<ResetPassword />}
-        ></Route>
-        <Route path="*" element={<PageNotFound />}></Route>
+          <Route path="/forgotPassword" element={<ForgotPassword />}></Route>
+          <Route
+            path="/resetPassword/:id/:token"
+            element={<ResetPassword />}
+          ></Route>
+          <Route path="*" element={<PageNotFound />}></Route>
 
-        <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
 
-        {/* <Route
+          {/* <Route
             path="/addEmployees/:id"
             element={
               <ProtectedRoute>
@@ -108,9 +114,10 @@ function App() {
               </ProtectedRoute>
             }
           ></Route> */}
-      </Routes>
-      {/* )} */}
-    </BrowserRouter>
+        </Routes>
+        {/* )} */}
+      </BrowserRouter>
+    </>
   );
 }
 
