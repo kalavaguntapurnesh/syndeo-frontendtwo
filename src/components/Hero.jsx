@@ -85,22 +85,22 @@ const Hero = () => {
 
                 <div className="flex lg:justify-end justify-center items-center w-[100%]">
                   <div className="lg:block hidden">
-                    <Lottie
+                    {/* <Lottie
                       animationData={Home}
                       loop={true}
                       // width="612"
                       // height="512"
                       className="h-auto w-auto "
-                    />
+                    /> */}
                   </div>
                   <div className="flex justify-center items-center">
-                    <Lottie
+                    {/* <Lottie
                       animationData={Home}
                       loop={true}
                       // width="612"
                       // height="512"
                       className=" h-auto w-auto lg:hidden block"
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
