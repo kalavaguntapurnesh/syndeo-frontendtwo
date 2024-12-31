@@ -39,7 +39,7 @@ const FAQ = () => {
                   <Accordion
                     title="Can I sync my personal calendar with an online booking platform?"
                     answer="
-                      Yes. Appointy offers a two-way sync with personal and work calendars like Google Calendar, iCal, Outlook, and more. You can export bookings from Syndèo to personal calendar, and also import bookings from your personal calendar to Syndèo to block those times."
+                      Yes. Syndèo offers a two-way sync with personal and work calendars like Google Calendar, iCal, Outlook, and more. You can export bookings from Syndèo to personal calendar, and also import bookings from your personal calendar to Syndèo to block those times."
                   />
                   <Accordion
                     title="Can different staff members have their own login?"

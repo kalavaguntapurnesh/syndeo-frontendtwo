@@ -67,9 +67,9 @@ const ForgotPassword = () => {
                 <div>
                   <section className="bg-gray-50 my-8">
                     <div className="flex flex-col items-center justify-center px-6 mx-auto">
-                      <div className="w-full bg-white rounded shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                      <div className="w-full bg-white rounded shadow dark:border md:mt-0 sm:max-w-md xl:p-0 ">
                         <div className="p-6 space-y-4 md:space-y-4 sm:p-8">
-                          <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-footerLinks md:text-2xl dark:text-white">
+                          <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-footerLinks md:text-2xl ">
                             Forgot your password
                           </h1>
                           <div className="text-center text-gray-500">
@@ -90,7 +90,7 @@ const ForgotPassword = () => {
                             <div>
                               <label
                                 htmlFor="email"
-                                className="block mb-2 text-sm font-medium text-colorThree dark:text-white"
+                                className="block mb-2 text-sm font-bold text-colorThree "
                               >
                                 Email
                               </label>
@@ -98,7 +98,7 @@ const ForgotPassword = () => {
                                 type="email"
                                 name="email"
                                 id="email"
-                                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                                 placeholder="name@company.com"
                                 required=""
                                 onChange={(e) => setEmail(e.target.value)}
@@ -111,11 +111,11 @@ const ForgotPassword = () => {
                             >
                               Submit
                             </button>
-                            <p className="text-sm text-center font-light text-gray-500 dark:text-gray-400">
+                            <p className="text-sm text-center font-light text-gray-500 ">
                               Don’t have an account yet?{" "}
                               <a
                                 href="/register"
-                                className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                                className="font-medium hover:underline "
                               >
                                 Sign up
                               </a>
