@@ -23,12 +23,12 @@ const DashboardNavbar = () => {
 
   const handleLogout = () => {
     localStorage.clear();
-    // setTimeout(() => {
-    //   Swal.fire({
-    //     title: "Logged Out Successfully!!!",
-    //     icon: "success",
-    //   });
-    // }, 4000);
+    setTimeout(() => {
+      Swal.fire({
+        title: "Logged Out Successfully!!!",
+        icon: "success",
+      });
+    }, 4000);
     navigate("/login");
     window.location.reload();
   };
@@ -141,7 +141,7 @@ const DashboardNavbar = () => {
                   <a
                     key={item}
                     href={item.path}
-                    className="lg:p-4 p-[11px] cursor-pointer text-colorFour font-semibold lg:text-base text-xs tracking-wider"
+                    className="lg:p-4 p-[11px] cursor-pointer text-footerLinks font-medium uppercase hover:text-colorFour ease-in-out transition duration-500 lg:text-base text-xs tracking-wider"
                   >
                     {item?.name}
                   </a>
@@ -151,7 +151,7 @@ const DashboardNavbar = () => {
               <div className="lg:block hidden mr-8">
                 <button
                   onClick={handleLogout}
-                  className=" bg-colorFour hover:bg-green-600 transition duration-1000 text-white py-2 px-6 rounded-full"
+                  className=" bg-colorFour hover:bg-green-600 transition duration-1000 text-white py-[6px] px-8 rounded"
                 >
                   Logout
                 </button>
@@ -209,7 +209,7 @@ const DashboardNavbar = () => {
                   className="uppercase mt-6 px-8 cursor-pointer"
                   onClick={handleLogout}
                 >
-                  <a className=" transition duration-1000 font-semibold text-white text-sm bg-colorFour py-3 px-6 rounded-full">
+                  <a className=" transition duration-1000 font-semibold text-white text-sm bg-colorFour py-3 px-6 rounded">
                     Logout
                   </a>
                 </div>
