@@ -55,8 +55,8 @@ function Register() {
     // dispatch(showLoading());
     axios
       .post(
-        // "http://localhost:8080/api/v1/registerUser",
-        "https://backend-syndeo.onrender.com/api/v1/registerUser",
+        "http://localhost:8080/api/v1/registerUser",
+        // "https://backend-syndeo.onrender.com/api/v1/registerUser",
         {
           firstName,
           lastName,
