@@ -26,6 +26,7 @@ import Spinner from "./components/Spinner";
 import ProtectedRoute from "./components/ProtectedRoute";
 // import PublicRoute from "./components/PublicRoute";
 // import EmployeeSchedules from "./pages/EmployeeSchedules";
+import PublicRoute from "./pages/PublicRoute";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -37,19 +38,86 @@ function App() {
           <Spinner />
         ) : (
           <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/about" element={<About />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/privacy" element={<Privacy />}></Route>
-            <Route path="/register" element={<Register />}></Route>
-            <Route path="/pricing" element={<Pricing />}></Route>
-            <Route path="/forgotPassword" element={<ForgotPassword />}></Route>
+            <Route
+              path="/"
+              element={
+                <PublicRoute>
+                  <Home />
+                </PublicRoute>
+              }
+            ></Route>
+            <Route
+              path="/about"
+              element={
+                <PublicRoute>
+                  <About />
+                </PublicRoute>
+              }
+            ></Route>
+            <Route
+              path="/login"
+              element={
+                <PublicRoute>
+                  <Login />
+                </PublicRoute>
+              }
+            ></Route>
+            <Route
+              path="/privacy"
+              element={
+                <PublicRoute>
+                  <Privacy />
+                </PublicRoute>
+              }
+            ></Route>
+            <Route
+              path="/register"
+              element={
+                <PublicRoute>
+                  <Register />
+                </PublicRoute>
+              }
+            ></Route>
+            <Route
+              path="/pricing"
+              element={
+                <PublicRoute>
+                  <Pricing />
+                </PublicRoute>
+              }
+            ></Route>
+            <Route
+              path="/forgotPassword"
+              element={
+                <PublicRoute>
+                  <ForgotPassword />
+                </PublicRoute>
+              }
+            ></Route>
             <Route
               path="/resetPassword/:id/:token"
-              element={<ResetPassword />}
+              element={
+                <PublicRoute>
+                  <ResetPassword />
+                </PublicRoute>
+              }
             ></Route>
-            <Route path="*" element={<PageNotFound />}></Route>
-            <Route path="/contact" element={<Contact />}></Route>
+            <Route
+              path="*"
+              element={
+                <PublicRoute>
+                  <PageNotFound />
+                </PublicRoute>
+              }
+            ></Route>
+            <Route
+              path="/contact"
+              element={
+                <PublicRoute>
+                  <Contact />
+                </PublicRoute>
+              }
+            ></Route>
             <Route
               path="/addEmployees/:id"
               element={
