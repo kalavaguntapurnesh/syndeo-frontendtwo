@@ -116,9 +116,9 @@ function Register() {
                     <div>
                       <section className="lg:mt-20 my-8">
                         <div className="flex flex-col items-center justify-center ">
-                          <div className="w-full bg-white rounded shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:border lg:max-w-xl dark:bg-gray-800 dark:border-gray-700 ">
+                          <div className="w-full bg-white rounded shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] ">
                             <div className="p-6 space-y-4 md:space-y-4">
-                              <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-footerLinks md:text-2xl dark:text-white">
+                              <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-footerLinks md:text-2xl ">
                                 Sign up to your account
                               </h1>
 
@@ -166,7 +166,7 @@ function Register() {
                                       <div>
                                         <label
                                           htmlFor="firstName"
-                                          className="block mb-2 text-sm font-bold text-colorThree dark:text-white"
+                                          className="block mb-2 text-sm font-bold text-colorThree "
                                         >
                                           First Name
                                         </label>
@@ -174,7 +174,7 @@ function Register() {
                                           type="text"
                                           name="firstName"
                                           id="firstName"
-                                          className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                          className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                                           placeholder="Your first name"
                                           required
                                           onChange={(e) =>
@@ -186,7 +186,7 @@ function Register() {
                                       <div>
                                         <label
                                           htmlFor="lastName"
-                                          className="block mb-2 text-sm font-bold text-colorThree dark:text-white"
+                                          className="block mb-2 text-sm font-bold text-colorThree "
                                         >
                                           Last Name
                                         </label>
@@ -194,7 +194,7 @@ function Register() {
                                           type="text"
                                           name="lastName"
                                           id="lastName"
-                                          className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                          className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                                           placeholder="Your last name"
                                           required="true"
                                           onChange={(e) =>
@@ -206,7 +206,7 @@ function Register() {
                                       <div>
                                         <label
                                           htmlFor="email"
-                                          className="block mb-2 text-sm font-bold text-colorThree dark:text-white"
+                                          className="block mb-2 text-sm font-bold text-colorThree "
                                         >
                                           Email
                                         </label>
@@ -215,7 +215,7 @@ function Register() {
                                           name="Email"
                                           id="email"
                                           placeholder="name@domain.com"
-                                          className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                          className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                                           required="true"
                                           onChange={(e) =>
                                             setEmail(e.target.value)
@@ -226,7 +226,7 @@ function Register() {
                                       <div>
                                         <label
                                           htmlFor="password"
-                                          className="block mb-2 text-sm font-bold text-colorThree dark:text-white"
+                                          className="block mb-2 text-sm font-bold text-colorThree"
                                         >
                                           Password
                                         </label>
@@ -238,7 +238,7 @@ function Register() {
                                             id="password"
                                             placeholder="••••••••"
                                             title="Password must be within 8 to 12 characters containing alteast 1 uppercase, 1 lowercase, 1 number and a special character"
-                                            className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                                             required="true"
                                             onChange={(e) =>
                                               setPassword(e.target.value)
@@ -273,7 +273,7 @@ function Register() {
                                     <button
                                       type="button"
                                       onClick={handleBack}
-                                      className="btn bg-colorFour text-white rounded p-3 text-sm font-semibold"
+                                      className="btn bg-colorFour text-white rounded p-2 text-sm font-semibold"
                                     >
                                       Go Back
                                     </button>
@@ -281,7 +281,7 @@ function Register() {
                                     <div>
                                       <label
                                         htmlFor="phone"
-                                        className="block mb-2 text-sm font-bold text-colorThree dark:text-white"
+                                        className="block mb-2 text-sm font-bold text-colorThree "
                                       >
                                         Phone Number
                                       </label>
@@ -291,21 +291,21 @@ function Register() {
                                         defaultCountry="US"
                                         value={phoneNumber}
                                         onChange={setPhoneNumber}
-                                        className="p-2.5 rounded text-sm border border-gray-300 text-gray-900 outline-none"
+                                        className="p-2.5 rounded text-sm border border-gray-300 text-gray-900 focus:outline-none focus:border-none"
                                       />
                                     </div>
 
                                     <div>
                                       <label
                                         htmlFor="role"
-                                        className="block mb-2 text-sm font-bold text-colorThree dark:text-white"
+                                        className="block mb-2 text-sm font-bold text-colorThree "
                                       >
                                         Registering as
                                       </label>
                                       <select
                                         id="role"
                                         name="role"
-                                        className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full py-2.5 "
                                         onChange={(e) =>
                                           setRole(e.target.value)
                                         }
@@ -431,14 +431,14 @@ function Register() {
                                           id="terms"
                                           aria-describedby="terms"
                                           type="checkbox"
-                                          className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800 cursor-pointer"
+                                          className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300  cursor-pointer"
                                           required
                                         ></input>
                                       </div>
                                       <div className="ml-3 text-sm">
                                         <label
                                           htmlFor="terms"
-                                          className="font-light text-gray-500 dark:text-gray-300"
+                                          className="font-light text-gray-500 "
                                         >
                                           I accept the{" "}
                                           <a
@@ -464,11 +464,11 @@ function Register() {
                                       </span>
                                       <div className="flex-grow border-t border-gray-400"></div>
                                     </div>
-                                    <p className="text-sm text-center font-light text-gray-500 dark:text-gray-400">
+                                    <p className="text-sm text-center font-light text-gray-500 ">
                                       Already have an account?{" "}
                                       <a
                                         href="/login"
-                                        className="font-medium text-primary-600 hover:underline dark:text-primary-500 cursor-pointer"
+                                        className="font-medium text-primary-600 hover:underline cursor-pointer"
                                       >
                                         Login here
                                       </a>
