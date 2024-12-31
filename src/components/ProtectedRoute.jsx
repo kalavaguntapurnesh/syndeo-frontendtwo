@@ -24,7 +24,6 @@ const ProtectedRoute = ({ children }) => {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
-          withCredentials: true,
         }
       );
 
