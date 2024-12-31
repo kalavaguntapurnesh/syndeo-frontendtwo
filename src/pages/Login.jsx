@@ -78,7 +78,7 @@ const Login = () => {
                 <div className="flex justify-center items-center">
                   <div className="w-full bg-white rounded-lg shadow md:mt-0 xl:p-0 max-w-md">
                     <div className="p-6 space-y-4 md:space-y-4 sm:p-8">
-                      <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-footerLinks md:text-2xl dark:text-white">
+                      <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-footerLinks md:text-2xl ">
                         Log in to Syndèo
                       </h1>
                       <form
