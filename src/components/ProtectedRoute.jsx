@@ -31,13 +31,13 @@ const ProtectedRoute = ({ children }) => {
       if (response.status === 200) {
         dispatch(setUser(response.data.data));
         console.log("Got the user token");
-        
-      } else {
-        console.log("Unable to getUserData ");
-        console.log(response.status);
-        localStorage.clear();
-        <Navigate to="/login" />;
       }
+      // else {
+      //   console.log("Unable to getUserData ");
+      //   console.log(response.status);
+      //   localStorage.clear();
+      //   <Navigate to="/login" />;
+      // }
     } catch (error) {
       dispatch(hideLoading());
       localStorage.clear();

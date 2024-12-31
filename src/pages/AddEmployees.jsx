@@ -99,7 +99,7 @@ const AddEmployees = () => {
                 type="text"
                 name="firstName"
                 id="firstName"
-                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-3 "
                 placeholder="Employee First Name"
                 required
                 onChange={(e) => setFirstName(e.target.value)}
@@ -117,7 +117,7 @@ const AddEmployees = () => {
                 type="text"
                 name="lastName"
                 id="lastName"
-                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-3 "
                 placeholder="Employee Last Name"
                 required="true"
                 onChange={(e) => setLastName(e.target.value)}
@@ -136,7 +136,7 @@ const AddEmployees = () => {
                 name="Email"
                 id="email"
                 placeholder="name@domain.com"
-                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-3"
                 required="true"
                 onChange={(e) => setEmail(e.target.value)}
               ></input>
@@ -154,7 +154,7 @@ const AddEmployees = () => {
                 name="employeeId"
                 id="employeeId"
                 placeholder="123456"
-                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-3 "
                 required="true"
                 onChange={(e) => setEmployeeId(e.target.value)}
               ></input>
@@ -173,7 +173,7 @@ const AddEmployees = () => {
                   name="phoneNumber"
                   id="phoneNumber"
                   aria-describedby="helper-text-explanation"
-                  className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-3 "
                   required="true"
                   // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                   pattern="[789][0-9]{9}"
@@ -200,7 +200,7 @@ const AddEmployees = () => {
                   id="password"
                   placeholder="******"
                   title="Password must be within 8 to 12 characters containing alteast 1 uppercase, 1 lowercase, 1 number and a special character"
-                  className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-3 "
                   required="true"
                   onChange={(e) => setPassword(e.target.value)}
                 ></input>
