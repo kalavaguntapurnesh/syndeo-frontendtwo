@@ -70,7 +70,7 @@ const Login = () => {
   return (
     <div>
       <Navbar />
-      <div className="relative md:pt-12 pt-24 pb-12">
+      <div className="relative md:pt-12 pt-20 pb-12">
         <div className="w-full">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 h-full ">
             <div className="h-[100%] w-full pt-8">
@@ -199,7 +199,7 @@ const Login = () => {
               </div>
             </div>
 
-            <div className="bg-slate-50">
+            <div className="bg-slate-50 lg:block hidden">
               <div className="flex justify-center items-center flex-col h-full space-y-4">
                 <div className="flex justify-center items-center lg:ml-0 lg:mr-0 ml-2 mr-2">
                   <img

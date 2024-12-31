@@ -2,12 +2,16 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import quote from "../assets/Quote.svg";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Pricing = () => {
   const navigate = useNavigate();
   return (
     <div>
       <Navbar />
+
+      <ScrollToTop />
+
       <div className="lg:pt-28 pt-24 pb-12">
         <div className="relative">
           <div className="w-full">

@@ -1,12 +1,15 @@
 // import React from "react";
 import Navbar from "../components/Navbar";
+import ScrollToTop from "../components/ScrollToTop";
+import Footer from "../components/Footer";
 
 const Privacy = () => {
   return (
     <div>
       <Navbar />
+      <ScrollToTop />
 
-      <div className="relative pt-20 pb-4">
+      <div className="relative pt-20 pb-12">
         <div className="w-full">
           <div className="w-full px-4 mx-auto max-w-[1400px]">
             <div className="justify-center w-full">
@@ -229,7 +232,10 @@ const Privacy = () => {
                       <div className=" flex items-center justify-center">
                         <h1 className="text-xs text-[#43474e]">
                           Copyright © 2024,{" "}
-                          <a href="/" className="text-colorFour">
+                          <a
+                            href="https://xn--syndo-7ra.com/"
+                            className="text-colorFour"
+                          >
                             Syndèo Pvt Ltd.
                           </a>
                         </h1>
@@ -242,6 +248,8 @@ const Privacy = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

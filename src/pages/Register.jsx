@@ -485,7 +485,7 @@ function Register() {
                 </div>
               </div>
 
-              <div className="bg-slate-50 lg:min-h-screen">
+              <div className="bg-slate-50 lg:min-h-screen lg:block hidden">
                 <div className="flex justify-center items-center flex-col h-full space-y-4">
                   <div className="flex justify-center items-center lg:ml-0 lg:mr-0 ml-2 mr-2">
                     <img

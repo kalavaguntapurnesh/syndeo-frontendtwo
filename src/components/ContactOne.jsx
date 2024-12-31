@@ -79,18 +79,18 @@ const ContactOne = () => {
 
   return (
     <div className="bg-white">
-      <div className="relative pt-24 pb-8">
+      <div className="relative pt-20 lg:pt-24 pb-12">
         <div className="w-full">
           <div className="w-full mx-auto max-w-[1400px]">
             <div className="p-4">
               <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                 <div>
                   <div className="flex flex-col space-y-4 mt-8">
-                    <div className="flex items-center justify-start ml-[3px]">
+                    <div className="flex items-center lg:justify-start justify-center ml-[3px]">
                       <div className="h-4 w-1 bg-mainColor"></div>
 
-                      <p className="ml-2 lg:text-lg font-semibold text-mainColor">
-                        Our Services
+                      <p className="ml-2 lg:text-lg font-bold text-mainColor">
+                        Connect with us
                       </p>
                     </div>
                     <div>

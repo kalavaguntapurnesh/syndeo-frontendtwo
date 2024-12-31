@@ -5,11 +5,13 @@ import Final from "../components/Final";
 import Footer from "./../components/Footer";
 import Reviews from "./../components/Reviews";
 import FAQ from "../components/FAQ";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
+      <ScrollToTop/>
       <Hero />
       <Carousel />
       <Reviews />
