@@ -50,6 +50,7 @@ const Login = () => {
         if (response.status === 200) {
           localStorage.setItem("token", response.data.token);
           console.log(response.data.token);
+          console.log("Login Success & now moving to dashboard");
           Swal.fire({
             title: "Login Success",
             icon: "success",
@@ -96,7 +97,6 @@ const Login = () => {
                             type="email"
                             name="email"
                             id="email"
-                            
                             className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                             placeholder="name@domain.com"
                             required="true"
