@@ -73,7 +73,7 @@ const Hero = () => {
 
                   <div className="flex lg:justify-start justify-center items-center pb-4 pt-4">
                     <a
-                      href="/contact"
+                      href="/login"
                       className="relative flex h-[50px] md:w-60 w-3/4 items-center justify-center overflow-hidden border border-headingColor text-white  transition-all before:absolute before:h-0 before:w-0  before:bg-white hover:text-mainColor hover:border-mainColor before:duration-500 before:ease-out  hover:before:h-56 hover:before:w-full rounded bg-colorFour"
                     >
                       <span className="relative z-10">
