@@ -35,7 +35,7 @@ const DashboardNavbar = () => {
 
   const adminMenu = [
     {
-      name: "Home",
+      name: "Dashboard",
       path: "/dashboard",
       icon: FaHome,
     },
@@ -43,7 +43,7 @@ const DashboardNavbar = () => {
 
   const userMenu = [
     {
-      name: "Home",
+      name: "Dashboard",
       path: "/dashboard",
       icon: FaHome,
     },
@@ -171,9 +171,9 @@ const DashboardNavbar = () => {
                 className="block lg:hidden cursor-pointer"
               >
                 {!nav ? (
-                  <RiMenu3Fill size={28} className=" mr-4 " />
+                  <RiMenu3Fill className=" mr-4 w-5 h-5" />
                 ) : (
-                  <AiOutlineClose size={28} className=" mr-4" />
+                  <AiOutlineClose className=" mr-4 w-5 h-5" />
                 )}
               </div>
 
@@ -184,14 +184,21 @@ const DashboardNavbar = () => {
                     : "lg:hidden fixed left-0 top-0 w-[70%] border-r h-[100%] bg-white dark:bg-[#000300] ease-in-out duration-1000 rounded-b-lg z-10 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
                 }
               >
-                <h1 className="w-full text-2xl text-colorFour font-bold m-4 cursor-pointer">
+                {/* <h1 className="w-full text-2xl text-colorFour font-bold m-4 cursor-pointer">
                   Syndèo.
-                </h1>
+                </h1> */}
+                <div className="flex flex-row items-center ml-6 mt-6 mb-2">
+                  {/* <SiPaloaltosoftware className="text-mainColor text-2xl leading-none" /> */}
+                  <h4 className="ml-1 text-2xl text-mainColor font-bold cursor-pointer">
+                    Syndèo
+                    {/* <span className="text-headingColor">Associates</span> */}
+                  </h4>
+                </div>
                 <div className=" p-4">
                   {NavbarMenu.map((item) => (
                     <div
                       key={item}
-                      className="p-4 border-b border-gray-500 text-footerLinks cursor-pointer font-medium hover:text-colorFour ease-in-out transition duration-500 "
+                      className="p-4 border-b border-gray-400 text-footerLinks cursor-pointer font-medium  "
                     >
                       <a href={item.path}>{item.name}</a>
                     </div>
@@ -209,7 +216,7 @@ const DashboardNavbar = () => {
                   className="uppercase mt-6 px-8 cursor-pointer"
                   onClick={handleLogout}
                 >
-                  <a className=" transition duration-1000 font-semibold text-white text-sm bg-colorFour py-3 px-6 rounded">
+                  <a className=" transition duration-1000 font-semibold text-white text-sm bg-colorFour py-3 px-12 rounded">
                     Logout
                   </a>
                 </div>
