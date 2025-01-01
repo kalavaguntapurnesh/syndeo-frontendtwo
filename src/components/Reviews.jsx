@@ -66,9 +66,9 @@ const Reviews = () => {
                         </div>
 
                         <div className="flex md:justify-start justify-center items-center pt-4">
-                          <h1 className="text-2xl text-headingColor font-bold text-center">
+                          <h2 className="text-2xl text-headingColor font-bold text-center">
                             {value.Title}
-                          </h1>
+                          </h2>
                         </div>
                         <div className="flex md:justify-start justify-center items-center text-gray-600 md:text-start text-center">
                           <p>{value.description}</p>
