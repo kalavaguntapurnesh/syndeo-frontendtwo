@@ -13,6 +13,8 @@ import Footer from "../components/Footer";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import Navbar from "../components/Navbar";
+import apple from "../assets/Apple.svg";
+import google from "../assets/Google.svg";
 
 function Register() {
   // const [eventType, setEventType] = useState("");
@@ -257,6 +259,24 @@ function Register() {
                                 Continue
                               </button>
                             </div>
+
+                            <div className="relative flex py-1 items-center mt-4">
+                              <div className="flex-grow border-t border-gray-400"></div>
+                              <span className="flex-shrink mx-4 text-black text-sm">
+                                or
+                              </span>
+                              <div className="flex-grow border-t border-gray-400"></div>
+                            </div>
+
+                            <button className="mt-4 w-full flex text-black font-medium items-center justify-center gap-x-3 py-2.5 border rounded hover:bg-gray-50 duration-150 active:bg-gray-100">
+                              <img src={google} alt="" className="w-5 h-5" />
+                              Sign Up with Google
+                            </button>
+
+                            <button className="mt-[20px] w-full flex text-black font-medium items-center justify-center gap-x-3 py-2.5 border rounded hover:bg-gray-50 duration-150 active:bg-gray-100">
+                              <img src={apple} alt="" className="w-5 h-5" />
+                              Sign Up with Apple
+                            </button>
                           </div>
                         ) : (
                           <div className="space-y-4">
