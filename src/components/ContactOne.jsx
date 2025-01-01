@@ -89,7 +89,7 @@ const ContactOne = () => {
                     <div className="flex items-center lg:justify-start justify-center ml-[3px]">
                       <div className="h-4 w-1 bg-mainColor"></div>
 
-                      <p className="ml-2 lg:text-lg font-bold text-mainColor">
+                      <p className="ml-2 lg:text-lg font-semibold text-mainColor">
                         Connect with us
                       </p>
                     </div>

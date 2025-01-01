@@ -66,7 +66,7 @@ const AboutOne = () => {
                   <div className="flex items-center text-center justify-center ">
                     <div className="h-4 w-1 bg-mainColor"></div>
 
-                    <p className="ml-2 lg:text-lg font-bold text-mainColor">
+                    <p className="ml-2 lg:text-lg font-semibold text-mainColor">
                       About Syndèo
                     </p>
                   </div>
@@ -219,7 +219,7 @@ const AboutOne = () => {
                     <div className="flex items-center lg:text-start text-center justify-center lg:justify-start lg:ml-[5px]">
                       <div className="h-4 w-1 bg-mainColor"></div>
 
-                      <p className="ml-2 lg:text-lg font-bold text-mainColor">
+                      <p className="ml-2 lg:text-lg font-semibold text-mainColor">
                         Discover Syndèo
                       </p>
                     </div>
