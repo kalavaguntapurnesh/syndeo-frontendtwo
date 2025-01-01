@@ -76,9 +76,9 @@ const Carousel = () => {
                           </div>
 
                           <div className="flex justify-center items-center">
-                            <h1 className="text-2xl text-headingColor font-bold text-center">
+                            <h4 className="text-2xl text-headingColor font-bold text-center">
                               {value.Title}
-                            </h1>
+                            </h4>
                           </div>
                           <div className="flex justify-center  items-center text-gray-600 text-center">
                             <p>{value.description}</p>
@@ -118,10 +118,10 @@ const Carousel = () => {
                       </p>
                     </div>
                     <div>
-                      <h1 className="lg:text-4xl text-2xl lg:text-start text-center text-headingColor font-bold lg:leading-snug">
+                      <h2 className="lg:text-4xl text-2xl lg:text-start text-center text-headingColor font-bold lg:leading-snug">
                         Revolutionizing appointment scheduling for
                         <span className="text-colorFour"> everyone.</span>
-                      </h1>
+                      </h2>
                     </div>
                     <div className="lg:text-start text-base text-center text-gray-600 lg:leading-normal">
                       <p>
@@ -147,7 +147,7 @@ const Carousel = () => {
                           <div className="grid md:grid-cols-3 grid-cols-1 gap-4 lg:h-[100%] h-auto">
                             <div className="flex flex-col justify-center items-center space-y-1">
                               <div className="text-footerLinks lg:text-4xl text-2xl font-bold ">
-                                <h1>2023 </h1>
+                                <h4>2023 </h4>
                               </div>
                               <div className="text-gray-600">
                                 <p>Year Founded</p>
@@ -156,7 +156,7 @@ const Carousel = () => {
 
                             <div className="flex flex-col justify-center items-center space-y-1">
                               <div className="text-footerLinks lg:text-4xl text-2xl font-bold ">
-                                <h1>180+</h1>
+                                <h4>180+</h4>
                               </div>
                               <div className="text-gray-600">
                                 <p>Countries Availability</p>
@@ -165,7 +165,7 @@ const Carousel = () => {
 
                             <div className="flex flex-col justify-center items-center space-y-1">
                               <div className="text-footerLinks lg:text-4xl text-2xl font-bold ">
-                                <h1>24/7</h1>
+                                <h4>24/7</h4>
                               </div>
                               <div className="text-gray-600">
                                 <p>Application Usage</p>

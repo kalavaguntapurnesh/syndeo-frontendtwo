@@ -7,9 +7,9 @@ const Final = () => {
             <div className="mx-auto max-w-[1000px] bg-[#E4E4E4] h-80 rounded">
               <div className="space-y-4">
                 <div className="flex justify-center items-center lg:pt-12 pt-8">
-                  <h1 className="md:text-4xl text-2xl text-footerLinks font-bold">
+                  <h4 className="md:text-4xl text-2xl text-footerLinks font-bold">
                     Get Started for Free
-                  </h1>
+                  </h4>
                 </div>
 
                 <div className="flex justify-center items-center text-center max-w-xl mx-auto text-gray-600 ">
