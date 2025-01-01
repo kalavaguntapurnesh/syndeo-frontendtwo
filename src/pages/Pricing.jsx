@@ -22,7 +22,7 @@ const Pricing = () => {
                     <div className="flex items-center text-center justify-center ">
                       <div className="h-4 w-1 bg-mainColor"></div>
 
-                      <p className="ml-2 lg:text-lg font-bold text-mainColor">
+                      <p className="ml-2 lg:text-lg font-semibold text-mainColor">
                         Our Plans
                       </p>
                     </div>
@@ -587,7 +587,7 @@ const Pricing = () => {
               <div className="flex items-center text-center justify-center ">
                 <div className="h-4 w-1 bg-mainColor"></div>
 
-                <p className="ml-2 lg:text-lg font-bold text-mainColor">
+                <p className="ml-2 lg:text-lg font-semibold text-mainColor">
                   Client testimonials hub
                 </p>
               </div>
@@ -610,13 +610,13 @@ const Pricing = () => {
             <div className="pt-16">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4">
                 <div className="flex md:justify-start justify-center">
-                  <div className="w-full max-w-sm bg-white border shadow border-gray-200 p-6">
+                  <div className="w-full max-w-sm bg-white border border-gray-200 p-6">
                     <div className="space-y-3">
                       <div>
                         <img
                           src={quote}
                           alt=""
-                          className="md:w-[56px] md:h-[56px] w-12 h-12"
+                          className="md:w-[52px] md:h-[52px] w-12 h-12"
                         />
                       </div>
                       {/* <div className="flex flex-row">
@@ -650,13 +650,13 @@ const Pricing = () => {
                 </div>
 
                 <div className="flex md:justify-start justify-center">
-                  <div className="w-full max-w-sm bg-white border shadow border-gray-200 p-6">
+                  <div className="w-full max-w-sm bg-white border border-gray-200 p-6">
                     <div className="space-y-3">
                       <div>
                         <img
                           src={quote}
                           alt=""
-                          className="md:w-[56px] md:h-[56px] w-12 h-12"
+                          className="md:w-[52px] md:h-[52px] w-12 h-12"
                         />
                       </div>
                       {/* <div className="flex flex-row">
@@ -689,13 +689,13 @@ const Pricing = () => {
                 </div>
 
                 <div className="flex md:justify-start justify-center">
-                  <div className="w-full max-w-sm bg-white border shadow border-gray-200 p-6">
+                  <div className="w-full max-w-sm bg-white border border-gray-200 p-6">
                     <div className="space-y-3">
                       <div>
                         <img
                           src={quote}
                           alt=""
-                          className="md:w-[56px] md:h-[56px] w-12 h-12"
+                          className="md:w-[52px] md:h-[52px] w-12 h-12"
                         />
                       </div>
                       {/* <div className="flex flex-row">
