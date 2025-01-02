@@ -5,13 +5,10 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
-import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [openDropdownMobile, setOpenDropdownMobile] = useState(null);
 
   const handleScroll = () => {
     if (window.scrollY > window.innerHeight / 4) {
@@ -25,18 +22,6 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const toggleDropdown = (dropdown) => {
-    if (openDropdown === dropdown) {
-      setOpenDropdown(null);
-    } else {
-      setOpenDropdown(dropdown);
-    }
-  };
-
-  const toggleMobileDropdown = (dropdown) => {
-    setOpenDropdownMobile((prev) => (prev === dropdown ? null : dropdown));
-  };
 
   return (
     <nav
@@ -59,30 +44,6 @@ const Navbar = () => {
 
         {/* Desktop Nav Links */}
         <ul className="hidden lg:flex flex-grow justify-center space-x-8 items-center">
-          {/* <Tabs /> */}
-          {/* <FlyoutLink href="/our-practices" FlyoutContent={SupportContent}>
-            Our Practice
-          </FlyoutLink> */}
-          {/* <FlyoutLink
-            href="/managed-it-services"
-            FlyoutContent={ServicesContent}
-          >
-            Our Services
-          </FlyoutLink> */}
-          {/* <FlyoutLink href="/solutions" FlyoutContent={PricingContent}>
-            Achievements
-          </FlyoutLink> */}
-          {/* <FlyoutLink href="/experts" FlyoutContent={IndustriesContent}>
-            Our Experts
-          </FlyoutLink> */}
-
-          {/* <FlyoutLink
-            href="/why-mannam-and-associates"
-            FlyoutContent={AboutUsContent}
-          >
-            About Us
-          </FlyoutLink> */}
-
           <li
             className={` group transition duration-300 uppercase ${
               isScrolled
@@ -188,93 +149,6 @@ const Navbar = () => {
           </a>
 
           <ul className="p-4">
-            {/* <li className="p-4 border-b border-headingColor">
-              <div
-                onClick={() => toggleMobileDropdown("subscription")}
-                className="flex items-center justify-between cursor-pointer text-footerLinks font-medium"
-              >
-                Our Practice
-                <FaAngleDown
-                  className={`transition-transform ${
-                    openDropdownMobile === "subscription"
-                      ? "rotate-180 text-mainColor"
-                      : ""
-                  }`}
-                />
-              </div>
-              <AnimatePresence>
-                {openDropdownMobile === "subscription" && (
-                  <motion.ul
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="pl-4 mt-6 space-y-2"
-                  >
-                    <li className="text-headingColor">
-                      <a
-                        href="/employment-based-visa"
-                        className="block text-sm hover:text-mainColor transition duration-300 ease-in-out  hover:font-semibold"
-                      >
-                        Employment Based Visas
-                      </a>
-                    </li>
-                    <li className="text-headingColor">
-                      <a
-                        href="/investor-based-visa"
-                        className="block text-sm hover:text-mainColor transition duration-300 ease-in-out  hover:font-semibold"
-                      >
-                        Investor Based Visas
-                      </a>
-                    </li>
-                    <li className="text-headingColor">
-                      <a
-                        href="/family-based-visa"
-                        className="block text-sm hover:text-mainColor transition duration-300 ease-in-out  hover:font-semibold
-"
-                      >
-                        Family Based Visas
-                      </a>
-                    </li>
-                    <li className="text-headingColor">
-                      <a
-                        href="/student-based-visa"
-                        className="block text-sm hover:text-mainColor transition duration-300 ease-in-out  hover:font-semibold
-"
-                      >
-                        Students & Scholars
-                      </a>
-                    </li>
-                    <li className="text-headingColor">
-                      <a
-                        href="/naturalization"
-                        className="block text-sm hover:text-mainColor transition duration-300 ease-in-out  hover:font-semibold
-"
-                      >
-                        Naturalization
-                      </a>
-                    </li>
-                    <li className="text-headingColor">
-                      <a
-                        href="/liaison-service"
-                        className="block text-sm hover:text-mainColor transition duration-300 ease-in-out  hover:font-semibold
-"
-                      >
-                        Liaison Services
-                      </a>
-                    </li>
-                  </motion.ul>
-                )}
-              </AnimatePresence>
-            </li> */}
-            {/* <li className="p-4 border-b border-headingColor">
-              <a
-                href="/contact"
-                className="flex items-center justify-between cursor-pointer text-headingColor"
-              >
-                Achievements
-              </a>
-            </li> */}
-
             <li className="p-4 border-b border-headingColor">
               <a
                 href="/"
@@ -301,15 +175,6 @@ const Navbar = () => {
                 Our Pricing
               </a>
             </li>
-
-            {/* <li className="p-4 border-b border-headingColor">
-              <a
-                href="/experts"
-                className="flex items-center justify-between cursor-pointer text-footerLinks font-medium"
-              >
-                Our Experts
-              </a>
-            </li> */}
 
             <li className="p-4 border-b border-headingColor">
               <a
@@ -356,153 +221,6 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  );
-};
-
-const FlyoutLink = ({ children, href, FlyoutContent }) => {
-  const [open, setOpen] = useState(false);
-
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const showFlyout = FlyoutContent && open;
-
-  return (
-    <div
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
-      className="relative w-fit h-fit"
-    >
-      <a
-        href={href}
-        className={`relative uppercase ${
-          isScrolled
-            ? "text-headingColor hover:text-mainColor transition ease-in-out duration-500"
-            : "text-headingColor hover:text-mainColor transition ease-in-out duration-500"
-        }`}
-      >
-        {children}
-        <span
-          style={{
-            transform: showFlyout ? "scaleX(1)" : "scaleX(0)",
-          }}
-          className={`absolute -bottom-1 -left-2 -right-2 h-[2px] origin-left scale-x-0 rounded transition-transform duration-300 ease-out ${
-            isScrolled ? "bg-mainColor" : "bg-mainColor"
-          }`}
-        />
-      </a>
-      <AnimatePresence>
-        {showFlyout && (
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 15 }}
-            style={{ translateX: "-50%" }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className="absolute left-1/2 top-12 bg-white text-black"
-          >
-            <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent" />
-            <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
-            <FlyoutContent />
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
-
-const AboutUsContent = () => {
-  return (
-    <div className="w-64 bg-white p-6 shadow-xl">
-      <div className="mb-3 space-y-3">
-        <h3 className="font-semibold text-sideHeading">About MannamLaw</h3>
-
-        <a
-          href="/why-mannam-and-associates"
-          className="block text-sm text-sideHeading hover:text-mainColor transition duration-500 ease-in-out  hover:font-semibold"
-        >
-          Why MannamLaw
-        </a>
-        <a
-          href="/collaborate-with-us"
-          className="block text-sm text-sideHeading hover:text-mainColor transition duration-500 ease-in-out  hover:font-semibold"
-        >
-          Our Difference
-        </a>
-      </div>
-      {/* <div className="mb-6 space-y-3"></div>
-      <button
-        onClick={() => navigate("/about-us")}
-        className="w-full rounded border-[1px] border-mainColor px-4 py-2 font-medium hover:font-normal duration-500 ease-in-out transition text-mainColor hover:text-white hover:bg-mainColor hover:border-none"
-      >
-        View More
-      </button> */}
-    </div>
-  );
-};
-
-const SupportContent = () => {
-  return (
-    <div className="w-64 bg-white p-6 shadow-xl">
-      <div className="mb-3 space-y-3">
-        <h3 className="font-semibold text-sideHeading">How We Operate</h3>
-
-        <a
-          href="/employment-based-visa"
-          className="block text-sm text-sideHeading hover:text-mainColor transition duration-500 ease-in-out  hover:font-semibold"
-        >
-          Employment Based Visas
-        </a>
-        <a
-          href="/family-based-visa"
-          className="block text-sm text-sideHeading hover:text-mainColor transition duration-500 ease-in-out  hover:font-semibold"
-        >
-          Family Based Visas
-        </a>
-        <a
-          href="/investor-based-visa"
-          className="block text-sm text-sideHeading hover:text-mainColor transition duration-500 ease-in-out  hover:font-semibold"
-        >
-          Investor Based Visas
-        </a>
-        <a
-          href="/student-based-visa"
-          className="block text-sm text-sideHeading hover:text-mainColor transition duration-500 ease-in-out  hover:font-semibold"
-        >
-          Students & Scholars
-        </a>
-        <a
-          href="/naturalization"
-          className="block text-sm text-sideHeading hover:text-mainColor transition duration-500 ease-in-out  hover:font-semibold"
-        >
-          Naturalization
-        </a>
-        <a
-          href="/liaison-service"
-          className="block text-sm text-sideHeading hover:text-mainColor transition duration-500 ease-in-out  hover:font-semibold"
-        >
-          Liaison Services
-        </a>
-      </div>
-      {/* <button
-        onClick={() => navigate("/about-us")}
-        className="w-full rounded border-[1px] border-mainColor px-4 py-2 font-medium hover:font-normal duration-500 ease-in-out transition text-mainColor hover:text-white hover:bg-mainColor hover:border-none"
-      >
-        View More
-      </button> */}
-    </div>
   );
 };
 
