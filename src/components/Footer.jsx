@@ -363,7 +363,7 @@ const Footer = () => {
 
             <div className="text-center text-xs pb-6">
               <p className="text-headingColor">
-                © 2024 Syndèo - All rights reserved.
+                © 2025 Syndèo - All rights reserved.
               </p>
             </div>
           </div>
