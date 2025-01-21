@@ -16,25 +16,27 @@ const VerifyEmail = () => {
 
   const verifyEmail = async (token) => {
     try {
-    //   const response = await axios.get(`http://localhost:8080/api/v1/confirm/${token}`);
-      const response = await axios.get(`https://backend-syndeo.onrender.com/api/v1/confirm/${token}`);
-      if (response.data.message === "Email Verified Successfully") {
-   
+    //   const response = await axios.get(`https://backend-syndeo.onrender.com/api/v1/confirm/${token}`);
+      
+    //   console.log(response);  
+
+    //   if (response.data && response.data.message === "Email Verified Successfully") {
         Swal.fire({
           icon: 'success',
-          title: response.data.message, 
-          html: `Please <a href="https://backend-syndeo.onrender.com/api/v1/login" target="_blank">login here</a>`,  
-        //   html: `Please <a href="http://localhost:8080/api/v1/login" target="_blank">login here</a>`, 
+          title: 'Email Verified Successfully',  
+          html: `Please <a href="https://backend-syndeo.onrender.com/api/v1/login" target="_blank">login here</a>`, 
           showConfirmButton: true,
           confirmButtonText: 'Close',
         });
-      } else {
-        Swal.fire('Error', 'Something went wrong. Please try again later.', 'error');
-      }
+    //   } else {
+    //     Swal.fire('Error', 'Something went wrong. Please try again later.', 'error');
+    //   }
     } catch (error) {
+      console.error('Error during email verification:', error); // Log the error
       Swal.fire('Error', 'An error occurred. Please try again later.', 'error');
     }
   };
+  
 
   return (
     <div>
