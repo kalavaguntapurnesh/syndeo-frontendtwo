@@ -50,7 +50,7 @@ const VerifyEmail = () => {
                 </div>
           
                 <!-- Success Image (Centered) -->
-                <div style="width: 100%; text-align: center; margin-bottom: 20px;">
+                <div style="margin-bottom: 20px;">
                   <img src="${success}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
                 </div>
           
