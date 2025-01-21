@@ -16,11 +16,11 @@ const VerifyEmail = () => {
 
   const verifyEmail = async (token) => {
     try {
-    //   const response = await axios.get(`https://backend-syndeo.onrender.com/api/v1/confirm/${token}`);
+      const response = await axios.get(`https://backend-syndeo.onrender.com/api/v1/confirm/${token}`);
       
-    //   console.log(response);  
+      console.log(response);  
 
-    //   if (response.data && response.data.message === "Email Verified Successfully") {
+      if (response.data && response.data.message === "Email Verified Successfully") {
         Swal.fire({
           icon: 'success',
           title: 'Email Verified Successfully',  
@@ -28,9 +28,9 @@ const VerifyEmail = () => {
           showConfirmButton: true,
           confirmButtonText: 'Close',
         });
-    //   } else {
-    //     Swal.fire('Error', 'Something went wrong. Please try again later.', 'error');
-    //   }
+      } else {
+        Swal.fire('Error', 'Something went wrong. Please try again later.', 'error');
+      }
     } catch (error) {
       console.error('Error during email verification:', error); // Log the error
       Swal.fire('Error', 'An error occurred. Please try again later.', 'error');
