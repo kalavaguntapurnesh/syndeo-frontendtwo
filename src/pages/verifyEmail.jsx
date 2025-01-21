@@ -46,7 +46,7 @@ const VerifyEmail = () => {
             <!-- Logo and Title Section -->
             <div style="display: flex; text-align: left; margin-bottom: 20px;">
               <h4 style="margin: 0; font-size: 1.5rem; font-weight: bold; color: #B31942; margin-right: 15px;">
-                Mannam & <span style="color: #0A3161;">Associates</span>
+                Syndèo.
               </h4>
             </div>
       
@@ -59,19 +59,17 @@ const VerifyEmail = () => {
             <div style="width: 100%; text-align: center; margin-bottom: 20px;">
               <h1 style="margin: 0; font-size: 30px;">Email Verified Successfully</h1>
             </div>
-            
-            <!-- Success Message and Login Link -->
-            <div style="text-align: center;">
-              <p>Your email has been successfully verified!</p>
-              <p>Please <a href="https://syndeo-frontendtwo.vercel.app/login" target="_blank">login here</a></p>
-            </div>
           </div>
         `,
         customClass: {
-          confirmButton: 'swal-custom-ok-button'  // Custom button class
+          confirmButton: 'swal-custom-ok-button' 
         },
-        confirmButtonText: 'Login',  // Text for the button
+        confirmButtonText: 'Login',  
+        preConfirm: () => {
+          window.location.href = 'https://syndeo-frontendtwo.vercel.app/login';  
+        }
       });
+      
       
 
 
