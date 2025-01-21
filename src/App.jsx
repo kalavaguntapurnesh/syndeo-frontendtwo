@@ -27,7 +27,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 // import PublicRoute from "./components/PublicRoute";
 // import EmployeeSchedules from "./pages/EmployeeSchedules";
 import PublicRoute from "./pages/PublicRoute";
-
+import VerifyEmail from "./pages/verifyEmail";
 function App() {
   const { loading } = useSelector((state) => state.alerts);
 
@@ -102,6 +102,15 @@ function App() {
                 </PublicRoute>
               }
             ></Route>
+            
+             <Route path="/verify-email/:token"
+                 element={
+                  <PublicRoute>
+                    <VerifyEmail />
+                  </PublicRoute>
+                }
+             />
+
             <Route
               path="*"
               element={
