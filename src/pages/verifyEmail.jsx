@@ -24,7 +24,7 @@ const VerifyEmail = () => {
         Swal.fire({
           icon: 'success',
           title: 'Email Verified Successfully',  
-          html: `Please <a href="https://backend-syndeo.onrender.com/api/v1/login" target="_blank">login here</a>`, 
+          html: `Please <a href="https://syndeo-frontendtwo.vercel.app/login" target="_blank">login here</a>`, 
           showConfirmButton: true,
           confirmButtonText: 'Close',
         });
