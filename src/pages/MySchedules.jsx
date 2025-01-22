@@ -103,7 +103,7 @@ const MySchedules = () => {
                   {upcomingSchedules
                     .slice(0, showMoreUpcoming ? upcomingSchedules.length : 3)
                     .map((schedule) => (
-                      <tr>
+                      <tr key={schedule}>
                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">
                           {schedule.title}
                         </td>
@@ -140,7 +140,7 @@ const MySchedules = () => {
 
             <div className="block md:hidden">
               {upcomingSchedules.map((schedule) => (
-                <div className="mb-4 border-2 rounded-lg shadow-sm bg-white border-colorFour flex flex-col space-y-1">
+                <div key={schedule} className="mb-4 border-2 rounded-lg shadow-sm bg-white border-colorFour flex flex-col space-y-1">
                   <div className="flex justify-center items-center w-full bg-colorFour pt-1 pb-1">
                     <p className="text-base text-white">
                       Event Name: {schedule.title}
@@ -232,7 +232,7 @@ const MySchedules = () => {
                   {pastSchedules
                     .slice(0, showMorePast ? pastSchedules.length : 3)
                     .map((schedule) => (
-                      <tr>
+                      <tr key={schedule}>
                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-600">
                           {schedule.title}
                         </td>
@@ -270,7 +270,7 @@ const MySchedules = () => {
 
             <div className="block md:hidden">
               {pastSchedules.map((schedule) => (
-                <div className="mb-4 border-2 rounded-lg shadow-sm bg-white border-colorFour flex flex-col space-y-1">
+                <div key={schedule} className="mb-4 border-2 rounded-lg shadow-sm bg-white border-colorFour flex flex-col space-y-1">
                   <div className="flex justify-center items-center w-full bg-colorFour pt-1 pb-1">
                     <p className="text-base text-white">
                       Event Name: {schedule.title}

@@ -18,7 +18,7 @@ import ResetPassword from "./pages/ResetPassword";
 import Dashboard from "./pages/Dashboard";
 import MySchedules from "./pages/MySchedules";
 import Profile from "./pages/Profile";
-// import CreateSchedule from "./pages/CreateSchedule";
+import CreateSchedule from "./pages/CreateSchedule";
 import AddEmployees from "./pages/AddEmployees";
 import AllEmployees from "./pages/AllEmployees";
 import { useSelector } from "react-redux";
@@ -158,14 +158,14 @@ function App() {
                 </ProtectedRoute>
               }
             ></Route> */}
-            {/* <Route
+            <Route
               path="/createSchedule/:id"
               element={
                 <ProtectedRoute>
                   <CreateSchedule />
                 </ProtectedRoute>
               }
-            ></Route> */}
+            ></Route>
             <Route
               path="/bookings/:id"
               element={
