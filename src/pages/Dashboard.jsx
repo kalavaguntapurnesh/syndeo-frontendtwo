@@ -1,12 +1,4 @@
 import Layout from "./../components/Layout";
-import chrome from "../assets/chrome.svg";
-import ai from "../assets/AI.svg";
-import calendar from "../assets/calendar.svg";
-import clock from "../assets/clock.svg";
-import premium from "../assets/PREMIUM.svg";
-import gc from "../assets/GC.svg";
-import success from "../assets/success.svg";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
@@ -23,7 +15,6 @@ import { SlGraph } from "react-icons/sl";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdFilterAlt } from "react-icons/md";
 
-
 const Dashboard = () => {
   const { user } = useSelector((state) => state.user);
   const [customer, setCustomer] = useState(null);
@@ -32,8 +23,8 @@ const Dashboard = () => {
   const getCustomerInfo = async () => {
     try {
       const response = await axios.post(
-        // "http://localhost:8080/api/v1/getUserData",
-        "https://backend-syndeo.onrender.com/api/v1/getUserData",
+        "http://localhost:8080/api/v1/getUserData",
+        // "https://backend-syndeo.onrender.com/api/v1/getUserData",
         { userId: user?._id },
         {
           headers: {
@@ -90,14 +81,13 @@ const Dashboard = () => {
                 </span>
                 <div>All Categories</div>
                 <span
-                  className="text-2xl shadow-xl hover:bg-white cursor-pointer"
-                  onClick={() => setCategoryOpen(!categoryOpen)} 
+                  className="text-2xl   hover:bg-white cursor-pointer"
+                  onClick={() => setCategoryOpen(!categoryOpen)}
                 >
                   <RiArrowDropDownLine />
                 </span>
                 {categoryOpen && (
                   <div className="absolute top-full left-0 mt-2 w-full bg-white shadow-lg rounded p-2">
-                    
                     <ul>
                       <li className="p-2">Category 1</li>
                       <li className="p-2">Category 2</li>
@@ -107,15 +97,14 @@ const Dashboard = () => {
                 )}
               </div>
 
-
               <div className="relative flex gap-4 items-center justify-between bg-gray-300 p-2 rounded">
                 <span className="text-colorFour text-xl">
                   <SlGraph />
                 </span>
                 <div>All Status</div>
                 <span
-                  className="text-2xl shadow-xl hover:bg-white cursor-pointer"
-                  onClick={() => setStatusOpen(!statusOpen)} 
+                  className="text-2xl   hover:bg-white cursor-pointer"
+                  onClick={() => setStatusOpen(!statusOpen)}
                 >
                   <RiArrowDropDownLine />
                 </span>
@@ -136,7 +125,7 @@ const Dashboard = () => {
                 </span>
                 <div>All Location</div>
                 <span
-                  className="text-2xl shadow-xl hover:bg-white cursor-pointer"
+                  className="text-2xl   hover:bg-white cursor-pointer"
                   onClick={() => setLocationOpen(!locationOpen)}
                 >
                   <RiArrowDropDownLine />
@@ -158,7 +147,7 @@ const Dashboard = () => {
                 </span>
                 <div>Advance Filter</div>
                 <span
-                  className="text-2xl shadow-xl hover:bg-white cursor-pointer"
+                  className="text-2xl   hover:bg-white cursor-pointer"
                   onClick={() => setFilterOpen(!filterOpen)}
                 >
                   <RiArrowDropDownLine />
@@ -173,261 +162,285 @@ const Dashboard = () => {
                   </div>
                 )}
               </div>
-
             </div>
-
           </div>
         </div>
 
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 pt-4">
-              <button
-                onClick={() => navigate(`/createSchedule/${user?._id}`)}
-                className="flex md:justify-start justify-center"
-              >
-                <div className="w-full p-4 bg-white border border-gray-200 rounded shadow sm:p-6 md:p-8 h-full">
-                  <div className="space-y-4 h-full flex flex-col justify-between">
-                    <div className="py-8 space-y-2">
-                      <div className="flex justify-center items-center">
-                        <div className="w-12 h-12 ">
-                          <span className="text-5xl  text-colorFour font-bold"><SlCalender /></span>
-                        </div>
-                      </div>
-                      <div className="flex justify-center items-center text-center">
-                        <h1 className="text-xl font-semibold">
-                          Create booking page
-                        </h1>
-                      </div>
-                      <div className="flex justify-center items-center text-center">
-                        <p className="text-gray-500">
-                          Start taking bookings and meet with your customers in no time.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex justify-center py-8">
-                      <button
-                        onClick={() => navigate(`/createSchedule/${user?._id}`)}
-                        className="text-colorFour font-semibold text-xl"
-                      >
-                        Create an event
-                      </button>
+          <button
+            onClick={() => navigate(`/createSchedule/${user?._id}`)}
+            className="flex md:justify-start justify-center"
+          >
+            <div className="w-full p-4 bg-white border border-gray-200 rounded shadow sm:p-6 md:p-8 h-full">
+              <div className="space-y-4 h-full flex flex-col justify-between">
+                <div className="py-8 space-y-2">
+                  <div className="flex justify-center items-center">
+                    <div className="w-12 h-12 ">
+                      <span className="text-5xl  text-colorFour font-bold">
+                        <SlCalender />
+                      </span>
                     </div>
                   </div>
-                </div>
-              </button>
-
-              <button
-                onClick={() => navigate(`/bookings/${user?._id}`)}
-                className="flex md:justify-start justify-center"
-              >
-                <div className="w-full p-4 bg-white border border-gray-200 rounded shadow sm:p-6 md:p-8 h-full">
-                  <div className="space-y-4 h-full flex flex-col justify-between">
-                    <div className="py-8 space-y-2">
-                      <div className="flex justify-center items-center">
-                        <div className="w-12 h-12 ">
-                          <span className="text-5xl  text-colorFour font-bold"><MdSchedule /></span>
-                        </div>
-                      </div>
-                      <div className="flex justify-center items-center text-center">
-                        <h1 className="text-xl font-semibold">
-                          No Upcoming bookings
-                        </h1>
-                      </div>
-                      <div className="flex justify-center items-center text-center">
-                        <p className="text-gray-500">
-                          As soon as someone books a time with you it will show up here.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex justify-center py-8">
-                      <button
-                        onClick={() => navigate(`/bookings/${user?._id}`)}
-                        className="text-colorFour font-semibold text-xl"
-                      >
-                        View all Bookings
-                      </button>
-                    </div>
+                  <div className="flex justify-center items-center text-center">
+                    <h1 className="text-xl font-semibold">
+                      Create booking page
+                    </h1>
+                  </div>
+                  <div className="flex justify-center items-center text-center">
+                    <p className="text-gray-500">
+                      Start taking bookings and meet with your customers in no
+                      time.
+                    </p>
                   </div>
                 </div>
-              </button>
+                <div className="flex justify-center py-8">
+                  <button
+                    onClick={() => navigate(`/createSchedule/${user?._id}`)}
+                    className="text-colorFour font-semibold text-xl"
+                  >
+                    Create an event
+                  </button>
+                </div>
+              </div>
+            </div>
+          </button>
 
-              <button
-                onClick={() => navigate(`/createSchedule/${user?._id}`)}
-                className="flex md:justify-start justify-center"
-              >
-                <div className="w-full p-4 bg-white border border-gray-200 rounded shadow sm:p-6 md:p-8 h-full">
-                  <div className="space-y-4 h-full flex flex-col justify-between">
-                    <div className="flex justify-center items-center">
-                      <div className="w-12 h-12 ">
-                        <span className="text-5xl  text-colorFour font-bold"><MdOutlineFeaturedVideo /></span>
-                      </div>
-                    </div>
-                    <div className="flex justify-center items-center text-center">
-                      <h1 className="text-xl font-semibold">
-                        Try our powerful features
-                      </h1>
-                    </div>
-
-                    <div className=" rounded space-y-3 p-2">
-                      <div className="flex flex-row justify-start items-center">
-                        <span className="text-xl text-colorFour font-bold"><FaCircleArrowRight /></span>
-                        <h1 className="ml-3 text-gray-500 leading-tight">Automatic reminders</h1>
-                      </div>
-
-                      <div className="flex flex-row justify-start items-center">
-                        <span className="text-xl text-colorFour font-bold"><FaCircleArrowRight /></span>
-                        <h1 className="ml-3 text-gray-500 leading-tight">
-                          Workflows to follow up meetings
-                        </h1>
-                      </div>
-
-                      <div className="flex flex-row justify-start items-center">
-                        <span className="text-xl text-colorFour font-bold"><FaCircleArrowRight /></span>
-                        <h1 className="ml-3 text-gray-500 leading-tight">
-                          Let bookers choose meeting length
-                        </h1>
-                      </div>
-                    </div>
-
-
-
-                    <div className="flex justify-center py-6">
-                      <button
-                        onClick={() => navigate(`/createSchedule/${user?._id}`)}
-                        className="text-colorFour font-semibold text-xl"
-                      >
-                        Start making event
-                      </button>
+          <button
+            onClick={() => navigate(`/bookings/${user?._id}`)}
+            className="flex md:justify-start justify-center"
+          >
+            <div className="w-full p-4 bg-white border border-gray-200 rounded shadow sm:p-6 md:p-8 h-full">
+              <div className="space-y-4 h-full flex flex-col justify-between">
+                <div className="py-8 space-y-2">
+                  <div className="flex justify-center items-center">
+                    <div className="w-12 h-12 ">
+                      <span className="text-5xl  text-colorFour font-bold">
+                        <MdSchedule />
+                      </span>
                     </div>
                   </div>
+                  <div className="flex justify-center items-center text-center">
+                    <h1 className="text-xl font-semibold">
+                      No Upcoming bookings
+                    </h1>
+                  </div>
+                  <div className="flex justify-center items-center text-center">
+                    <p className="text-gray-500">
+                      As soon as someone books a time with you it will show up
+                      here.
+                    </p>
+                  </div>
                 </div>
-              </button>
+                <div className="flex justify-center py-8">
+                  <button
+                    onClick={() => navigate(`/bookings/${user?._id}`)}
+                    className="text-colorFour font-semibold text-xl"
+                  >
+                    View all Bookings
+                  </button>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <button
+            onClick={() => navigate(`/createSchedule/${user?._id}`)}
+            className="flex md:justify-start justify-center"
+          >
+            <div className="w-full p-4 bg-white border border-gray-200 rounded shadow sm:p-6 md:p-8 h-full">
+              <div className="space-y-4 h-full flex flex-col justify-between">
+                <div className="flex justify-center items-center">
+                  <div className="w-12 h-12 ">
+                    <span className="text-5xl  text-colorFour font-bold">
+                      <MdOutlineFeaturedVideo />
+                    </span>
+                  </div>
+                </div>
+                <div className="flex justify-center items-center text-center">
+                  <h1 className="text-xl font-semibold">
+                    Try our powerful features
+                  </h1>
+                </div>
+
+                <div className=" rounded space-y-3 p-2">
+                  <div className="flex flex-row justify-start items-center">
+                    <span className="text-xl text-colorFour font-bold">
+                      <FaCircleArrowRight />
+                    </span>
+                    <h1 className="ml-3 text-gray-500 leading-tight">
+                      Automatic reminders
+                    </h1>
+                  </div>
+
+                  <div className="flex flex-row justify-start items-center">
+                    <span className="text-xl text-colorFour font-bold">
+                      <FaCircleArrowRight />
+                    </span>
+                    <h1 className="ml-3 text-gray-500 leading-tight">
+                      Workflows to follow up meetings
+                    </h1>
+                  </div>
+
+                  <div className="flex flex-row justify-start items-center">
+                    <span className="text-xl text-colorFour font-bold">
+                      <FaCircleArrowRight />
+                    </span>
+                    <h1 className="ml-3 text-gray-500 leading-tight">
+                      Let bookers choose meeting length
+                    </h1>
+                  </div>
+                </div>
+
+                <div className="flex justify-center py-6">
+                  <button
+                    onClick={() => navigate(`/createSchedule/${user?._id}`)}
+                    className="text-colorFour font-semibold text-xl"
+                  >
+                    Start making event
+                  </button>
+                </div>
+              </div>
+            </div>
+          </button>
         </div>
-        
+
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 pt-4">
-              <button
-                onClick={() => navigate(`/createSchedule/${user?._id}`)}
-                className="flex md:justify-start justify-center"
-              >
-                <div className="w-full p-4 bg-white border border-gray-200 rounded shadow sm:p-6 md:p-8 h-full">
-                  <div className="space-y-4 h-full flex flex-col justify-between">
-                    <div className="py-8 space-y-2">
-                      <div className="flex justify-center items-center">
-                        <div className="w-12 h-12 ">
-                          <span className="text-5xl  text-colorFour font-bold"><SlCalender /></span>
-                        </div>
-                      </div>
-                      <div className="flex justify-center items-center text-center">
-                        <h1 className="text-xl font-semibold">
-                          Create booking page
-                        </h1>
-                      </div>
-                      <div className="flex justify-center items-center text-center">
-                        <p className="text-gray-500">
-                          Start taking bookings and meet with your customers in no time.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex justify-center py-8">
-                      <button
-                        onClick={() => navigate(`/createSchedule/${user?._id}`)}
-                        className="text-colorFour font-semibold text-xl"
-                      >
-                        Create an event
-                      </button>
+          <button
+            onClick={() => navigate(`/createSchedule/${user?._id}`)}
+            className="flex md:justify-start justify-center"
+          >
+            <div className="w-full p-4 bg-white border border-gray-200 rounded shadow sm:p-6 md:p-8 h-full">
+              <div className="space-y-4 h-full flex flex-col justify-between">
+                <div className="py-8 space-y-2">
+                  <div className="flex justify-center items-center">
+                    <div className="w-12 h-12 ">
+                      <span className="text-5xl  text-colorFour font-bold">
+                        <SlCalender />
+                      </span>
                     </div>
                   </div>
-                </div>
-              </button>
-
-              <button
-                onClick={() => navigate(`/bookings/${user?._id}`)}
-                className="flex md:justify-start justify-center"
-              >
-                <div className="w-full p-4 bg-white border border-gray-200 rounded shadow sm:p-6 md:p-8 h-full">
-                  <div className="space-y-4 h-full flex flex-col justify-between">
-                    <div className="py-8 space-y-2">
-                      <div className="flex justify-center items-center">
-                        <div className="w-12 h-12 ">
-                          <span className="text-5xl  text-colorFour font-bold"><MdSchedule /></span>
-                        </div>
-                      </div>
-                      <div className="flex justify-center items-center text-center">
-                        <h1 className="text-xl font-semibold">
-                          No Upcoming bookings
-                        </h1>
-                      </div>
-                      <div className="flex justify-center items-center text-center">
-                        <p className="text-gray-500">
-                          As soon as someone books a time with you it will show up here.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex justify-center py-8">
-                      <button
-                        onClick={() => navigate(`/bookings/${user?._id}`)}
-                        className="text-colorFour font-semibold text-xl"
-                      >
-                        View all Bookings
-                      </button>
-                    </div>
+                  <div className="flex justify-center items-center text-center">
+                    <h1 className="text-xl font-semibold">
+                      Create booking page
+                    </h1>
+                  </div>
+                  <div className="flex justify-center items-center text-center">
+                    <p className="text-gray-500">
+                      Start taking bookings and meet with your customers in no
+                      time.
+                    </p>
                   </div>
                 </div>
-              </button>
+                <div className="flex justify-center py-8">
+                  <button
+                    onClick={() => navigate(`/createSchedule/${user?._id}`)}
+                    className="text-colorFour font-semibold text-xl"
+                  >
+                    Create an event
+                  </button>
+                </div>
+              </div>
+            </div>
+          </button>
 
-              <button
-                onClick={() => navigate(`/createSchedule/${user?._id}`)}
-                className="flex md:justify-start justify-center"
-              >
-                <div className="w-full p-4 bg-white border border-gray-200 rounded shadow sm:p-6 md:p-8 h-full">
-                  <div className="space-y-4 h-full flex flex-col justify-between">
-                    <div className="flex justify-center items-center">
-                      <div className="w-12 h-12 ">
-                        <span className="text-5xl  text-colorFour font-bold"><MdOutlineFeaturedVideo /></span>
-                      </div>
-                    </div>
-                    <div className="flex justify-center items-center text-center">
-                      <h1 className="text-xl font-semibold">
-                        Try our powerful features
-                      </h1>
-                    </div>
-
-                    <div className=" rounded space-y-3 p-2">
-                      <div className="flex flex-row justify-start items-center">
-                        <span className="text-xl text-colorFour font-bold"><FaCircleArrowRight /></span>
-                        <h1 className="ml-3 text-gray-500 leading-tight">Automatic reminders</h1>
-                      </div>
-
-                      <div className="flex flex-row justify-start items-center">
-                        <span className="text-xl text-colorFour font-bold"><FaCircleArrowRight /></span>
-                        <h1 className="ml-3 text-gray-500 leading-tight">
-                          Workflows to follow up meetings
-                        </h1>
-                      </div>
-
-                      <div className="flex flex-row justify-start items-center">
-                        <span className="text-xl text-colorFour font-bold"><FaCircleArrowRight /></span>
-                        <h1 className="ml-3 text-gray-500 leading-tight">
-                          Let bookers choose meeting length
-                        </h1>
-                      </div>
-                    </div>
-
-
-
-                    <div className="flex justify-center py-6">
-                      <button
-                        onClick={() => navigate(`/createSchedule/${user?._id}`)}
-                        className="text-colorFour font-semibold text-xl"
-                      >
-                        Start making event
-                      </button>
+          <button
+            onClick={() => navigate(`/bookings/${user?._id}`)}
+            className="flex md:justify-start justify-center"
+          >
+            <div className="w-full p-4 bg-white border border-gray-200 rounded shadow sm:p-6 md:p-8 h-full">
+              <div className="space-y-4 h-full flex flex-col justify-between">
+                <div className="py-8 space-y-2">
+                  <div className="flex justify-center items-center">
+                    <div className="w-12 h-12 ">
+                      <span className="text-5xl  text-colorFour font-bold">
+                        <MdSchedule />
+                      </span>
                     </div>
                   </div>
+                  <div className="flex justify-center items-center text-center">
+                    <h1 className="text-xl font-semibold">
+                      No Upcoming bookings
+                    </h1>
+                  </div>
+                  <div className="flex justify-center items-center text-center">
+                    <p className="text-gray-500">
+                      As soon as someone books a time with you it will show up
+                      here.
+                    </p>
+                  </div>
                 </div>
-              </button>
+                <div className="flex justify-center py-8">
+                  <button
+                    onClick={() => navigate(`/bookings/${user?._id}`)}
+                    className="text-colorFour font-semibold text-xl"
+                  >
+                    View all Bookings
+                  </button>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <button
+            onClick={() => navigate(`/createSchedule/${user?._id}`)}
+            className="flex md:justify-start justify-center"
+          >
+            <div className="w-full p-4 bg-white border border-gray-200 rounded shadow sm:p-6 md:p-8 h-full">
+              <div className="space-y-4 h-full flex flex-col justify-between">
+                <div className="flex justify-center items-center">
+                  <div className="w-12 h-12 ">
+                    <span className="text-5xl  text-colorFour font-bold">
+                      <MdOutlineFeaturedVideo />
+                    </span>
+                  </div>
+                </div>
+                <div className="flex justify-center items-center text-center">
+                  <h1 className="text-xl font-semibold">
+                    Try our powerful features
+                  </h1>
+                </div>
+
+                <div className=" rounded space-y-3 p-2">
+                  <div className="flex flex-row justify-start items-center">
+                    <span className="text-xl text-colorFour font-bold">
+                      <FaCircleArrowRight />
+                    </span>
+                    <h1 className="ml-3 text-gray-500 leading-tight">
+                      Automatic reminders
+                    </h1>
+                  </div>
+
+                  <div className="flex flex-row justify-start items-center">
+                    <span className="text-xl text-colorFour font-bold">
+                      <FaCircleArrowRight />
+                    </span>
+                    <h1 className="ml-3 text-gray-500 leading-tight">
+                      Workflows to follow up meetings
+                    </h1>
+                  </div>
+
+                  <div className="flex flex-row justify-start items-center">
+                    <span className="text-xl text-colorFour font-bold">
+                      <FaCircleArrowRight />
+                    </span>
+                    <h1 className="ml-3 text-gray-500 leading-tight">
+                      Let bookers choose meeting length
+                    </h1>
+                  </div>
+                </div>
+
+                <div className="flex justify-center py-6">
+                  <button
+                    onClick={() => navigate(`/createSchedule/${user?._id}`)}
+                    className="text-colorFour font-semibold text-xl"
+                  >
+                    Start making event
+                  </button>
+                </div>
+              </div>
+            </div>
+          </button>
         </div>
-
-        
       </Layout>
 
       {/* <div className="w-full bg-white text-gray-500 text-sm rounded-4xl">

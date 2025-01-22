@@ -153,18 +153,9 @@ const DashboardNavbar = () => {
                   onClick={handleLogout}
                   className="uppercase border-[1px] relative lg:px-6 md:px-4 py-2 rounded bg-colorFour text-sm border-colorFour hover:border-colorFour hover:text-colorFour text-white font-medium overflow-hidden transition-all duration-500 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-auto before:w-0 before:bg-white before:duration-500 before:ease-out  hover:before:h-40 hover:before:w-48 "
                 >
-                  Logout
+                  <span className="relative z-10">Logout</span>
                 </button>
               </div>
-              {/* 
-              <div className="cursor-pointer lg:block hidden">
-                <button
-                  onClick={() => navigate(`/profile/${user?._id}`)}
-                  className="flex justify-center items-center w-12 h-12 rounded-full font-extrabold text-[#ffffff] bg-colorFour"
-                >
-                  {firstNameInitial} {lastNameInitial}
-                </button>
-              </div> */}
 
               <div
                 onClick={handleNav}
@@ -184,14 +175,9 @@ const DashboardNavbar = () => {
                     : "lg:hidden fixed left-0 top-0 w-[70%] border-r h-[100%] bg-white dark:bg-[#000300] ease-in-out duration-1000 rounded-b-lg z-10 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
                 }
               >
-                {/* <h1 className="w-full text-2xl text-colorFour font-bold m-4 cursor-pointer">
-                  Syndèo.
-                </h1> */}
                 <div className="flex flex-row items-center ml-6 mt-6 mb-2">
-                  {/* <SiPaloaltosoftware className="text-mainColor text-2xl leading-none" /> */}
                   <h4 className="ml-1 text-2xl text-mainColor font-bold cursor-pointer">
                     Syndèo
-                    {/* <span className="text-headingColor">Associates</span> */}
                   </h4>
                 </div>
                 <div className=" p-4">
@@ -204,19 +190,12 @@ const DashboardNavbar = () => {
                     </div>
                   ))}
                 </div>
-                {/* <div className="uppercase">
-                  <a
-                    href="/notifications"
-                    className="py-4 px-8 border-gray-600 text-colorThree cursor-pointer font-medium dark:text-white"
-                  >
-                    Notifications
-                  </a>
-                </div> */}
+
                 <div
-                  className="uppercase mt-6 px-8 cursor-pointer"
+                  className="uppercase mt-6 px-6 cursor-pointer"
                   onClick={handleLogout}
                 >
-                  <a className=" transition duration-1000 font-semibold text-white text-sm bg-colorFour py-3 px-12 rounded">
+                  <a className=" transition duration-1000 font-semibold text-white text-sm bg-colorFour hover:bg-white border-colorFour py-3 px-12 rounded">
                     Logout
                   </a>
                 </div>

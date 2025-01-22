@@ -17,7 +17,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import Dashboard from "./pages/Dashboard";
 import MySchedules from "./pages/MySchedules";
-// import Profile from "./pages/Profile";
+import Profile from "./pages/Profile";
 // import CreateSchedule from "./pages/CreateSchedule";
 import AddEmployees from "./pages/AddEmployees";
 import AllEmployees from "./pages/AllEmployees";
@@ -102,15 +102,14 @@ function App() {
                 </PublicRoute>
               }
             ></Route>
-            
-             <Route path="/verify-email/:token"
-                 element={
-                  <PublicRoute>
-                    <VerifyEmail />
-                  </PublicRoute>
-                }
-             />
-
+            <Route
+              path="/verify-email/:token"
+              element={
+                <PublicRoute>
+                  <VerifyEmail />
+                </PublicRoute>
+              }
+            />
             <Route
               path="*"
               element={
@@ -143,14 +142,14 @@ function App() {
                 </ProtectedRoute>
               }
             ></Route>
-            {/* <Route
+            <Route
               path="/profile/:id"
               element={
                 <ProtectedRoute>
                   <Profile />
                 </ProtectedRoute>
               }
-            ></Route> */}
+            ></Route>
             {/* <Route
               path="/employeeSchedules/:id"
               element={

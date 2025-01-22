@@ -27,7 +27,7 @@ const Login = () => {
   //     setIcon(eye);
   //     setType("text");
   //   } else {
-  //     setIcon(eyeOff);       
+  //     setIcon(eyeOff);
   //     setType("password");
   //   }
   // };
@@ -37,8 +37,8 @@ const Login = () => {
     // dispatch(showLoading());
     axios
       .post(
-        // "http://localhost:8080/api/v1/login",     
-        "https://backend-syndeo.onrender.com/api/v1/login",
+        "http://localhost:8080/api/v1/login",
+        // "https://backend-syndeo.onrender.com/api/v1/login",
         {
           email,
           password,

@@ -20,8 +20,8 @@ const MySchedules = () => {
   const getIndividualSchedules = async () => {
     try {
       const response = await axios.post(
-        // "http://localhost:8080/api/v1/getIndividualSchedules",
-        "https://backend-syndeo.onrender.com/api/v1/getIndividualSchedules",
+        "http://localhost:8080/api/v1/getIndividualSchedules",
+        // "https://backend-syndeo.onrender.com/api/v1/getIndividualSchedules",
         { userId: params.id }
       );
       if (Array.isArray(response.data)) {
