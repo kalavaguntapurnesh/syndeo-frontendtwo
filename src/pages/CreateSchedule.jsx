@@ -83,8 +83,8 @@ const CreateSchedule = () => {
     dispatch(showLoading());
     axios
       .post(
-        "http://localhost:8080/api/v1/makeIndividualSchedules",
-        // "https://backend-syndeo.onrender.com/api/v1/makeIndividualSchedules",
+        // "http://localhost:8080/api/v1/makeIndividualSchedules",
+        "https://backend-syndeo.onrender.com/api/v1/makeIndividualSchedules",
         {
           userId: params.id,
           title,
@@ -314,7 +314,7 @@ const CreateSchedule = () => {
               <button
                 type="button"
                 onClick={addEmailField}
-                className="p-3 text-white text-sm bg-colorFour rounded-full transition"
+                className="py-2 px-8 text-white text-sm bg-colorFour rounded transition duration-1000 hover:bg-white border border-colorFour hover:text-colorFour ease-in-out "
               >
                 Add Another Email
               </button>
@@ -330,7 +330,7 @@ const CreateSchedule = () => {
 
           <div className="md:pt-8 pt-4 pb-4">
             <div className="flex justify-center">
-              <button className="  hover:text-white transition duration-1000 text-white bg-colorFour hover:bg-green-600 py-3 px-8 rounded-full">
+              <button className="transition duration-1000 text-white bg-colorFour hover:bg-white border border-colorFour hover:text-colorFour py-3 px-20 rounded">
                 Make Schedule
               </button>
             </div>

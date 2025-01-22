@@ -20,8 +20,8 @@ const MySchedules = () => {
   const getIndividualSchedules = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/getIndividualSchedules",
-        // "https://backend-syndeo.onrender.com/api/v1/getIndividualSchedules",
+        // "http://localhost:8080/api/v1/getIndividualSchedules",
+        "https://backend-syndeo.onrender.com/api/v1/getIndividualSchedules",
         { userId: params.id }
       );
       if (Array.isArray(response.data)) {
@@ -66,7 +66,7 @@ const MySchedules = () => {
             <button
               onClick={() => navigate("/dashboard")}
               type="button"
-              className="text-gray-500 bg-white border hover:bg-colorFour hover:text-white transition duration-1000 ease-in-out border-gray-500 font-medium rounded-full text-sm md:px-5 md:py-2.5 px-2"
+              className="text-colorFour bg-white border hover:bg-colorFour hover:text-white transition duration-1000 ease-in-out border-colorFour font-medium rounded text-sm md:px-5 md:py-2.5 px-2"
             >
               Go to Home
             </button>
@@ -140,7 +140,10 @@ const MySchedules = () => {
 
             <div className="block md:hidden">
               {upcomingSchedules.map((schedule) => (
-                <div key={schedule} className="mb-4 border-2 rounded-lg shadow-sm bg-white border-colorFour flex flex-col space-y-1">
+                <div
+                  key={schedule}
+                  className="mb-4 border-2 rounded-lg shadow-sm bg-white border-colorFour flex flex-col space-y-1"
+                >
                   <div className="flex justify-center items-center w-full bg-colorFour pt-1 pb-1">
                     <p className="text-base text-white">
                       Event Name: {schedule.title}
@@ -186,12 +189,7 @@ const MySchedules = () => {
               </div>
 
               <div className="text-center text-gray-500 md:text-base text-sm">
-                <p>
-                  Need help? Find out more about sharing your{" "}
-                  <a href="/dashboard" className="text-colorFour font-medium">
-                    booking pages
-                  </a>
-                </p>
+                <p>Need help? Find out more about sharing your booking pages</p>
               </div>
             </div>
           </div>
@@ -270,7 +268,10 @@ const MySchedules = () => {
 
             <div className="block md:hidden">
               {pastSchedules.map((schedule) => (
-                <div key={schedule} className="mb-4 border-2 rounded-lg shadow-sm bg-white border-colorFour flex flex-col space-y-1">
+                <div
+                  key={schedule}
+                  className="mb-4 border-2 rounded-lg shadow-sm bg-white border-colorFour flex flex-col space-y-1"
+                >
                   <div className="flex justify-center items-center w-full bg-colorFour pt-1 pb-1">
                     <p className="text-base text-white">
                       Event Name: {schedule.title}
@@ -316,36 +317,14 @@ const MySchedules = () => {
               </div>
 
               <div className="text-center text-gray-500 md:text-base text-sm">
-                <p>
-                  Need help? Find out more about sharing your{" "}
-                  <a href="/dashboard" className="text-colorFour font-medium">
-                    booking pages
-                  </a>
-                </p>
+                <p>Need help? Find out more about sharing your booking pages</p>
               </div>
             </div>
           </div>
         )}
       </Layout>
 
-      <div className="w-full bg-white text-gray-500 text-sm rounded-4xl">
-        <div className="mx-auto max-w-[600px] py-6">
-          <div className="grid md:grid-cols-4 grid-cols-2 gap-4">
-            <div className="flex justify-center items-center">
-              <a href="">© 2024 Syndeo Ltd</a>
-            </div>
-            <div className="flex justify-center items-center">
-              <a href="">Terms</a>
-            </div>
-            <div className="flex justify-center items-center">
-              <a href="">Privacy</a>
-            </div>
-            <div className="flex justify-center items-center text-colorFour font-bold">
-              <a href="">Syndèo</a>
-            </div>
-          </div>
-        </div>
-      </div>
+     
     </div>
   );
 };

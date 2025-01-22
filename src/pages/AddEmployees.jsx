@@ -6,14 +6,22 @@ import Layout from "../components/Layout";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useParams } from "react-router-dom";
-// import { eye } from "react-icons-kit/feather/eye";
-// import { eyeOff } from "react-icons-kit/feather/eyeOff";
-// import { Icon } from "react-icons-kit";
+import { CiSearch } from "react-icons/ci";
+import { MdCategory } from "react-icons/md";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import { SlGraph } from "react-icons/sl";
+import { FaLocationDot } from "react-icons/fa6";
+import { MdFilterAlt } from "react-icons/md";
 
 const AddEmployees = () => {
   const { user } = useSelector((state) => state.user);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [categoryOpen, setCategoryOpen] = useState(false);
+  const [statusOpen, setStatusOpen] = useState(false);
+  const [locationOpen, setLocationOpen] = useState(false);
+  const [filterOpen, setFilterOpen] = useState(false);
+
   const [firstName, setFirstName] = useState("");
   const [type, setType] = useState("password");
   // const [icon, setIcon] = useState(eyeOff);
@@ -27,15 +35,6 @@ const AddEmployees = () => {
     const input = event.target.value;
     setPhoneNumber(input);
   };
-  // const handleToggle = () => {
-  //   if (type === "password") {
-  //     setIcon(eye);
-  //     setType("text");
-  //   } else {
-  //     setIcon(eyeOff);
-  //     setType("password");
-  //   }
-  // };
 
   const params = useParams();
 
@@ -44,8 +43,8 @@ const AddEmployees = () => {
     dispatch(showLoading());
     axios
       .post(
-        "http://localhost:8080/api/v1/add-employee",
-        // "https://backend-syndeo.onrender.com/api/v1/add-employee",
+        // "http://localhost:8080/api/v1/add-employee",
+        "https://backend-syndeo.onrender.com/api/v1/add-employee",
         {
           firstName,
           lastName,
@@ -81,12 +80,115 @@ const AddEmployees = () => {
   return (
     <div>
       <Layout>
-        <div>
+        <div className="lg:flex items-center justify-between">
           <h1 className="pb-3 font-medium leading-normal tracking-normal text-2xl lg:text-start text-center">
-            Add an Employee
+            Add an employee
           </h1>
+          <div className="lg:flex gap-3 ">
+            <div className="relative">
+              <span className="absolute top-1/2 left-2 transform -translate-y-1/2 text-xl font-bold text-colorFour">
+                <CiSearch />
+              </span>
+              <input
+                type="text"
+                placeholder="Search for an event"
+                className="w-full py-2 pl-8 border border-gray-300 rounded focus:outline-none hover:border-colorFour transition-colors duration-300 "
+              />
+            </div>
+
+            <div className="lg:flex grid grid-cols-2 gap-2 lg:mt-0 mt-4">
+              <div className="relative flex gap-4 items-center justify-between bg-gray-300 p-2 rounded">
+                <span className="text-colorFour text-xl">
+                  <MdCategory />
+                </span>
+                <div>All Categories</div>
+                <span
+                  className="text-2xl   hover:bg-white cursor-pointer"
+                  onClick={() => setCategoryOpen(!categoryOpen)}
+                >
+                  <RiArrowDropDownLine />
+                </span>
+                {categoryOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-full bg-white shadow-lg rounded p-2">
+                    <ul>
+                      <li className="p-2">Category 1</li>
+                      <li className="p-2">Category 2</li>
+                      <li className="p-2">Category 3</li>
+                    </ul>
+                  </div>
+                )}
+              </div>
+
+              <div className="relative flex gap-4 items-center justify-between bg-gray-300 p-2 rounded">
+                <span className="text-colorFour text-xl">
+                  <SlGraph />
+                </span>
+                <div>All Status</div>
+                <span
+                  className="text-2xl   hover:bg-white cursor-pointer"
+                  onClick={() => setStatusOpen(!statusOpen)}
+                >
+                  <RiArrowDropDownLine />
+                </span>
+                {statusOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-full bg-white shadow-lg rounded p-2">
+                    <ul>
+                      <li className="p-2">Status 1</li>
+                      <li className="p-2">Status 2</li>
+                      <li className="p-2">Status 3</li>
+                    </ul>
+                  </div>
+                )}
+              </div>
+
+              <div className="relative flex gap-4 items-center justify-between bg-gray-300 p-2 rounded">
+                <span className="text-colorFour text-xl font-bold">
+                  <FaLocationDot />
+                </span>
+                <div>All Location</div>
+                <span
+                  className="text-2xl   hover:bg-white cursor-pointer"
+                  onClick={() => setLocationOpen(!locationOpen)}
+                >
+                  <RiArrowDropDownLine />
+                </span>
+                {locationOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-full bg-white shadow-lg rounded p-2">
+                    <ul>
+                      <li className="p-2">Location 1</li>
+                      <li className="p-2">Location 2</li>
+                      <li className="p-2">Location 3</li>
+                    </ul>
+                  </div>
+                )}
+              </div>
+
+              <div className="relative flex gap-4 items-center justify-between bg-gray-300 p-2 rounded">
+                <span className="text-colorFour text-xl">
+                  <MdFilterAlt />
+                </span>
+                <div>Advance Filter</div>
+                <span
+                  className="text-2xl   hover:bg-white cursor-pointer"
+                  onClick={() => setFilterOpen(!filterOpen)}
+                >
+                  <RiArrowDropDownLine />
+                </span>
+                {filterOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-full bg-white shadow-lg rounded p-2">
+                    <ul>
+                      <li className="p-2">Filter 1</li>
+                      <li className="p-2">Filter 2</li>
+                      <li className="p-2">Filter 3</li>
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
-        <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
+
+        <form className="space-y-4 md:space-y-6 pt-8" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div>
               <label
@@ -204,23 +306,13 @@ const AddEmployees = () => {
                   required="true"
                   onChange={(e) => setPassword(e.target.value)}
                 ></input>
-                {/* <span
-                  onClick={handleToggle}
-                  className="cursor-pointer flex justify-center items-center"
-                >
-                  <Icon
-                    className="absolute mr-10 text-black"
-                    icon={icon}
-                    size={20}
-                  ></Icon>
-                </span> */}
               </div>
             </div>
           </div>
 
-          <div className="md:pt-8 pt-4 pb-4">
-            <div className="flex justify-center">
-              <button className="  hover:text-white transition duration-1000 text-white bg-colorFour hover:bg-green-600 py-3 px-8 rounded-full">
+          <div className="md:pt-8 pt-4 pb-4 w-[100%]">
+            <div className="flex justify-center w-[100%]">
+              <button className="transition duration-1000 text-white bg-colorFour hover:bg-white border border-colorFour hover:text-colorFour py-3 px-20 rounded">
                 Add Employee
               </button>
             </div>

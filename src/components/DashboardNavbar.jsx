@@ -151,7 +151,7 @@ const DashboardNavbar = () => {
               <div className="lg:block hidden mr-8">
                 <button
                   onClick={handleLogout}
-                  className="uppercase border-[1px] relative lg:px-6 md:px-4 py-2 rounded bg-colorFour text-sm border-colorFour hover:border-colorFour hover:text-colorFour text-white font-medium overflow-hidden transition-all duration-500 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-auto before:w-0 before:bg-white before:duration-500 before:ease-out  hover:before:h-40 hover:before:w-48 "
+                  className="uppercase border-[1px] relative px-8 py-2 rounded bg-colorFour text-sm border-colorFour hover:border-colorFour hover:text-colorFour text-white font-medium overflow-hidden transition-all duration-500 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-auto before:w-0 before:bg-white before:duration-500 before:ease-out  hover:before:h-40 hover:before:w-48 "
                 >
                   <span className="relative z-10">Logout</span>
                 </button>
@@ -195,7 +195,7 @@ const DashboardNavbar = () => {
                   className="uppercase mt-6 px-6 cursor-pointer"
                   onClick={handleLogout}
                 >
-                  <a className=" transition duration-1000 font-semibold text-white text-sm bg-colorFour hover:bg-white border-colorFour py-3 px-12 rounded">
+                  <a className=" transition duration-1000 font-semibold text-white text-sm bg-colorFour hover:bg-white border-colorFour py-3 px-16 rounded">
                     Logout
                   </a>
                 </div>
